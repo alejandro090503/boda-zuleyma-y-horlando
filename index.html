@@ -99,7 +99,7 @@ body{background:var(--bg);color:var(--text);font-family:'Cormorant Garamond',ser
 
 /* ── HERO ── */
 #hero{position:relative;height:100vh;height:100dvh;min-height:620px;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.hero-bg{position:absolute;inset:0;background:url('portada.jpg') center 42%/cover no-repeat;background-color:var(--surface);animation:kenBurns 24s ease-in-out infinite}
+.hero-bg{position:absolute;inset:0;background-color:var(--surface);animation:kenBurns 24s ease-in-out infinite}
 @keyframes kenBurns{0%{transform:scale(1.06) translate(0,0)}33%{transform:scale(1.11) translate(-1.5%,-.5%)}66%{transform:scale(1.09) translate(.8%,-1%)}100%{transform:scale(1.06) translate(0,0)}}
 .hero-veil{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(20,16,10,.5) 0%,rgba(20,16,10,.3) 40%,rgba(20,16,10,.4) 75%,rgba(20,16,10,.6) 100%)}
 .hero-shimmer{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden}
@@ -573,8 +573,9 @@ body{background:var(--bg);color:var(--text);font-family:'Cormorant Garamond',ser
 <div class="wrap">
 
   <!-- HERO -->
-  <section id="hero">
-    <div class="hero-bg"></div>
+  <section id="hero" data-bot="#F7E7CE">
+    <div class="hero-bg"><i class="hero-drift"></i></div>
+    <div class="hero-glow"></div>
     <div class="hero-veil"></div>
     <div class="hero-shimmer"></div>
     <div class="hero-desliza" data-en="Scroll">Desliza</div>
@@ -585,11 +586,11 @@ body{background:var(--bg);color:var(--text);font-family:'Cormorant Garamond',ser
       <div class="hero-corner hc-br"><svg viewBox="0 0 24 24" fill="none"><path d="M1 1L1 11M1 1L11 1" stroke="#a5802e" stroke-width="1.4" opacity=".7"/></svg></div>
     </div>
     <div class="hero-content">
-      <span class="hero-tag rv">Montgomery, Texas</span>
-      <span class="hero-bride rv">Zuleyma</span>
+            <span class="hero-bride rv">Zuleyma</span>
       <span class="hero-amp rv">&amp;</span>
       <span class="hero-groom rv">Horlando</span>
-      <span class="hero-date rv" data-en="Saturday<br>April 3 · 2027">Sábado<br>3 de abril · 2027</span>
+      <span class="hero-city rv">Montgomery, Texas</span>
+      <span class="hero-date rv" data-en="Saturday · April 3 · 2027">Sábado · 3 de abril · 2027</span>
     </div>
     <div class="scroll-hint" id="scrollHint">
       <div class="scroll-hint-line"></div>
@@ -599,7 +600,8 @@ body{background:var(--bg);color:var(--text);font-family:'Cormorant Garamond',ser
   </section>
 
   <!-- INTRO -->
-  <section class="sec rv intro-card" style="text-align:center;overflow:hidden">
+  <section class="on-ink sec rv intro-card" style="text-align:center;overflow:hidden">
+    <div class="ink-bg " aria-hidden="true"><i style="background-image:url(ink/ink-top.webp)"></i></div>
     <span class="intro-corner ic-tl"><svg viewBox="0 0 90 90" fill="none" aria-hidden="true"><path d="M7 7 C26 19 41 29 57 30" stroke="#c9a24a" stroke-width="1" opacity=".5"/><path d="M7 7 C19 26 29 41 30 57" stroke="#c9a24a" stroke-width="1" opacity=".5"/><path d="M30 21 q9 -7 18 -3 q-7 8 -18 3Z" fill="#c9a24a" opacity=".22"/><path d="M45 26 q9 -6 17 -1 q-8 8 -17 1Z" fill="#c9a24a" opacity=".18"/><path d="M21 30 q-7 9 -3 18 q8 -7 3 -18Z" fill="#c9a24a" opacity=".22"/><path d="M26 45 q-6 9 -1 17 q8 -8 1 -17Z" fill="#c9a24a" opacity=".18"/><g transform="translate(12,12)" stroke="#c9a24a" stroke-width="1" opacity=".6" fill="none"><ellipse cx="0" cy="-7.5" rx="3" ry="6.5"/><ellipse cx="0" cy="-7.5" rx="3" ry="6.5" transform="rotate(72)"/><ellipse cx="0" cy="-7.5" rx="3" ry="6.5" transform="rotate(144)"/><ellipse cx="0" cy="-7.5" rx="3" ry="6.5" transform="rotate(216)"/><ellipse cx="0" cy="-7.5" rx="3" ry="6.5" transform="rotate(288)"/><circle cx="0" cy="0" r="2" fill="#c9a24a"/></g></svg></span>
     <span class="intro-corner ic-tr"><svg viewBox="0 0 90 90" fill="none" aria-hidden="true"><path d="M7 7 C26 19 41 29 57 30" stroke="#c9a24a" stroke-width="1" opacity=".5"/><path d="M7 7 C19 26 29 41 30 57" stroke="#c9a24a" stroke-width="1" opacity=".5"/><path d="M30 21 q9 -7 18 -3 q-7 8 -18 3Z" fill="#c9a24a" opacity=".22"/><path d="M45 26 q9 -6 17 -1 q-8 8 -17 1Z" fill="#c9a24a" opacity=".18"/><path d="M21 30 q-7 9 -3 18 q8 -7 3 -18Z" fill="#c9a24a" opacity=".22"/><path d="M26 45 q-6 9 -1 17 q8 -8 1 -17Z" fill="#c9a24a" opacity=".18"/><g transform="translate(12,12)" stroke="#c9a24a" stroke-width="1" opacity=".6" fill="none"><ellipse cx="0" cy="-7.5" rx="3" ry="6.5"/><ellipse cx="0" cy="-7.5" rx="3" ry="6.5" transform="rotate(72)"/><ellipse cx="0" cy="-7.5" rx="3" ry="6.5" transform="rotate(144)"/><ellipse cx="0" cy="-7.5" rx="3" ry="6.5" transform="rotate(216)"/><ellipse cx="0" cy="-7.5" rx="3" ry="6.5" transform="rotate(288)"/><circle cx="0" cy="0" r="2" fill="#c9a24a"/></g></svg></span>
     <span class="intro-corner ic-bl"><svg viewBox="0 0 90 90" fill="none" aria-hidden="true"><path d="M7 7 C26 19 41 29 57 30" stroke="#c9a24a" stroke-width="1" opacity=".5"/><path d="M7 7 C19 26 29 41 30 57" stroke="#c9a24a" stroke-width="1" opacity=".5"/><path d="M30 21 q9 -7 18 -3 q-7 8 -18 3Z" fill="#c9a24a" opacity=".22"/><path d="M45 26 q9 -6 17 -1 q-8 8 -17 1Z" fill="#c9a24a" opacity=".18"/><path d="M21 30 q-7 9 -3 18 q8 -7 3 -18Z" fill="#c9a24a" opacity=".22"/><path d="M26 45 q-6 9 -1 17 q8 -8 1 -17Z" fill="#c9a24a" opacity=".18"/><g transform="translate(12,12)" stroke="#c9a24a" stroke-width="1" opacity=".6" fill="none"><ellipse cx="0" cy="-7.5" rx="3" ry="6.5"/><ellipse cx="0" cy="-7.5" rx="3" ry="6.5" transform="rotate(72)"/><ellipse cx="0" cy="-7.5" rx="3" ry="6.5" transform="rotate(144)"/><ellipse cx="0" cy="-7.5" rx="3" ry="6.5" transform="rotate(216)"/><ellipse cx="0" cy="-7.5" rx="3" ry="6.5" transform="rotate(288)"/><circle cx="0" cy="0" r="2" fill="#c9a24a"/></g></svg></span>
@@ -616,12 +618,6 @@ body{background:var(--bg);color:var(--text);font-family:'Cormorant Garamond',ser
     </div>
   </section>
 
-  <!-- BANDA FOTOGRÁFICA 1 -->
-  <div class="photo-band rv">
-    <img src="foto-band1.jpg" alt="Zuleyma y Horlando" style="object-position:center 65%">
-    <div class="photo-band-veil"></div>
-    <div class="photo-band-frame"></div>
-  </div>
 
   <!-- CUENTA REGRESIVA -->
   <section id="countdown" class="rv" style="text-align:center;background:var(--soft)">
@@ -653,7 +649,6 @@ body{background:var(--bg);color:var(--text);font-family:'Cormorant Garamond',ser
       <span class="cd-sep" aria-hidden="true"></span>
       <div class="cd-plate" id="cd-item-s"><span class="cd-num" id="cd-s">--</span><span class="cd-ring-lbl" data-en="Seconds">Segundos</span></div>
     </div>
-    </div>
 
     <span class="cd-para" data-en="Until the big day">Para el Gran Día</span>
 
@@ -666,7 +661,8 @@ body{background:var(--bg);color:var(--text);font-family:'Cormorant Garamond',ser
   </section>
 
   <!-- FAMILIAS -->
-  <section id="familias" class="sec rv" style="text-align:center;overflow:hidden">
+  <section id="familias" class="on-ink sec rv" style="text-align:center;overflow:hidden">
+    <div class="ink-bg oval" aria-hidden="true"><i style="background-image:url(ink/ink-oval.webp)"></i></div>
     <span class="eyebrow" data-en="With the blessing of">Con la bendición de</span>
     <h2 class="heading-sm" data-en="Our Families">Nuestras Familias</h2>
     <div class="fam-rings rv">
@@ -698,7 +694,8 @@ body{background:var(--bg);color:var(--text);font-family:'Cormorant Garamond',ser
   </section>
 
   <!-- UBICACIÓN -->
-  <section id="ubicacion" class="sec rv" style="text-align:center;background:var(--soft)">
+  <section id="ubicacion" class="on-ink sec rv" style="text-align:center;background:var(--soft)">
+    <div class="ink-bg flip" aria-hidden="true"><i style="background-image:url(ink/ink-corner.webp)"></i></div>
     <div class="loc-pin rv">
       <svg viewBox="0 0 30 38" width="30" height="38" fill="none" aria-hidden="true">
         <path d="M15 2C8.9 2 4 6.9 4 13c0 8.8 11 23 11 23s11-14.2 11-23c0-6.1-4.9-11-11-11z" fill="rgba(165,128,46,.12)" stroke="#a5802e" stroke-width="1.3" opacity=".7"/>
@@ -787,8 +784,52 @@ body{background:var(--bg);color:var(--text);font-family:'Cormorant Garamond',ser
     </div>
   </section>
 
+  <!-- HOSPEDAJE -->
+  <section id="hospedaje" class="on-ink sec rv" style="text-align:center;overflow:hidden">
+    <div class="ink-bg flipy" aria-hidden="true"><i style="background-image:url(ink/ink-corner.webp)"></i></div>
+    <span class="eyebrow" data-en="For Your Comfort">Para tu Comodidad</span>
+    <h2 class="heading-sm" data-en="Suggested Lodging">Hospedaje Sugerido</h2>
+    <div class="orn" style="margin-top:16px"><div class="orn-line"></div><div class="orn-diamond-sm"></div><div class="orn-diamond"></div><div class="orn-diamond-sm"></div><div class="orn-line"></div></div>
+    <p class="hosp-intro" data-en="Some options near the reception in Montgomery and Lake Conroe.">Algunas opciones cerca de la recepción, en Montgomery y Lake Conroe.</p>
+    <div class="hv-toggle" role="tablist" aria-label="Ver hospedaje como">
+      <span class="hv-ind" aria-hidden="true"></span>
+      <button class="hv-btn on" type="button" role="tab" aria-selected="true" data-view="lista" data-en="List">Lista</button>
+      <button class="hv-btn" type="button" role="tab" aria-selected="false" data-view="mapa" data-en="Map">Mapa</button>
+    </div>
+    <div class="hv-pane" id="hvLista">
+      <div class="hosp-carousel">
+        <button class="hosp-arrow prev" type="button" aria-label="Hotel anterior"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></button>
+        <button class="hosp-arrow next" type="button" aria-label="Hotel siguiente"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></button>
+        <div class="hosp-viewport"><div class="hosp-track" id="hospTrack"></div></div>
+        <div class="hosp-dots" id="hospDots"></div>
+      </div>
+    </div>
+    <div class="hv-pane" id="hvMapa" hidden>
+      <div class="hmap-frame">
+        <div class="hmap" id="hmap" aria-label="Mapa de hoteles y recepción"></div>
+        <div class="hmap-vig" aria-hidden="true"></div>
+        <div class="hmap-ctrl">
+          <button type="button" id="hmZin" aria-label="Acercar">+</button>
+          <button type="button" id="hmZout" aria-label="Alejar">−</button>
+          <button type="button" id="hmAll" aria-label="Ver todo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
+        </div>
+        <div class="hmap-hint" id="hmHint" data-en="Tap a number to see the hotel">Toca un número para ver el hotel</div>
+        <div class="hmap-2f" id="hm2f" data-en="Use two fingers to move the map">Usa dos dedos para mover el mapa</div>
+        <div class="hmap-sheet" id="hmSheet" aria-live="polite">
+          <button class="hms-x" type="button" id="hmsX" aria-label="Cerrar ficha">✕</button>
+          <div class="hms-top"><span class="hms-num" id="hmsNum">1</span><span class="hms-type" id="hmsType"></span></div>
+          <p class="hms-name" id="hmsName"></p>
+          <p class="hms-addr" id="hmsAddr"></p>
+          <p class="hms-dist" id="hmsDist"></p>
+          <div class="hms-btns"><a id="hmsMap" target="_blank" rel="noopener" data-en="See location">Ver ubicación</a><a id="hmsBook" class="gold" target="_blank" rel="noopener" data-en="Book">Reservar</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ITINERARIO -->
-  <section id="itinerario" class="rv" style="text-align:center">
+  <section id="itinerario" class="on-ink rv" style="text-align:center">
+    <div class="ink-bg flipy" aria-hidden="true"><i style="background-image:url(ink/ink-top.webp)"></i></div>
     <span class="eyebrow stagger-child" data-en="The Day's Program">El Programa del Día</span>
     <h2 class="heading-sm stagger-child" data-en="Timeline">Itinerario</h2>
     <div class="orn stagger-child" style="margin-top:16px"><div class="orn-line"></div><div class="orn-diamond-sm"></div><div class="orn-diamond"></div><div class="orn-diamond-sm"></div><div class="orn-line"></div></div>
@@ -834,58 +875,34 @@ body{background:var(--bg);color:var(--text);font-family:'Cormorant Garamond',ser
   </section>
 
   <!-- DRESS CODE -->
-  <section id="vestimenta" class="sec rv" style="text-align:center;background:var(--soft)">
+  <section id="vestimenta" class="on-ink sec rv" style="text-align:center;background:var(--soft)">
+    <div class="ink-bg " aria-hidden="true"><i style="background-image:url(ink/ink-corner.webp)"></i></div>
     <span class="eyebrow" data-en="Dress Code">Código de Vestimenta</span>
     <h2 class="heading-sm" data-en="To be confirmed">Por confirmar</h2>
     <div class="orn" style="margin-top:16px"><div class="orn-line"></div><div class="orn-diamond-sm"></div><div class="orn-diamond"></div><div class="orn-diamond-sm"></div><div class="orn-line"></div></div>
 
     <div class="dc-figs rv">
       <div class="dc-fig">
-        <img src="caballero.png" alt="Caballero de etiqueta — traje formal negro" loading="lazy">
+        <img src="caballero.png" alt="Caballero de etiqueta — traje formal negro">
         <span class="dc-fig-ttl" data-en="Gentlemen">Caballeros</span>
       </div>
       <div class="dc-fig">
-        <img src="dama.png" alt="Dama de gala — vestido largo" loading="lazy">
+        <img src="dama.png" alt="Dama de gala — vestido largo">
         <span class="dc-fig-ttl" data-en="Ladies">Damas</span>
       </div>
     </div>
+    <p class="dc-avoid-lbl" data-en="Colors reserved for the bride">Colores reservados para la novia</p>
+    <div class="dc-swatches">
+      <div class="dc-sw"><span style="background:#ffffff"></span><em data-en="White">Blanco</em></div>
+      <div class="dc-sw"><span style="background:#fffff0"></span><em data-en="Ivory">Marfil</em></div>
+    </div>
   </section>
 
-  <!-- GALERÍA -->
-  <section id="galeria">
-    <span class="eyebrow" data-en="Us">Nosotros</span>
-    <h2 class="heading-sm" data-en="Our Story">Nuestra Historia</h2>
-    <div class="orn" style="margin-top:16px"><div class="orn-line"></div><div class="orn-diamond-sm"></div><div class="orn-diamond"></div><div class="orn-diamond-sm"></div><div class="orn-line"></div></div>
-    <p class="gal-quote rv" data-en="Every picture, a chapter of our love story.">Cada imagen, un capítulo de nuestra historia de amor.</p>
-    <div class="wheel-scene rv" id="wheel-scene">
-      <div class="wheel-ring" id="wheel-ring">
-        <div class="wheel-card"><img src="g01.jpg" alt="Zuleyma y Horlando" loading="lazy"></div>
-        <div class="wheel-card"><img src="g02.jpg" alt="Zuleyma y Horlando" loading="lazy"></div>
-        <div class="wheel-card"><img src="g03.jpg" alt="Zuleyma y Horlando" loading="lazy"></div>
-        <div class="wheel-card"><img src="g04.jpg" alt="Zuleyma y Horlando" loading="lazy"></div>
-        <div class="wheel-card"><img src="g05.jpg" alt="Zuleyma y Horlando" loading="lazy"></div>
-        <div class="wheel-card"><img src="g06.jpg" alt="Zuleyma y Horlando" loading="lazy"></div>
-        <div class="wheel-card"><img src="g07.jpg" alt="Zuleyma y Horlando" loading="lazy"></div>
-        <div class="wheel-card"><img src="g08.jpg" alt="Zuleyma y Horlando" loading="lazy"></div>
-        <div class="wheel-card"><img src="g09.jpg" alt="Zuleyma y Horlando" loading="lazy"></div>
-        <div class="wheel-card"><img src="g10.jpg" alt="Zuleyma y Horlando" loading="lazy"></div>
-        <div class="wheel-card"><img src="g11.jpg" alt="Zuleyma y Horlando" loading="lazy"></div>
-        <div class="wheel-card"><img src="g13.jpg" alt="Zuleyma y Horlando" loading="lazy"></div>
-        <div class="wheel-card"><img src="g14.jpg" alt="Zuleyma y Horlando" loading="lazy"></div>
-        <div class="wheel-card"><img src="g15.jpg" alt="Zuleyma y Horlando" loading="lazy"></div>
-        <div class="wheel-card"><img src="g16.jpg" alt="Zuleyma y Horlando" loading="lazy"></div>
-        <div class="wheel-card"><img src="g17.jpg" alt="Zuleyma y Horlando" loading="lazy"></div>
-        <div class="wheel-card"><img src="g18.jpg" alt="Zuleyma y Horlando" loading="lazy"></div>
-        <div class="wheel-card"><img src="g19.jpg" alt="Zuleyma y Horlando" loading="lazy"></div>
-        <div class="wheel-card"><img src="g21.jpg" alt="Zuleyma y Horlando" loading="lazy"></div>
-      </div>
-    </div>
-    <p class="gal-hint rv" data-en="Drag to spin">Arrastra para girar</p>
-  </section>
 
 
   <!-- LLUVIA DE SOBRES -->
-  <section id="regalos" class="sec rv" style="text-align:center">
+  <section id="regalos" class="on-ink sec rv" style="text-align:center">
+    <div class="ink-bg oval flip" aria-hidden="true"><i style="background-image:url(ink/ink-oval.webp)"></i></div>
     <div class="env-rain" id="envRain" aria-hidden="true"></div>
     <div class="env-stage">
       <span class="eyebrow" data-en="Celebrate With Us">Celebra con Nosotros</span>
@@ -929,15 +946,16 @@ body{background:var(--bg);color:var(--text);font-family:'Cormorant Garamond',ser
             <rect x="20" y="28" width="12" height="2.5" rx="1.25" fill="currentColor" stroke="none" opacity=".4"/>
           </svg>
           <p class="env-title" data-en="Your Presence Is Our Gift">Tu Presencia es Nuestro Regalo</p>
-          
+          <p class="env-desc" data-en="If you wish to give us a gift, there will be an envelope box at the reception.">Si deseas obsequiarnos algo, habrá un buzón de sobres en la recepción.</p>
         </div>
       </button>
-      <p class="env-tap-hint" id="envGiftHint" data-en="Tap to open">Toca para abrir</p>
+      <button type="button" class="env-tap-hint" id="envGiftHint">Toca para abrir</button>
     </div>
   </section>
 
   <!-- ÁLBUM COMPARTIDO -->
-  <section id="album" class="sec rv" style="text-align:center">
+  <section id="album" class="on-ink sec rv" style="text-align:center">
+    <div class="ink-bg " aria-hidden="true"><i style="background-image:url(ink/ink-footer.webp)"></i></div>
     <span class="eyebrow" data-en="Share the Moment">Comparte el Momento</span>
     <h2 class="heading-sm" data-en="Photo album">Álbum de fotos</h2>
     <div class="orn" style="margin-top:14px;margin-bottom:0"><div class="orn-line"></div><div class="orn-diamond-sm"></div><div class="orn-diamond"></div><div class="orn-diamond-sm"></div><div class="orn-line"></div></div>
@@ -973,16 +991,10 @@ body{background:var(--bg);color:var(--text);font-family:'Cormorant Garamond',ser
   </script>
   </section>
 
-  <!-- BANDA FOTOGRÁFICA 2 -->
-  <div class="photo-band rv">
-    <img src="foto-band2.jpg" alt="Zuleyma y Horlando" style="object-position:center 35%">
-    <div class="photo-band-veil"></div>
-    <div class="photo-band-frame"></div>
-    <span class="photo-band-quote" data-en="See you at the altar">Nos vemos en el altar</span>
-  </div>
 
   <!-- RSVP -->
-  <section class="sec rv" id="rsvp" style="text-align:center;background:var(--soft)">
+  <section class="on-ink sec rv" id="rsvp" style="text-align:center;background:var(--soft)">
+    <div class="ink-bg flip" aria-hidden="true"><i style="background-image:url(ink/ink-top.webp)"></i></div>
     <span class="eyebrow" data-en="RSVP">Confirmación de Asistencia</span>
     <h2 class="heading-sm" data-en="Join Us">Acompáñanos</h2>
     <div class="orn" style="margin-top:16px"><div class="orn-line"></div><div class="orn-diamond-sm"></div><div class="orn-diamond"></div><div class="orn-diamond-sm"></div><div class="orn-line"></div></div>
@@ -1586,86 +1598,7 @@ function initMain(){
     gsap.fromTo(el,{autoAlpha:0,y:18},{autoAlpha:1,y:0,duration:.7,ease:'power2.out',scrollTrigger:{trigger:el,start:'top 88%',toggleActions:'play none none none'}});
   });
 
-  /* Lluvia de sobres — cae hasta que la sección se centra, ahí aterriza uno */
-  (function(){
-    var sec=document.getElementById('regalos'),rain=document.getElementById('envRain'),
-        btn=document.getElementById('envGift'),body=document.getElementById('envGiftBody'),
-        hint=document.getElementById('envGiftHint');
-    if(!sec||!rain||!btn)return;
-    var raining=true,landed=false,spawnCall=null,alive=0;
-    var MAX_ALIVE=18;
-
-    function makeEnvelope(){
-      if(alive>=MAX_ALIVE)return;
-      alive++;
-      var el=document.createElementNS('http://www.w3.org/2000/svg','svg');
-      el.setAttribute('viewBox','0 0 34 24');
-      el.setAttribute('class','env-rain-item');
-      var w=16+Math.random()*16;
-      el.style.width=w+'px';el.style.height=(w*24/34)+'px';
-      el.style.left=(Math.random()*100)+'%';
-      el.innerHTML='<rect x="1" y="1" width="32" height="22" rx="2.5" fill="#fdf3dc" stroke="#a5802e" stroke-width="1.2"/>'+
-                   '<path d="M1 1 L17 13 L33 1" fill="none" stroke="#a5802e" stroke-width="1.2" stroke-linejoin="round"/>';
-      rain.appendChild(el);
-      var H=sec.offsetHeight+80,dur=5+Math.random()*4;
-      function kill(){if(el.parentNode){el.remove();alive--;}}
-      gsap.timeline({onComplete:kill})
-        .fromTo(el,{y:-46,x:0,rotation:(Math.random()-.5)*50,opacity:0},
-                   {y:H,x:(Math.random()-.5)*70,rotation:(Math.random()-.5)*160,
-                    duration:dur,ease:'none'},0)
-        .fromTo(el,{opacity:0},{opacity:.75,duration:dur*.18,ease:'power1.out'},0)
-        .to(el,{opacity:0,duration:dur*.25,ease:'power1.in'},dur*.75);
-    }
-
-    /* Spawn por el ticker de GSAP (no setInterval): se pausa junto con la
-       animación si la pestaña pasa a segundo plano, evitando acumulación. */
-    function scheduleSpawn(){
-      spawnCall=gsap.delayedCall(.52,function(){
-        if(!raining)return;
-        makeEnvelope();
-        scheduleSpawn();
-      });
-    }
-    function startRain(){
-      for(var i=0;i<7;i++)gsap.delayedCall(i*.26,makeEnvelope);
-      scheduleSpawn();
-    }
-    function stopRain(){
-      raining=false;
-      if(spawnCall)spawnCall.kill();
-      gsap.to(rain,{opacity:0,duration:1.1,ease:'power2.out',
-        onComplete:function(){rain.innerHTML='';alive=0;}});
-    }
-
-    function land(){
-      if(landed)return;landed=true;
-      stopRain();
-      /* Un sobre se detiene: cae desde arriba y se asienta con rebote */
-      gsap.fromTo(btn,
-        {opacity:0,y:-150,rotation:-12,scale:.82},
-        {opacity:1,y:0,rotation:0,scale:1,duration:1.15,ease:'back.out(1.5)',
-         onComplete:function(){
-           if(body)body.classList.add('landed');
-           if(hint)hint.classList.add('show');
-         }});
-    }
-
-    startRain();
-    /* Aterriza cuando la sección queda centrada. Se usa 55% en vez de 'center'
-       porque el reveal genérico desplaza las secciones aún no visibles 28px,
-       y con 'center center' exacto el umbral queda fuera de alcance. */
-    ScrollTrigger.create({trigger:sec,start:'center 55%',once:true,onEnter:land,onEnterBack:land});
-
-    function toggle(e){
-      if(e)e.preventDefault();
-      if(!landed)return;
-      var open=btn.classList.toggle('open');
-      btn.setAttribute('aria-expanded',open?'true':'false');
-      if(open&&body)body.classList.remove('landed');
-      ScrollTrigger.refresh();
-    }
-    btn.addEventListener('click',toggle);
-  })();
+  /* Lluvia de sobres: ver initSobres (paquete v2) */
 
   /* Itinerario — camino en S dibujado con scroll + perla viajera */
   (function(){
@@ -1866,11 +1799,11 @@ function applyLang(lang){
 .footer-names{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(19px,5vw,23px);color:var(--dark);margin-top:18px;line-height:1.4}
 .footer-blessing{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;font-size:clamp(18px,4.8vw,21px);color:var(--accent);margin:8px auto 0;max-width:330px;line-height:1.5}
 /* Héroe: parallax por variables (no pisa el Ken Burns) */
-.hero-bg{translate:0 var(--py,0px);scale:var(--ps,1)}
+
 /* Ubicaciones: cards que levitan */
-.loc-card{animation:zhFloat 5.6s ease-in-out infinite;transition:box-shadow .5s ease,rotate .5s ease;box-shadow:0 10px 26px -18px rgba(74,58,24,.35)}
-.loc-card+.loc-card{animation-delay:-2.8s}
-.loc-card.lift{box-shadow:0 30px 48px -22px rgba(74,58,24,.45);rotate:1 0 0 4deg}
+.loc-card{animation:levitate 6.5s ease-in-out infinite;transition:box-shadow .5s ease,rotate .5s ease;box-shadow:0 10px 26px -18px rgba(74,58,24,.35)}
+.loc-card:nth-of-type(2){animation-delay:-2.2s}.loc-card:nth-of-type(3){animation-delay:-4.1s}
+.loc-card.lift{box-shadow:0 30px 48px -22px rgba(74,58,24,.45)}
 @keyframes zhFloat{0%,100%{translate:0 0}50%{translate:0 -6px}}
 /* Regalos: destello */
 #regalos .env-stage{position:relative}
@@ -1938,8 +1871,8 @@ body.zh-menu-open #musicFab{opacity:0;pointer-events:none}
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   function T(es,en){ return window.LANG==='en'?en:es; }
   var SECS=[
-    ['hero','Inicio','Home'],['familias','Familias','Families'],['ubicacion','Ubicación','Location'],
-    ['itinerario','Itinerario','Timeline'],['vestimenta','Vestimenta','Dress code'],['galeria','Galería','Gallery'],
+    ['hero','Inicio','Home'],['familias','Familias','Families'],['ubicacion','Ubicación','Location'],['hospedaje','Hospedaje','Lodging'],
+    ['itinerario','Itinerario','Timeline'],['vestimenta','Vestimenta','Dress code'],
     ['regalos','Regalos','Gifts'],['rsvp','Confirmar','RSVP']
   ].filter(function(x){return document.getElementById(x[0]);});
 
@@ -2015,9 +1948,7 @@ body.zh-menu-open #musicFab{opacity:0;pointer-events:none}
     if(reduce||typeof gsap==='undefined')return;
 
     /* Portada: la foto baja lento y se acerca; los nombres suben y se desvanecen */
-    var hb=document.querySelector('.hero-bg');
-    gsap.to(hb,{'--py':'110px','--ps':1.08,ease:'none',scrollTrigger:{trigger:'#hero',start:'top top',end:'bottom top',scrub:true}});
-    gsap.to('.hero-content',{y:-70,opacity:0,ease:'none',scrollTrigger:{trigger:'#hero',start:'top top',end:'75% top',scrub:true}});
+
 
     /* Títulos: reveal por palabras */
     document.querySelectorAll('.heading-sm').forEach(function(h){
@@ -2074,5 +2005,379 @@ body.zh-menu-open #musicFab{opacity:0;pointer-events:none}
 })();
 </script>
 
+<!-- ===== PAQUETE DE EFECTOS v2 ===== -->
+<style>
+/* 1 · HERO sin fotos: tinta champagne/oro que deriva */
+#hero{align-items:flex-end!important;background:#fbf3e4}
+.hero-bg{background:none!important;animation:none!important;overflow:hidden;will-change:transform}
+.hero-drift{position:absolute;inset:-14% -4%;background:url('ink/ink-hero.webp') center/cover no-repeat;animation:heroDrift 26s ease-in-out infinite alternate}
+@keyframes heroDrift{0%{transform:translate(0,0) scale(1.02)}50%{transform:translate(-1.5%,1%) scale(1.06)}100%{transform:translate(2%,-1.2%) scale(1.10)}}
+.hero-glow{position:absolute;inset:0;z-index:1;mix-blend-mode:soft-light;background:linear-gradient(115deg,transparent 30%,rgba(255,250,232,.9) 48%,rgba(201,162,74,.45) 54%,transparent 70%);background-size:260% 100%;animation:heroGlow 9s ease-in-out infinite;pointer-events:none}
+@keyframes heroGlow{0%,100%{background-position:120% 0}50%{background-position:-20% 0}}
+.hero-veil{background:linear-gradient(to bottom,rgba(255,255,240,0) 0%,rgba(255,255,240,.05) 40%,rgba(255,255,240,.55) 68%,rgba(255,255,240,.88) 100%)!important}
+.hero-shimmer,.hero-desliza{display:none!important}
+.hero-content{position:absolute!important;left:0;right:0;bottom:0!important;margin-top:0!important;padding:0 28px 110px!important;z-index:3}
+@media(max-width:1023px){.hero-content{padding-bottom:178px!important}}
+.hero-bride,.hero-groom{color:#5a4518!important;text-shadow:0 0 18px rgba(255,255,240,.95),0 0 4px rgba(255,255,240,.9)!important}
+.hero-amp{color:#8a6a22!important;text-shadow:0 0 12px rgba(255,255,240,.95)!important}
+.hero-city{display:block;font-family:'Cormorant Garamond',serif;font-weight:700;font-size:16px;letter-spacing:.3em;text-transform:uppercase;color:#4c4433;margin-top:16px;text-shadow:0 0 10px rgba(255,255,240,.95)}
+.hero-date{margin-top:8px!important;color:#6b5220!important;font-size:19px!important;letter-spacing:.12em!important;text-shadow:0 0 10px rgba(255,255,240,.95)!important}
+.hero-frame{border-color:rgba(138,106,34,.35)!important}
+.scroll-hint-txt{background:none!important;-webkit-text-fill-color:#6b5220!important;color:#6b5220!important;animation:none!important;font-weight:600}
+#hero::after{content:'';position:absolute;left:0;right:0;bottom:0;height:90px;z-index:2;pointer-events:none;background:linear-gradient(to top,var(--hero-next,#fffff0) 0%,transparent 100%)}
+
+/* 2 · FUNDIDOS ENTRE SECCIONES */
+.wrap>section,#footer{isolation:isolate;position:relative}
+.wrap>section:not(#hero)::before,.wrap>section:not(#hero)::after,#footer::before,#footer::after{content:''!important;position:absolute!important;left:0!important;right:0!important;inset:auto 0!important;height:170px!important;width:auto!important;pointer-events:none;z-index:-1!important}
+.wrap>section:not(#hero)::before,#footer::before{top:0!important;background:var(--fade-top,none)!important}
+.wrap>section:not(#hero)::after,#footer::after{bottom:0!important;background:var(--fade-bot,none)!important}
+
+/* 3 · TINTAS */
+.ink-bg{position:absolute;inset:0;z-index:-2;overflow:hidden;pointer-events:none;opacity:.9;
+  -webkit-mask-image:linear-gradient(transparent 0,#000 150px,#000 calc(100% - 150px),transparent 100%);mask-image:linear-gradient(transparent 0,#000 150px,#000 calc(100% - 150px),transparent 100%)}
+.ink-bg.flip{transform:scaleX(-1)}
+.ink-bg.flipy{transform:scaleY(-1)}
+.ink-bg i{position:absolute;inset:-6%;background-size:cover;background-position:center;animation:inkDrift 28s ease-in-out infinite alternate}
+.ink-bg.oval i{background-size:auto 100%;background-repeat:no-repeat}
+@keyframes inkDrift{0%{transform:translate(-2.5%,1.5%) scale(1) rotate(-.6deg)}100%{transform:translate(2.5%,-1.5%) scale(1.1) rotate(.6deg)}}
+.on-ink p,.on-ink .fam-name,.on-ink .fam-role-lbl,.on-ink .dc-fig-ttl,.on-ink .dc-avoid-lbl,.on-ink .dc-sw em,.on-ink .intro-names,.on-ink .intro-date,.on-ink .tl-time,.on-ink .tl-title,.on-ink .tl-place{text-shadow:0 0 12px rgba(255,255,240,.95),0 0 3px rgba(255,255,240,.9)}
+.on-ink .heading,.on-ink .heading-sm,.on-ink .eyebrow,.on-ink .env-title{filter:drop-shadow(0 0 5px rgba(255,255,240,.95)) drop-shadow(0 0 2px rgba(255,255,240,.9))}
+#regalos,#album{background:transparent!important}
+#regalos .env-rain{z-index:0}
+
+/* 4 · LEVITAR */
+@keyframes levitate{0%,100%{translate:0 0;rotate:-.6deg}50%{translate:0 -9px;rotate:.6deg}}
+.fam-col{animation:levitate 6.5s ease-in-out infinite;background:rgba(255,255,255,.6);border:1px solid rgba(201,162,74,.38);border-radius:14px;padding:18px 8px}
+.fam-col:nth-of-type(2),.fam-2col>.fam-col:last-child{animation-delay:-2.2s}
+
+/* 5 · DRESS CODE */
+.dc-fig::before{display:none}
+.dc-fig img{animation:levitate 6.5s ease-in-out infinite!important;transform-origin:50% 100%}
+.dc-fig:nth-child(2) img{animation-delay:-2.2s!important}
+.dc-fig-ttl{font-size:16px!important;font-weight:700!important;color:#6b5220!important}
+.dc-avoid-lbl{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:16px;letter-spacing:.14em;text-transform:uppercase;color:#4c4433;margin:6px 0 16px}
+.dc-swatches{position:relative;display:flex;gap:28px;justify-content:center}
+.dc-sw{width:64px;display:flex;flex-direction:column;align-items:center;gap:8px}
+.dc-sw span{position:relative;overflow:hidden;display:block;width:48px;height:48px;border-radius:50%;border:1.5px solid rgba(138,106,34,.55);animation:swGlow 3s ease-in-out infinite}
+.dc-sw span::after{content:'';position:absolute;inset:0;border-radius:50%;background:linear-gradient(120deg,transparent 30%,rgba(201,162,74,.55) 50%,transparent 70%);background-size:250% 100%;animation:swSheen 3.6s ease-in-out infinite}
+.dc-sw em{font-family:'Cormorant Garamond',serif;font-style:normal;font-weight:700;font-size:16px;color:#4c4433}
+@keyframes swGlow{0%,100%{box-shadow:0 2px 8px rgba(0,0,0,.12),0 0 0 0 rgba(201,162,74,0)}50%{box-shadow:0 2px 8px rgba(0,0,0,.12),0 0 16px 3px rgba(201,162,74,.6)}}
+@keyframes swSheen{0%,100%{background-position:130% 0}50%{background-position:-30% 0}}
+.dc-swatches.swap .dc-sw:nth-child(1){animation:swapA 7s cubic-bezier(.65,0,.35,1) infinite}
+.dc-swatches.swap .dc-sw:nth-child(2){animation:swapB 7s cubic-bezier(.65,0,.35,1) infinite}
+@keyframes swapA{0%,30%{transform:translate(0,0)}45%{transform:translate(46px,-16px)}55%,80%{transform:translate(92px,0)}90%{transform:translate(46px,16px)}100%{transform:translate(0,0)}}
+@keyframes swapB{0%,30%{transform:translate(0,0)}45%{transform:translate(-46px,16px)}55%,80%{transform:translate(-92px,0)}90%{transform:translate(-46px,-16px)}100%{transform:translate(0,0)}}
+
+/* 6 · LLUVIA DE SOBRES */
+.env-interactive{touch-action:manipulation}
+.env-desc{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:500;font-style:italic;color:var(--text);line-height:1.65;max-width:300px}
+.env-tap-hint{display:inline-block;background:none;border:none;cursor:pointer;touch-action:manipulation;font-family:'Cormorant Garamond',serif;font-weight:700;font-size:15px;letter-spacing:.22em;text-transform:uppercase;color:#6b5220;margin-top:18px;padding:12px 18px;min-height:44px;opacity:0;transition:opacity .5s ease;position:relative;z-index:1}
+.env-tap-hint.show{opacity:1;animation:envHintPulse 2.4s ease-in-out infinite}
+@keyframes envHintPulse{0%,100%{opacity:.6}50%{opacity:1}}
+.env-body.landed{animation:envBreathe 3.6s ease-in-out infinite}
+@keyframes envBreathe{0%,100%{transform:scale(1)}50%{transform:scale(1.025)}}
+.env-interactive.open .env-open-content{max-height:360px!important}
+
+/* 9 · RSVP */
+#rsvp-name-display{font-family:'Cormorant Garamond',serif!important;font-style:italic;font-weight:600;font-size:clamp(28px,8vw,36px)!important;color:#4c4433!important;line-height:1.25;margin:10px 0 2px}
+.rsvp-toggle{display:grid!important;grid-template-columns:1fr 1fr;gap:10px}
+.rsvp-toggle-btn{min-height:52px;font-size:16px!important;font-weight:700!important}
+.rsvp-men{display:inline-flex;flex-direction:column;align-items:center;margin:0 0 6px 10px;padding:10px 22px;border:1px solid rgba(201,162,74,.6);border-radius:16px;background:rgba(255,255,255,.75);vertical-align:top}
+.rsvp-men b{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:44px;line-height:1.05;color:#4c4433}
+.rsvp-men small{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:13px;letter-spacing:3px;text-transform:uppercase;color:#6b5220}
+
+#rsvp-pases-display{display:inline-flex!important;flex-direction:column!important;align-items:center!important;gap:0!important;padding:10px 22px!important;margin:0!important;border-radius:16px!important}
+#rsvp-pases-num{font-family:'Cormorant Garamond',serif!important;font-weight:600!important;font-size:44px!important;line-height:1.05!important}
+/* 10 · LETRAS METÁLICAS SIN CORTES */
+.heading,.heading-sm,.env-title,.cal-month,.gold-metal,.zh-word{padding:.22em .45em!important;margin-left:-.45em!important;margin-right:-.45em!important;margin-top:-.22em!important;margin-bottom:-.22em!important;line-height:1.25!important;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.heading-sm .zh-word{margin-top:0!important;margin-bottom:0!important}
+.heading-sm:has(.zh-word){padding:.22em 0!important;margin-left:0!important;margin-right:0!important}
+.hero-bride,.hero-groom,.hero-amp{padding:.12em .3em;line-height:1.2!important}
+
+@media(prefers-reduced-motion:reduce){
+  .hero-drift,.hero-glow,.ink-bg i,.fam-col,.loc-card,.dc-fig img,.dc-sw,.dc-sw span,.dc-sw span::after,.env-body.landed,.env-tap-hint.show,.hosp-photo,.hm-hotel::after,.hm-route{animation:none!important}
+}
+
+/* 7 · HOSPEDAJE */
+.hosp-intro{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:19px;font-weight:500;color:var(--text);max-width:320px;margin:18px auto 0;line-height:1.6}
+.hv-toggle{position:relative;display:inline-grid;grid-template-columns:1fr 1fr;margin:22px auto 6px;padding:5px;border-radius:999px;background:rgba(255,255,255,.8);border:1px solid rgba(192,192,192,.8);box-shadow:0 8px 22px rgba(58,50,34,.1)}
+.hv-btn{position:relative;z-index:1;min-width:110px;min-height:44px;border:none;background:none;cursor:pointer;font-family:'Cormorant Garamond',serif;font-weight:600;font-size:14px;letter-spacing:.16em;text-transform:uppercase;color:#4c4433;transition:color .35s}
+.hv-btn.on{color:#fff}
+.hv-ind{position:absolute;top:5px;bottom:5px;left:5px;width:calc(50% - 5px);border-radius:999px;background:linear-gradient(135deg,#c9a24a,#6b5220);box-shadow:0 4px 12px rgba(107,82,32,.35),inset 0 0 0 1px rgba(212,175,55,.6);transition:transform .45s cubic-bezier(.2,.7,.2,1)}
+.hv-toggle.mapa .hv-ind{transform:translateX(100%)}
+.hv-pane[hidden]{display:none}
+/* lista */
+.hosp-carousel{position:relative;max-width:380px;margin:18px auto 0}
+.hosp-viewport{overflow:hidden}
+.hosp-track{display:flex;transition:transform .45s cubic-bezier(.4,0,.2,1);touch-action:pan-y}
+.hosp-slide{flex:0 0 100%;box-sizing:border-box;display:flex;flex-direction:column;align-items:center;text-align:center;padding:8px 30px}
+.hosp-num{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:13px;letter-spacing:.24em;color:#8a6a22;margin-bottom:10px}
+.hosp-photo{width:200px;height:200px;border-radius:50%;overflow:hidden;padding:4px;background:linear-gradient(135deg,#F6E3A1,#C0C0C0 40%,#D4AF37 70%,#E6E6E6);box-shadow:0 14px 34px rgba(58,50,34,.22);margin-bottom:14px;animation:levitate 6.5s ease-in-out infinite}
+.hosp-photo img{width:100%;height:100%;object-fit:cover;display:block;border-radius:50%;transition:opacity .35s}
+.hosp-thumbs{display:flex;gap:8px;justify-content:center;margin-bottom:16px}
+.hosp-thumbs button{width:48px;height:48px;border-radius:10px;overflow:hidden;padding:0;border:2px solid transparent;cursor:pointer;opacity:.7;transition:opacity .25s,border-color .25s;background:#eee}
+.hosp-thumbs button.on{opacity:1;border-color:#c9a24a}
+.hosp-thumbs img{width:100%;height:100%;object-fit:cover;display:block}
+.hosp-name{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:24px;color:#4c4433;line-height:1.25;margin-bottom:4px}
+.hosp-type{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:#6b5220;margin-bottom:8px}
+.hosp-addr{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:16px;color:var(--text);line-height:1.5;margin-bottom:4px}
+.hosp-dist{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:16px;color:#8a6a22;margin-bottom:16px}
+.hosp-btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.btn-hosp{display:inline-flex;align-items:center;gap:8px;min-height:46px;padding:10px 20px;border:1.5px solid #8a6a22;border-radius:50px;color:#6b5220;font-family:'Cormorant Garamond',serif;font-weight:600;font-size:15px;text-decoration:none;background:#fff;transition:background .25s,color .25s}
+.btn-hosp.gold{background:linear-gradient(135deg,#c9a24a,#6b5220);color:#fff;border-color:rgba(212,175,55,.8)}
+.btn-hosp svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.hosp-arrow{position:absolute;top:150px;transform:translateY(-50%);width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.85);border:1px solid rgba(192,192,192,.9);border-radius:50%;cursor:pointer;color:#6b5220;z-index:2;padding:0}
+.hosp-arrow svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2}
+.hosp-arrow.prev{left:-4px}.hosp-arrow.next{right:-4px}
+.hosp-dots{display:flex;justify-content:center;gap:10px;margin-top:20px}
+.hosp-dots button{width:10px;height:10px;border-radius:50%;border:1px solid #8a6a22;background:transparent;cursor:pointer;padding:0;transition:background .25s,transform .25s}
+.hosp-dots button.on{background:#8a6a22;transform:scale(1.25)}
+/* mapa */
+.hmap-frame{position:relative;overflow:hidden;height:580px;max-width:420px;margin:18px auto 0;border-radius:28px;padding:2px;background:linear-gradient(135deg,#F6E3A1,#C0C0C0 35%,#D4AF37 65%,#9AA3AE);box-shadow:0 22px 50px rgba(58,50,34,.3)}
+.hmap{position:absolute;inset:2px;border-radius:26px;overflow:hidden;background:#3a3222;z-index:0}
+.hmap .leaflet-tile-pane{filter:sepia(.55) hue-rotate(5deg) saturate(1.35) brightness(1.22) contrast(.95)}
+.hmap .leaflet-control-attribution{font-size:9px;background:rgba(58,50,34,.6);color:#efe3c8}
+.hmap .leaflet-control-attribution a{color:#E8CF7A}
+.hmap-vig{position:absolute;inset:2px;border-radius:26px;pointer-events:none;z-index:500;box-shadow:inset 0 0 60px rgba(30,24,14,.65)}
+.hmap-ctrl{position:absolute;top:14px;right:14px;z-index:600;display:flex;flex-direction:column;gap:8px}
+.hmap-ctrl button{width:44px;height:44px;border-radius:50%;border:1px solid rgba(212,175,55,.7);background:rgba(58,50,34,.85);color:#F6E3A1;font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:500;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.hmap-ctrl svg{width:18px;height:18px}
+.hmap-hint{position:absolute;left:50%;bottom:18px;transform:translateX(-50%);z-index:600;padding:10px 18px;border-radius:999px;background:rgba(58,50,34,.88);border:1px solid rgba(212,175,55,.6);color:#fff;font-family:'Cormorant Garamond',serif;font-weight:600;font-size:14px;white-space:nowrap;pointer-events:none;transition:opacity .3s}
+.hmap-2f{position:absolute;inset:2px;border-radius:26px;z-index:650;display:flex;align-items:center;justify-content:center;background:rgba(30,24,14,.55);color:#fff;font-family:'Cormorant Garamond',serif;font-weight:600;font-size:17px;opacity:0;pointer-events:none;transition:opacity .3s}
+.hmap-2f.show{opacity:1}
+.hm-hotel{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-weight:600;font-size:18px;color:#3a3222;background:radial-gradient(circle at 35% 30%,#fff,#F7E7CE);box-shadow:0 0 0 3px #D4AF37,0 0 0 5px rgba(192,192,192,.9),0 8px 18px rgba(0,0,0,.45);position:relative}
+.hm-hotel::after{content:'';position:absolute;inset:-6px;border-radius:50%;border:2px solid rgba(246,227,161,.9);animation:hmPulse 2.2s ease-out infinite}
+@keyframes hmPulse{0%{transform:scale(.85);opacity:.9}100%{transform:scale(1.6);opacity:0}}
+.hm-rec{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:999px;background:#FFFDF7;border:1.5px solid #D4AF37;color:#3a3222;font-family:'Cormorant Garamond',serif;font-weight:600;font-size:14px;white-space:nowrap;box-shadow:0 8px 18px rgba(0,0,0,.45);position:relative;transform:translate(-50%,-100%)}
+.hm-rec::after{content:'';position:absolute;left:50%;bottom:-8px;transform:translateX(-50%);border:8px solid transparent;border-bottom:0;border-top-color:#D4AF37}
+.hm-rec b{color:#c9a24a;font-weight:600}
+.hm-route{stroke-dasharray:8 10;animation:hmDash 1.6s linear infinite}
+@keyframes hmDash{to{stroke-dashoffset:-36}}
+.hmap-sheet{position:absolute;left:12px;right:12px;bottom:12px;z-index:700;padding:18px 18px 16px;border-radius:22px;background:rgba(46,39,26,.96);border:1px solid rgba(212,175,55,.6);color:#fff;text-align:left;transform:translateY(120%);transition:transform .5s cubic-bezier(.2,.7,.2,1);box-shadow:0 -10px 30px rgba(0,0,0,.35)}
+.hmap-sheet.open{transform:none}
+.hms-x{position:absolute;top:10px;right:10px;width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;font-size:16px;cursor:pointer}
+.hms-top{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.hms-num{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-weight:600;font-size:16px;color:#3a3222;background:#F6E3A1}
+.hms-type{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:#E8CF7A}
+.hms-name{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:22px;line-height:1.25;margin:2px 44px 4px 0}
+.hms-addr{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:15px;color:#efe3c8;line-height:1.45}
+.hms-dist{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:15px;color:#F6E3A1;margin:6px 0 12px}
+.hms-btns{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.hms-btns a{display:flex;align-items:center;justify-content:center;min-height:46px;border-radius:999px;border:1px solid rgba(255,255,255,.45);color:#fff;text-decoration:none;font-family:'Cormorant Garamond',serif;font-weight:600;font-size:15px}
+.hms-btns a.gold{background:linear-gradient(135deg,#F6E3A1,#D4AF37);color:#3a3222;border-color:#D4AF37}
+@media(prefers-reduced-motion:reduce){.hosp-photo,.hm-hotel::after,.hm-route{animation:none!important}}
+
+
+.hosp-name{padding:.1em 0}
+.hosp-type,.hms-type,.btn-hosp,.hv-btn,.hosp-num{font-weight:700!important}
+.hm-hotel,.hms-num{font-family:Arial,Helvetica,sans-serif!important;font-weight:700!important}
+</style>
+<script>
+/* ════════ PAQUETE DE EFECTOS v2 · Zuleyma & Horlando ════════ */
+(function(){
+var RM2=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+function T(es,en){return window.LANG==='en'?en:es;}
+
+/* 2 · Fundido uniforme entre secciones */
+function initSectionFades(){
+  var secs=[].slice.call(document.querySelectorAll('.wrap > section, .wrap > footer'));
+  var page=getComputedStyle(document.body).backgroundColor;
+  function rgb(c){var m=String(c).match(/[\d.]+/g);if(!m)return null;if(m.length===4&&+m[3]===0)return null;return [+m[0],+m[1],+m[2]];}
+  function hex(h){h=h.replace('#','');return [parseInt(h.substr(0,2),16),parseInt(h.substr(2,2),16),parseInt(h.substr(4,2),16)];}
+  function edge(s,which){var d=s.getAttribute(which==='top'?'data-top':'data-bot');if(d)return hex(d);return rgb(getComputedStyle(s).backgroundColor)||rgb(page)||[255,255,240];}
+  function grad(c,dir){var st=[];for(var i=0;i<=8;i++){var t=i/8,a=1-t*t*(3-2*t);st.push('rgba('+c[0]+','+c[1]+','+c[2]+','+a.toFixed(3)+') '+(t*100).toFixed(1)+'%');}return 'linear-gradient('+dir+','+st.join(',')+')';}
+  for(var i=0;i<secs.length-1;i++){
+    var A=secs[i],B=secs[i+1],a=edge(A,'bot'),b=edge(B,'top');
+    if(A.id==='hero'){A.style.setProperty('--hero-next','rgb('+b.join(',')+')');continue;}
+    var m=[Math.round((a[0]+b[0])/2),Math.round((a[1]+b[1])/2),Math.round((a[2]+b[2])/2)];
+    A.style.setProperty('--fade-bot',grad(m,'to top'));
+    B.style.setProperty('--fade-top',grad(m,'to bottom'));
+  }
+}
+
+/* 1 · Hero al hacer scroll */
+function initHeroScroll(){
+  if(RM2||!window.gsap)return;
+  gsap.to('.hero-content',{y:-110,opacity:0,filter:'blur(10px)',ease:'none',scrollTrigger:{trigger:'#hero',start:'top top',end:'bottom 15%',scrub:true}});
+  gsap.fromTo('.hero-bg',{filter:'blur(0px) brightness(1)'},{y:-70,filter:'blur(5px) brightness(.92)',ease:'none',scrollTrigger:{trigger:'#hero',start:'top top',end:'bottom top',scrub:true}});
+}
+
+/* 6 · Lluvia de sobres: no se detiene; el sobre aterriza y se abre al tocar */
+function initSobres(){
+  var sec=document.getElementById('regalos'),rain=document.getElementById('envRain'),
+      btn=document.getElementById('envGift'),body=document.getElementById('envGiftBody'),hint=document.getElementById('envGiftHint');
+  if(!sec||!rain||!btn)return;
+  var landed=false,landing=false,alive=0,MAX=22,onScreen=false,spawnCall=null,pendingOpen=false;
+  var DEPTH=[{w:[14,20],o:.38,d:[9,12]},{w:[20,28],o:.62,d:[7,9]},{w:[28,38],o:.85,d:[5,7]}];
+  function r(a){return a[0]+Math.random()*(a[1]-a[0]);}
+  function make(){
+    if(alive>=MAX||!onScreen||RM2)return;alive++;
+    var L=DEPTH[Math.floor(Math.random()*3)],w=r(L.w);
+    var el=document.createElementNS('http://www.w3.org/2000/svg','svg');
+    el.setAttribute('viewBox','0 0 34 24');el.setAttribute('class','env-rain-item');
+    el.style.width=w+'px';el.style.height=(w*24/34)+'px';el.style.left=(Math.random()*100)+'%';
+    el.innerHTML='<rect x="1" y="1" width="32" height="22" rx="2.5" fill="#FFFDF4" stroke="#C9A24A" stroke-width="1.1"/>'+
+      '<path d="M1 1 L17 13 L33 1" fill="#F7E7CE" stroke="#C9A24A" stroke-width="1.1" stroke-linejoin="round"/>'+
+      '<circle cx="17" cy="13" r="3" fill="#8A6A22"/>';
+    rain.appendChild(el);
+    var H=sec.offsetHeight+80,dur=r(L.d);
+    function kill(){if(el.parentNode){el.remove();alive--;}}
+    gsap.timeline({onComplete:kill})
+      .fromTo(el,{y:-50,x:0,rotation:(Math.random()-.5)*50},{y:H,x:(Math.random()-.5)*70,rotation:(Math.random()-.5)*160,duration:dur,ease:'none'},0)
+      .fromTo(el,{opacity:0},{opacity:L.o,duration:dur*.15},0)
+      .to(el,{opacity:0,duration:dur*.2},dur*.8);
+  }
+  function loop(){spawnCall=gsap.delayedCall(.45,function(){make();loop();});}
+  ScrollTrigger.create({trigger:sec,start:'top bottom',end:'bottom top',onToggle:function(s){
+    onScreen=s.isActive;
+    if(onScreen&&!spawnCall){for(var i=0;i<6;i++)gsap.delayedCall(i*.22,make);loop();}
+    if(!onScreen&&spawnCall){spawnCall.kill();spawnCall=null;}
+  }});
+  gsap.set(btn,{opacity:0});
+  function hintTxt(){hint.textContent=btn.classList.contains('open')?T('Toca para cerrar','Tap to close'):T('Toca para abrir','Tap to open');}
+  hintTxt();
+  function land(){
+    if(landed||landing)return;landing=true;
+    gsap.fromTo(btn,{opacity:0,y:-150,rotation:-12,scale:.82},{opacity:1,y:0,rotation:0,scale:1,duration:RM2?.3:1.15,ease:'back.out(1.5)',onComplete:function(){
+      landed=true;body.classList.add('landed');hint.classList.add('show');
+      if(pendingOpen){pendingOpen=false;toggle();}
+    }});
+  }
+  ScrollTrigger.create({trigger:sec,start:'center 60%',once:true,onEnter:land});
+  function toggle(){
+    var open=btn.classList.toggle('open');
+    btn.setAttribute('aria-expanded',open?'true':'false');
+    hintTxt();body.classList.toggle('landed',!open);
+    setTimeout(function(){ScrollTrigger.refresh();},700);
+  }
+  function tap(e){if(e)e.preventDefault();if(!landed){pendingOpen=true;land();return;}toggle();}
+  btn.addEventListener('click',tap);hint.addEventListener('click',tap);
+  window.__zhLang.push(hintTxt);
+}
+
+/* RSVP: recuadro de menores (?menores=) */
+function initMenores(){
+  var n=Math.max(0,Math.min(20,parseInt(new URLSearchParams(location.search).get('menores'),10)||0));
+  var pd=document.getElementById('rsvp-pases-display');if(!n||!pd)return;
+  var box=document.createElement('div');box.className='rsvp-men';
+  box.innerHTML='<small></small><b>'+n+'</b>';pd.parentNode.insertBefore(box,pd.nextSibling);
+  var wrap=document.createElement('div');wrap.style.cssText='display:flex;justify-content:center;gap:12px;align-items:flex-start';
+  pd.parentNode.insertBefore(wrap,pd);wrap.appendChild(pd);wrap.appendChild(box);box.style.margin='0';
+  function lbl(){box.querySelector('small').textContent=n===1?T('Menor','Child'):T('Menores','Children');}
+  lbl();window.__zhLang.push(lbl);
+}
+
+/* 7 · Hospedaje: lista + mapa */
+var HOTELS=[{"n": "Best Western Lake Conroe Inn", "t": "Hotel · el más cercano", "te": "Hotel · closest", "a": "14643 Highway 105 West, Montgomery, TX 77356", "lat": 30.35375898393512, "lng": -95.58434575796127, "mi": 3.8, "min": 6, "b": "https://www.booking.com/hotel/us/best-western-lake-conroe.html", "m": "https://www.google.com/maps/search/?api=1&query=Best+Western+Lake+Conroe+Inn+14643+Highway+105+West+Montgomery+TX+77356", "f": ["https://cf.bstatic.com/xdata/images/hotel/max500/778897497.jpg?k=2dffb2eb8fbde7de5699ee66fb517c34db11052ed82c76ecda15c0c4277b164d", "https://cf.bstatic.com/xdata/images/hotel/max500/778897499.jpg?k=8e5edf50533d7cffdc917b1fafc28c693e659cc73d04a9d6f9c21da63d8e8996", "https://cf.bstatic.com/xdata/images/hotel/max500/778897532.jpg?k=259b1580913394ce4fb8033cdd60a95db4c366f7abdab71addf7f501bf165d87", "https://cf.bstatic.com/xdata/images/hotel/max500/778897521.jpg?k=41dbc243b75174adf590892486f1e010954991f734818613bbf7c0ff9047e1e3"], "route": [[30.35376, -95.58425], [30.35397, -95.58425], [30.35418, -95.58415], [30.3541, -95.58394], [30.35407, -95.58386], [30.35399, -95.58362], [30.35391, -95.5834], [30.35385, -95.58325], [30.35378, -95.58304], [30.35397, -95.58306], [30.35412, -95.58348], [30.35427, -95.5839], [30.35436, -95.5841], [30.35482, -95.5853], [30.35545, -95.5869], [30.35553, -95.5871], [30.35571, -95.58758], [30.35577, -95.58772], [30.35581, -95.58785], [30.35604, -95.58849], [30.35621, -95.58898], [30.35644, -95.58965], [30.35655, -95.58995], [30.35661, -95.59013], [30.35666, -95.59028], [30.35686, -95.59089], [30.357, -95.59136], [30.35717, -95.59192], [30.35758, -95.59322], [30.35774, -95.59373], [30.35804, -95.59463], [30.35869, -95.59644], [30.35883, -95.59681], [30.35908, -95.59751], [30.3592, -95.59784], [30.35929, -95.5981], [30.35943, -95.59848], [30.35955, -95.59881], [30.35972, -95.59932], [30.35994, -95.59995], [30.36008, -95.60034], [30.36084, -95.60254], [30.36144, -95.6043], [30.3621, -95.60625], [30.3626, -95.60775], [30.36327, -95.60968], [30.36364, -95.61074], [30.36434, -95.61274], [30.36487, -95.61424], [30.36498, -95.61456], [30.36592, -95.61716], [30.3664, -95.61851], [30.36666, -95.61922], [30.36716, -95.62061], [30.36745, -95.62135], [30.36797, -95.62261], [30.36866, -95.62424], [30.36942, -95.62591], [30.37004, -95.62728], [30.37064, -95.62868], [30.3708, -95.62905], [30.37112, -95.6298], [30.37133, -95.63029], [30.37167, -95.63106], [30.37179, -95.63136], [30.37199, -95.63181], [30.37243, -95.63283], [30.37282, -95.63376], [30.37268, -95.63383], [30.37258, -95.63387], [30.37251, -95.63389], [30.3723, -95.63387], [30.37145, -95.63367], [30.37105, -95.63358], [30.37068, -95.6335], [30.37054, -95.63347], [30.37027, -95.63343], [30.36985, -95.63336], [30.36977, -95.63334], [30.36968, -95.6333], [30.36933, -95.63318], [30.36888, -95.63299], [30.36878, -95.63295], [30.36859, -95.63288], [30.3681, -95.63268], [30.36788, -95.63259], [30.3676, -95.63247], [30.36728, -95.63236], [30.36719, -95.63232], [30.36719, -95.63232]]}, {"n": "Margaritaville Lake Resort, Lake Conroe", "t": "Resort · junto al lago", "te": "Resort · lakeside", "a": "600 La Torretta Blvd, Montgomery, TX 77356", "lat": 30.393618, "lng": -95.636913, "mi": 5.0, "min": 11, "b": "https://www.booking.com/hotel/us/margaritaville-lake-resort-lake-conroe.html", "m": "https://www.google.com/maps/search/?api=1&query=Margaritaville+Lake+Resort+Lake+Conroe+Montgomery+TX+77356", "f": ["https://cf.bstatic.com/xdata/images/hotel/max500/233801898.jpg?k=d772934f2ebfe9f9fc4ca764ec62d74f9e75ecd331281deff3f7dd990a26e741", "https://cf.bstatic.com/xdata/images/hotel/max500/719893751.jpg?k=fe1fa68685fc0d5ea7f6c155b1444b8d8899858ca71d9f66b315be1c80026af2", "https://cf.bstatic.com/xdata/images/hotel/max500/719892942.jpg?k=75ee88cacb710df188c22c451d0d65eba6d49f89c10735131ebfb493c291737e", "https://cf.bstatic.com/xdata/images/hotel/max500/233801931.jpg?k=030f9e827c2494150506b8f1eea389baeeaf0d2319f61f3a7ed3dc8aa4479be8"], "route": [[30.39362, -95.63746], [30.39378, -95.63752], [30.39389, -95.63763], [30.39404, -95.63769], [30.39423, -95.63765], [30.39436, -95.63758], [30.39446, -95.63753], [30.39479, -95.63799], [30.395, -95.63813], [30.39527, -95.63822], [30.39545, -95.63826], [30.39564, -95.63829], [30.39581, -95.63824], [30.39603, -95.63814], [30.39647, -95.63807], [30.39699, -95.63799], [30.39786, -95.6379], [30.39824, -95.63791], [30.39868, -95.63802], [30.39912, -95.63827], [30.40044, -95.63957], [30.40067, -95.63974], [30.40102, -95.6399], [30.40133, -95.63997], [30.40283, -95.64001], [30.40345, -95.64003], [30.40421, -95.64017], [30.40419, -95.64122], [30.40418, -95.64268], [30.40418, -95.64467], [30.40418, -95.64513], [30.40418, -95.64802], [30.40418, -95.64843], [30.40423, -95.64871], [30.40427, -95.64891], [30.40441, -95.64948], [30.4046, -95.65023], [30.40464, -95.65047], [30.40467, -95.65073], [30.40467, -95.65099], [30.40464, -95.65125], [30.40458, -95.65153], [30.40449, -95.65183], [30.40444, -95.65194], [30.40433, -95.65217], [30.40418, -95.65239], [30.40403, -95.65259], [30.40384, -95.65276], [30.40364, -95.65292], [30.40343, -95.65304], [30.4032, -95.65314], [30.40294, -95.65322], [30.40271, -95.65324], [30.40248, -95.65324], [30.40223, -95.6532], [30.40145, -95.65304], [30.39736, -95.65222], [30.39636, -95.65217], [30.39588, -95.65237], [30.39559, -95.65256], [30.39541, -95.65273], [30.3953, -95.65283], [30.39486, -95.65363], [30.39469, -95.65426], [30.39453, -95.65475], [30.39418, -95.65536], [30.39365, -95.65582], [30.39328, -95.65603], [30.39314, -95.65612], [30.39221, -95.65661], [30.39176, -95.65676], [30.39118, -95.65677], [30.38981, -95.65643], [30.38857, -95.65602], [30.38791, -95.6555], [30.3876, -95.6552], [30.38673, -95.65426], [30.38579, -95.65331], [30.38553, -95.65313], [30.38507, -95.65293], [30.3846, -95.65284], [30.38375, -95.65285], [30.38336, -95.65289], [30.38309, -95.65291], [30.38285, -95.65295], [30.38263, -95.65268], [30.38231, -95.65172], [30.38204, -95.65103], [30.38173, -95.65033], [30.38122, -95.64928], [30.38052, -95.64802], [30.38006, -95.64721], [30.37943, -95.64608], [30.37877, -95.64491], [30.37834, -95.64416], [30.37812, -95.64377], [30.37782, -95.64324], [30.37695, -95.64171], [30.37575, -95.63959], [30.37495, -95.63817], [30.37389, -95.63627], [30.37322, -95.63504], [30.37282, -95.63417], [30.37258, -95.63387], [30.3723, -95.63387], [30.37105, -95.63358], [30.37054, -95.63347], [30.36985, -95.63336], [30.36968, -95.6333], [30.36888, -95.63299], [30.36859, -95.63288], [30.36788, -95.63259], [30.36728, -95.63236], [30.36719, -95.63232]]}, {"n": "Homewood Suites by Hilton Conroe", "t": "Hotel · suites", "te": "Hotel · suites", "a": "3000 Interstate 45 North, Conroe, TX 77303", "lat": 30.3523514242, "lng": -95.4869344706, "mi": 10.5, "min": 15, "b": "https://www.booking.com/hotel/us/homewood-suites-by-hilton-conroe.html", "m": "https://www.google.com/maps/search/?api=1&query=Homewood+Suites+by+Hilton+Conroe+3000+Interstate+45+North+Conroe+TX+77303", "f": ["https://cf.bstatic.com/xdata/images/hotel/max500/474425906.jpg?k=5597ba6c682581f7b97e7638e179c1a5601190d0f557ceeedc34ed12fd221470", "https://cf.bstatic.com/xdata/images/hotel/max500/474426208.jpg?k=887d63c06f07ce021a8de55072b99eb7d3431590e993cd9d6f3d54dc60ec0987", "https://cf.bstatic.com/xdata/images/hotel/max500/474425952.jpg?k=914a2858745872e55d9d184d9c9c5c2186b2d08925cb6246a469a673bf87eed9", "https://cf.bstatic.com/xdata/images/hotel/max500/474425977.jpg?k=e7a7cb4af522fe46c1bdfdac27d6d2b953b7ab8e37f4e7853b6a0485bcdc958d"], "route": [[30.35235, -95.48654], [30.35229, -95.48635], [30.35157, -95.48642], [30.35158, -95.48705], [30.35147, -95.48769], [30.35137, -95.48802], [30.35115, -95.48855], [30.35092, -95.48893], [30.35043, -95.48959], [30.35014, -95.48996], [30.34983, -95.49047], [30.3495, -95.4915], [30.3493, -95.49238], [30.34888, -95.49416], [30.3483, -95.49568], [30.34746, -95.49692], [30.34633, -95.49801], [30.34342, -95.50026], [30.34234, -95.50109], [30.34151, -95.50192], [30.34096, -95.50297], [30.34073, -95.50377], [30.34, -95.50664], [30.33951, -95.508], [30.3391, -95.50857], [30.3386, -95.50904], [30.33815, -95.50929], [30.33704, -95.50974], [30.33557, -95.51031], [30.33502, -95.51052], [30.33441, -95.51075], [30.33392, -95.51096], [30.33343, -95.51129], [30.33386, -95.51214], [30.33468, -95.51337], [30.33497, -95.51379], [30.33534, -95.51436], [30.33555, -95.51467], [30.33659, -95.51621], [30.3369, -95.51668], [30.33823, -95.51855], [30.3391, -95.51977], [30.33972, -95.52071], [30.33987, -95.52098], [30.34023, -95.52159], [30.34045, -95.522], [30.34078, -95.52269], [30.34105, -95.52328], [30.34118, -95.52357], [30.34143, -95.52424], [30.34184, -95.5255], [30.34205, -95.5263], [30.34219, -95.52689], [30.3424, -95.52796], [30.34253, -95.52891], [30.34265, -95.5302], [30.34267, -95.53177], [30.34263, -95.53384], [30.34261, -95.53479], [30.3426, -95.53539], [30.34258, -95.53643], [30.34253, -95.53879], [30.34246, -95.54256], [30.34242, -95.54423], [30.34238, -95.54668], [30.34242, -95.54816], [30.34253, -95.54947], [30.34259, -95.54991], [30.34288, -95.55137], [30.34306, -95.55206], [30.34324, -95.55268], [30.34371, -95.55416], [30.34414, -95.55536], [30.34452, -95.55639], [30.3449, -95.55747], [30.3457, -95.55974], [30.34628, -95.56138], [30.34686, -95.563], [30.34765, -95.56522], [30.34864, -95.56803], [30.34925, -95.56973], [30.34933, -95.56996], [30.35015, -95.57228], [30.35078, -95.57407], [30.35199, -95.57749], [30.35257, -95.57912], [30.35277, -95.57967], [30.35313, -95.58071], [30.35346, -95.58163], [30.35374, -95.58243], [30.35397, -95.58306], [30.35427, -95.5839], [30.35482, -95.5853], [30.35553, -95.5871], [30.35577, -95.58772], [30.35604, -95.58849], [30.35644, -95.58965], [30.35661, -95.59013], [30.35686, -95.59089], [30.35717, -95.59192], [30.35774, -95.59373], [30.35869, -95.59644], [30.35908, -95.59751], [30.35929, -95.5981], [30.35955, -95.59881], [30.35994, -95.59995], [30.36084, -95.60254], [30.3621, -95.60625], [30.36327, -95.60968], [30.36434, -95.61274], [30.36498, -95.61456], [30.3664, -95.61851], [30.36716, -95.62061], [30.36797, -95.62261], [30.36942, -95.62591], [30.37064, -95.62868], [30.37112, -95.6298], [30.37167, -95.63106], [30.37199, -95.63181], [30.37282, -95.63376], [30.37258, -95.63387], [30.3723, -95.63387], [30.37105, -95.63358], [30.37054, -95.63347], [30.36985, -95.63336], [30.36968, -95.6333], [30.36888, -95.63299], [30.36859, -95.63288], [30.36788, -95.63259], [30.36728, -95.63236], [30.36719, -95.63232]]}];
+var REC={lat:30.3671607,lng:-95.6324061,maps:'https://www.google.com/maps/search/?api=1&query=The+Luminaire+Venue+495+S+Pine+Lake+Rd+Montgomery+TX+77356'};
+function initHosp(){
+  var track=document.getElementById('hospTrack');if(!track)return;
+  var ico={book:'<svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="14" rx="2"/><path d="M7 7V5a5 5 0 0110 0v2"/></svg>',pin:'<svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>'};
+  function dist(h){return h.mi+' mi · '+h.min+' min '+T('a la recepción','to the reception');}
+  function type(h){return T(h.t,h.te);}
+  var idx=0,n=HOTELS.length,dots=document.getElementById('hospDots');
+  function render(){
+    track.innerHTML='';
+    HOTELS.forEach(function(h,i){
+      var s=document.createElement('div');s.className='hosp-slide';
+      s.innerHTML='<span class="hosp-num">'+String(i+1).padStart(2,'0')+'</span>'+
+        '<div class="hosp-photo"><img src="'+h.f[0]+'" alt="'+h.n+'" referrerpolicy="no-referrer"></div>'+
+        '<div class="hosp-thumbs">'+h.f.map(function(u,k){return '<button type="button" class="'+(k?'':'on')+'" aria-label="'+T('Foto ','Photo ')+(k+1)+'"><img src="'+u+'" alt="" referrerpolicy="no-referrer"></button>';}).join('')+'</div>'+
+        '<div class="hosp-name">'+h.n+'</div><div class="hosp-type">'+type(h)+'</div>'+
+        '<div class="hosp-addr">'+h.a+'</div><div class="hosp-dist">'+dist(h)+'</div>'+
+        '<div class="hosp-btns"><a class="btn-hosp gold" href="'+h.b+'" target="_blank" rel="noopener">'+ico.book+T('Reservar','Book')+'</a><a class="btn-hosp" href="'+h.m+'" target="_blank" rel="noopener">'+ico.pin+T('Cómo llegar','Directions')+'</a></div>';
+      var main=s.querySelector('.hosp-photo img');
+      s.querySelectorAll('.hosp-thumbs button').forEach(function(b,k){b.addEventListener('click',function(){
+        s.querySelectorAll('.hosp-thumbs button').forEach(function(x){x.classList.remove('on');});b.classList.add('on');
+        main.style.opacity=0;setTimeout(function(){main.src=h.f[k];main.style.opacity=1;},200);
+      });});
+      track.appendChild(s);
+    });
+    go(idx);
+  }
+  for(var i=0;i<n;i++){(function(k){var d=document.createElement('button');d.type='button';d.setAttribute('aria-label','Hotel '+(k+1));d.addEventListener('click',function(){go(k);});dots.appendChild(d);})(i);}
+  function go(i){idx=(i+n)%n;track.style.transform='translateX('+(-idx*100)+'%)';[].forEach.call(dots.children,function(d,k){d.classList.toggle('on',k===idx);});}
+  document.querySelector('.hosp-arrow.prev').addEventListener('click',function(){go(idx-1);});
+  document.querySelector('.hosp-arrow.next').addEventListener('click',function(){go(idx+1);});
+  var sx=0,sy=0;
+  track.addEventListener('touchstart',function(e){sx=e.touches[0].clientX;sy=e.touches[0].clientY;},{passive:true});
+  track.addEventListener('touchend',function(e){var dx=e.changedTouches[0].clientX-sx,dy=e.changedTouches[0].clientY-sy;if(Math.abs(dx)>40&&Math.abs(dx)>Math.abs(dy))go(dx<0?idx+1:idx-1);},{passive:true});
+  render();window.__zhLang.push(render);
+
+  var tg=document.querySelector('.hv-toggle'),lista=document.getElementById('hvLista'),mapa=document.getElementById('hvMapa'),built=false,cur=null;
+  tg.querySelectorAll('.hv-btn').forEach(function(b){b.addEventListener('click',function(){
+    var v=b.dataset.view;tg.classList.toggle('mapa',v==='mapa');
+    tg.querySelectorAll('.hv-btn').forEach(function(x){var on=x===b;x.classList.toggle('on',on);x.setAttribute('aria-selected',on);});
+    lista.hidden=v!=='lista';mapa.hidden=v!=='mapa';
+    if(v==='mapa'){if(!built){built=true;buildMap();}else if(window._hm){_hm.invalidateSize();}}
+    if(window.ScrollTrigger)setTimeout(function(){ScrollTrigger.refresh();initSectionFades();},60);
+  });});
+
+  function loadLeaflet(cb){
+    if(window.L)return cb();
+    var c=document.createElement('link');c.rel='stylesheet';c.href='https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css';document.head.appendChild(c);
+    var s=document.createElement('script');s.src='https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js';s.onload=cb;document.head.appendChild(s);
+  }
+  function buildMap(){loadLeaflet(function(){
+    var touch=('ontouchstart' in window)||navigator.maxTouchPoints>0;
+    var map=L.map('hmap',{zoomControl:false,attributionControl:true,dragging:!touch,tap:false,scrollWheelZoom:false,touchZoom:true});
+    window._hm=map;
+    L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}',{maxZoom:16,attribution:'Tiles &copy; Esri'}).addTo(map);
+    L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Reference/MapServer/tile/{z}/{y}/{x}',{maxZoom:16}).addTo(map);
+    var pts=[[REC.lat,REC.lng]];
+    HOTELS.forEach(function(h){L.polyline(h.route,{color:'#E6C97A',weight:3,opacity:.95,className:'hm-route'}).addTo(map);});
+    var recM=L.marker([REC.lat,REC.lng],{icon:L.divIcon({className:'',html:'<div class="hm-rec"><b>♥</b> <span>'+T('Recepción','Reception')+'</span></div>',iconSize:[0,0]}),keyboard:false,zIndexOffset:-1000}).addTo(map);
+    HOTELS.forEach(function(h,i){
+      pts.push([h.lat,h.lng]);
+      var m=L.marker([h.lat,h.lng],{icon:L.divIcon({className:'',html:'<div class="hm-hotel">'+(i+1)+'</div>',iconSize:[40,40],iconAnchor:[20,20]}),title:h.n}).addTo(map);
+      m.on('click',function(){openSheet(i);map.flyTo([h.lat-.004,h.lng],14,{duration:RM2?0:.9});});
+    });
+    var bounds=L.latLngBounds(pts);
+    function all(){map.fitBounds(bounds,{paddingTopLeft:[90,120],paddingBottomRight:[50,90]});}
+    map.invalidateSize();all();
+    document.getElementById('hmZin').onclick=function(){map.zoomIn();};
+    document.getElementById('hmZout').onclick=function(){map.zoomOut();};
+    document.getElementById('hmAll').onclick=function(){closeSheet();all();};
+    var sheet=document.getElementById('hmSheet'),hint=document.getElementById('hmHint');
+    function openSheet(i){
+      cur=i;var h=HOTELS[i];
+      document.getElementById('hmsNum').textContent=i+1;document.getElementById('hmsType').textContent=type(h);
+      document.getElementById('hmsName').textContent=h.n;document.getElementById('hmsAddr').textContent=h.a;
+      document.getElementById('hmsDist').textContent=dist(h);
+      document.getElementById('hmsMap').href=h.m;document.getElementById('hmsBook').href=h.b;
+      sheet.classList.add('open');hint.style.opacity=0;
+    }
+    function closeSheet(){cur=null;sheet.classList.remove('open');hint.style.opacity=1;}
+    document.getElementById('hmsX').onclick=closeSheet;
+    window.__zhLang.push(function(){var sp=recM.getElement()&&recM.getElement().querySelector('.hm-rec span');if(sp)sp.textContent=T('Recepción','Reception');if(cur!==null)openSheet(cur);});
+    if(touch){
+      var el=document.getElementById('hmap'),tip=document.getElementById('hm2f'),tt=null;
+      el.addEventListener('touchstart',function(e){if(e.touches.length>1){map.dragging.enable();tip.classList.remove('show');}else{map.dragging.disable();}},{passive:true});
+      el.addEventListener('touchmove',function(e){if(e.touches.length===1){tip.classList.add('show');clearTimeout(tt);tt=setTimeout(function(){tip.classList.remove('show');},1200);}},{passive:true});
+      el.addEventListener('touchend',function(e){if(e.touches.length<2)map.dragging.disable();},{passive:true});
+    }
+  });}
+}
+
+/* cambios de idioma: re-pintar textos generados por JS */
+window.__zhLang=window.__zhLang||[];
+new MutationObserver(function(){window.__zhLang.forEach(function(f){try{f();}catch(e){}});}).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});
+
+function boot(){
+  initSectionFades();initMenores();initHosp();
+  if(!RM2)document.querySelectorAll('.dc-swatches').forEach(function(s){if(s.children.length===2)s.classList.add('swap');});
+}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);else boot();
+window.addEventListener('load',initSectionFades);
+
+/* lo que depende de GSAP corre una vez, con la invitación abierta */
+var started=false;
+function startFx(){if(started||!window.gsap||!window.ScrollTrigger)return;started=true;initHeroScroll();initSobres();setTimeout(function(){ScrollTrigger.refresh();},400);}
+var prev=window.initMain;
+if(typeof prev==='function'){window.initMain=function(){var r=prev.apply(this,arguments);startFx();return r;};}
+window.addEventListener('load',function(){setTimeout(startFx,1500);});
+})();
+
+</script>
 </body>
 </html>
