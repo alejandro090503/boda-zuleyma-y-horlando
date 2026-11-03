@@ -26,6 +26,7 @@ body{font-family:'Montserrat',sans-serif;color:var(--ink);-webkit-font-smoothing
 .sc{position:absolute;inset:0;visibility:hidden;opacity:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:70px 34px 96px;overflow:hidden}
 .sc>*{max-width:100%}
 .bg{position:absolute;inset:-6%;background-size:cover;background-position:center;z-index:-2}
+.sc{isolation:isolate}
 video.bg{inset:0;width:100%;height:100%;object-fit:cover}
 .veil{position:absolute;inset:0;z-index:-1;pointer-events:none}
 .frame{position:absolute;inset:16px;pointer-events:none;z-index:1}
@@ -248,7 +249,7 @@ video.bg{inset:0;width:100%;height:100%;object-fit:cover}
   <section class="sc lightsc" id="s5">
     <div class="bg"></div><div class="veil"></div>
     <div class="frame"><i></i><i></i><i></i><i></i></div>
-    <div class="ttl c"><span class="script a" data-en="where">dónde</span><span class="serif foil split a" data-en="LOCATION">UBICACIÓN</span></div>
+    <div class="ttl c"><span class="script a" data-en="the">el lugar</span><span class="serif foil split a" data-en="VENUE">DEL EVENTO</span></div>
     <div class="place a"><p class="k" data-en="Religious ceremony">Ceremonia religiosa</p><p class="serif" data-en="To be confirmed">Por confirmar</p><p>Montgomery, Texas</p></div>
     <div class="place a"><p class="k" data-en="Reception">Recepción</p><p class="serif">The Luminaire Venue</p><p>495 S Pine Lake Rd<br>Montgomery, TX 77356</p>
       <a class="btn" style="margin-top:14px" href="https://www.google.com/maps/search/?api=1&query=The+Luminaire+Venue+495+S+Pine+Lake+Rd+Montgomery+TX+77356" target="_blank" rel="noopener" data-en="Directions">Cómo llegar</a></div>
