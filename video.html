@@ -7,158 +7,214 @@
 <meta name="description" content="Zuleyma Morales & Horlando Martínez · 3 de abril de 2027 · Montgomery, Texas">
 <meta property="og:title" content="Zuleyma & Horlando · 3 de abril de 2027">
 <meta property="og:image" content="https://boda-zuleyma-y-horlando.vercel.app/og-image.jpg">
-<meta name="theme-color" content="#1a140c">
+<meta name="theme-color" content="#120e08">
+<link rel="preload" href="vid/sobre.mp4" as="video" type="video/mp4">
 <style>
 @font-face{font-family:'Bodoni Moda';src:url(fonts/BodoniModa.ttf) format('truetype');font-weight:400 900;font-display:swap}
 @font-face{font-family:'WindSong';src:url(fonts/WindSong.ttf) format('truetype');font-display:swap}
 @font-face{font-family:'Montserrat';src:url(fonts/Montserrat.ttf) format('truetype');font-weight:100 900;font-display:swap}
-:root{--ink:#1c1710;--ivory:#fffff0;--champ:#f7e7ce;--gold:#c9a24a;--gold-d:#8a6a22;--sepia:#2a2013}
+:root{--ink:#1c1710;--ivory:#fffff0;--champ:#f7e7ce;--gold:#c9a24a;--gold-d:#8a6a22}
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{height:100%;background:#120e08;overflow:hidden;overscroll-behavior:none}
 body{font-family:'Montserrat',sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased;-webkit-tap-highlight-color:transparent}
-.stage{position:fixed;inset:0;margin:0 auto;max-width:480px;overflow:hidden;background:#000}
+.stage{position:fixed;inset:0;margin:0 auto;max-width:480px;overflow:hidden;background:#000;isolation:isolate}
 @media(min-width:520px){.stage{inset:2vh auto;height:96vh;left:0;right:0;width:min(480px,54vh);border-radius:34px;box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 0 1px rgba(201,162,74,.35)}
   body{background:url(ink/ink-hero.webp) center/cover}
-  body::before{content:'';position:fixed;inset:0;background:rgba(18,14,8,.55)}}
-.sc{position:absolute;inset:0;visibility:hidden;opacity:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 26px}
-.bg{position:absolute;inset:-6%;background-size:cover;background-position:center;z-index:-1}
-.veil{position:absolute;inset:0;z-index:-1}
-/* tipografía */
-.cap{font-family:'Montserrat',sans-serif;font-weight:400;font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;line-height:1.7}
+  body::before{content:'';position:fixed;inset:0;background:rgba(18,14,8,.6)}}
+.sc{position:absolute;inset:0;visibility:hidden;opacity:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 26px 40px;overflow:hidden}
+.bg{position:absolute;inset:-6%;background-size:cover;background-position:center;z-index:-2}
+video.bg{inset:0;width:100%;height:100%;object-fit:cover}
+.veil{position:absolute;inset:0;z-index:-1;pointer-events:none}
+.frame{position:absolute;inset:16px;pointer-events:none;z-index:1}
+.frame i{position:absolute;background:linear-gradient(90deg,transparent,rgba(232,206,140,.85),transparent)}
+.frame i:nth-child(1),.frame i:nth-child(2){left:0;right:0;height:1px}
+.frame i:nth-child(1){top:0}.frame i:nth-child(2){bottom:0}
+.frame i:nth-child(3),.frame i:nth-child(4){top:0;bottom:0;width:1px;background:linear-gradient(180deg,transparent,rgba(232,206,140,.85),transparent)}
+.frame i:nth-child(3){left:0}.frame i:nth-child(4){right:0}
+.lightsc .frame i{background:linear-gradient(90deg,transparent,rgba(138,106,34,.6),transparent)}
+.lightsc .frame i:nth-child(3),.lightsc .frame i:nth-child(4){background:linear-gradient(180deg,transparent,rgba(138,106,34,.6),transparent)}
+.cap{font-family:'Montserrat',sans-serif;font-weight:500;font-size:12.5px;letter-spacing:.24em;text-transform:uppercase;line-height:1.8}
 .serif{font-family:'Bodoni Moda',serif;font-weight:400}
-.script{font-family:'WindSong',cursive;font-weight:400;line-height:1;padding:.2em .3em;margin:-.2em -.3em}
-.light{color:#fff}
-/* 0 · sobre */
+.script{font-family:'WindSong',cursive;font-weight:400;line-height:1;padding:.25em .35em;margin:-.25em -.35em;display:inline-block}
+.ch{display:inline-block;white-space:pre}.wd{display:inline-block;white-space:nowrap}
+.foil .ch,.foil.solo{background:linear-gradient(105deg,#7a5c14 0%,#c9a24a 18%,#fff3cf 30%,#e2c47c 40%,#9c7a2a 55%,#f4dd9c 72%,#8a6a22 100%);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;animation:foil 5.5s ease-in-out infinite;animation-delay:calc(var(--i,0) * .07s)}
+@keyframes foil{0%,100%{background-position:100% 0}50%{background-position:0 0}}
+.dark .foil{filter:drop-shadow(0 0 10px rgba(255,220,150,.35)) drop-shadow(0 2px 2px rgba(0,0,0,.45))}
+.lightsc .foil .ch,.lightsc .foil.solo,#s8 .foil .ch{background-image:linear-gradient(105deg,#3b2c0e 0%,#8a6a22 22%,#d9b860 34%,#6b5218 48%,#a8843a 66%,#2f230b 100%)}
+.ivory{color:#fffaf0;text-shadow:0 1px 12px rgba(0,0,0,.45)}
+.dark .script{color:#fff4dc;text-shadow:0 0 14px rgba(255,214,140,.55),0 0 2px rgba(255,240,210,.8)}
+.lightsc .script,#s8 .script{color:#2b2112}
+.glint{position:relative}
+.glint::after{content:'';position:absolute;top:-10%;bottom:-10%;left:-30%;width:30%;background:linear-gradient(100deg,transparent,rgba(255,250,230,.0) 20%,rgba(255,250,230,.85) 50%,transparent 80%);transform:skewX(-18deg);mix-blend-mode:overlay;pointer-events:none;animation:glint 6s ease-in-out infinite 1.5s}
+@keyframes glint{0%,70%{left:-40%}100%{left:130%}}
+#fx{position:absolute;inset:0;z-index:20;pointer-events:none}
+.leak{position:absolute;inset:-20%;z-index:-1;pointer-events:none;mix-blend-mode:screen;background:radial-gradient(40% 30% at 20% 15%,rgba(255,196,110,.35),transparent 70%),radial-gradient(35% 25% at 85% 80%,rgba(255,170,90,.25),transparent 70%);animation:leak 9s ease-in-out infinite alternate}
+@keyframes leak{to{transform:translate(6%,-4%) rotate(4deg)}}
+.grain{position:absolute;inset:0;z-index:21;pointer-events:none;opacity:.07;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E")}
 #s0{background:#0c0a07;padding:0}
-.env{position:absolute;inset:0;background:radial-gradient(120% 80% at 50% 40%,#2a2620,#0c0a07 70%)}
-.env::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.13'/%3E%3C/svg%3E")}
-.flap{position:absolute;left:0;right:0;top:0;height:58%;background:linear-gradient(170deg,#1d1a15,#0f0d0a);clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:50% 0;filter:drop-shadow(0 6px 10px rgba(0,0,0,.6));z-index:2}
-.ribbon{position:absolute;width:5px;height:140%;top:-20%;left:50%;background:linear-gradient(90deg,#8a6a22,#f7e7ce 50%,#8a6a22);transform:rotate(32deg);z-index:3;box-shadow:0 0 6px rgba(0,0,0,.5)}
-.ribbon.r2{transform:rotate(-32deg)}
-.seal{position:absolute;left:50%;top:58%;width:118px;height:118px;margin:-59px 0 0 -59px;border-radius:50%;z-index:4;
-  background:radial-gradient(circle at 36% 30%,#f3dc9a,#c9a24a 38%,#8a6a22 72%,#5e4612);box-shadow:0 8px 20px rgba(0,0,0,.65),inset 0 0 0 7px rgba(138,106,34,.55),inset 0 0 18px rgba(255,240,200,.35);
-  display:flex;align-items:center;justify-content:center;font-family:'Bodoni Moda',serif;font-size:34px;color:#5e4612;text-shadow:0 1px 0 rgba(255,240,200,.6)}
-.seal i{font-family:'WindSong',cursive;font-style:normal;font-size:30px;margin:0 2px}
-/* 1 · portada */
-#s1 .bg,#s6 .bg{background-image:url(ink/ink-hero.webp)}
-#s1 .veil{background:linear-gradient(180deg,rgba(40,28,12,.25) 0%,rgba(40,28,12,.45) 40%,rgba(26,18,8,.82) 100%)}
-#s1 .bg{filter:sepia(.45) saturate(1.2) brightness(.72)}
-.sun{position:absolute;left:50%;top:13%;width:160px;height:160px;margin-left:-80px;border-radius:50%;background:radial-gradient(circle,rgba(255,246,220,.95),rgba(255,226,170,.5) 35%,rgba(255,210,140,0) 70%);z-index:-1}
-#s1{justify-content:flex-end;padding-bottom:120px}
-.names{font-size:clamp(30px,9vw,40px);letter-spacing:.04em;line-height:1.15;margin:12px 0 10px;display:flex;flex-wrap:wrap;align-items:baseline;justify-content:center;gap:0 10px}
-.names .script{font-size:1.25em;letter-spacing:0}
-.dt{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:12px;width:100%;max-width:330px;margin-top:22px}
-.dt .side{border-top:1px solid rgba(255,255,255,.8);border-bottom:1px solid rgba(255,255,255,.8);padding:9px 0;font-family:'Bodoni Moda',serif;font-size:15px;letter-spacing:.08em;text-transform:uppercase}
-.dt .mid{font-family:'Bodoni Moda',serif;line-height:1}
-.dt .mid small{display:block;font-size:17px;letter-spacing:.1em}
-.dt .mid b{display:block;font-weight:400;font-size:52px;margin:4px 0}
-/* escenas claras */
-.lightsc .bg{background-image:url(ink/ink-hero.webp);filter:saturate(.5) brightness(1.1);opacity:.55}
-.lightsc .veil{background:rgba(255,255,248,.72)}
-.ttl{position:relative;width:100%;text-align:left;margin-bottom:26px;padding-left:18px}
-.ttl .script{font-size:74px;display:block;margin-bottom:-30px;margin-left:-.1em}
-.ttl .serif{font-size:clamp(34px,10vw,44px);letter-spacing:.06em;display:block;padding-left:64px}
-/* programa */
+#s1{justify-content:flex-end;padding-bottom:128px}
+#s1 .veil{background:linear-gradient(180deg,rgba(20,12,4,.15) 0%,rgba(20,12,4,.2) 42%,rgba(16,10,4,.86) 100%)}
+.names{font-size:clamp(34px,10.4vw,46px);letter-spacing:.05em;line-height:1.08;margin:14px 0 10px}
+.names .y{font-size:1.15em;margin:-.15em 0 -.25em}
+.dt{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:12px;width:100%;max-width:330px;margin-top:20px}
+.dt .side{border-top:1px solid rgba(232,206,140,.8);border-bottom:1px solid rgba(232,206,140,.8);padding:9px 0;font-family:'Bodoni Moda',serif;font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:#fffaf0}
+.dt .mid{font-family:'Bodoni Moda',serif;line-height:1;color:#fffaf0}
+.dt .mid small{display:block;font-size:16px;letter-spacing:.16em}
+.dt .mid b{display:block;font-weight:400;font-size:58px;margin:4px 0}
+.lightsc .bg{background-image:url(ink/ink-hero.webp);filter:saturate(.6) brightness(1.08);opacity:.6}
+.lightsc .veil{background:radial-gradient(120% 80% at 50% 45%,rgba(255,255,248,.62),rgba(255,252,240,.82))}
+.ttl{position:relative;width:100%;text-align:left;margin-bottom:24px;padding-left:16px}
+.ttl .script{font-size:78px;display:block;margin-bottom:-36px;margin-left:-.1em}
+.ttl .serif{font-size:clamp(34px,10.4vw,46px);letter-spacing:.07em;display:block;padding-left:62px}
+.ttl.c{text-align:center;padding:0}.ttl.c .serif{padding:0}.ttl.c .script{margin-left:0;margin-right:0}
+.fam{display:grid;grid-template-columns:1fr 1fr;gap:14px;width:100%;max-width:350px}
+.fam div{padding:16px 8px;border-top:1px solid rgba(138,106,34,.45);border-bottom:1px solid rgba(138,106,34,.45)}
+.fam .serif{font-size:17px;line-height:1.5;margin-top:6px}
+#s3,#s7{background:radial-gradient(90% 70% at 50% 40%,#3d2a12,#1a1108 60%,#0d0904)}
+.dark .bg.ink{background-image:url(ink/ink-hero.webp);opacity:.22;mix-blend-mode:screen}
+.cd{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;width:100%;max-width:360px;margin-top:26px}
+.cd div{display:flex;flex-direction:column;align-items:center;padding:14px 0 10px;border:1px solid rgba(232,206,140,.45);border-radius:14px;background:rgba(255,240,210,.04)}
+.cd b{font-family:'Bodoni Moda',serif;font-weight:400;font-size:40px;line-height:1}
+.cd small{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:#f7e7ce;margin-top:8px;font-weight:500}
 .tl{position:relative;width:100%;max-width:340px}
-.tl-line{position:absolute;left:50%;top:0;bottom:0;width:1.5px;background:var(--ink);transform-origin:50% 0}
-.ev{position:relative;display:grid;grid-template-columns:1fr 34px 1fr;align-items:center;margin:0 0 34px}
-.ev .dot{width:12px;height:12px;border-radius:50%;background:var(--ink);justify-self:center;z-index:1}
+.tl-line{position:absolute;left:50%;top:0;bottom:0;width:1.5px;background:linear-gradient(#2b2112,#8a6a22,#2b2112);transform-origin:50% 0}
+.ev{position:relative;display:grid;grid-template-columns:1fr 34px 1fr;align-items:center;margin:0 0 30px}
+.ev .dot{width:12px;height:12px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#f3dc9a,#8a6a22);box-shadow:0 0 0 3px rgba(201,162,74,.25),0 0 12px rgba(201,162,74,.6);justify-self:center;z-index:1}
 .ev .tx{text-align:right;padding-right:6px}
 .ev.r .tx{grid-column:3;text-align:left;padding:0 0 0 6px}
 .ev .ic{grid-column:3;grid-row:1;justify-self:start;padding-left:8px}
 .ev.r .ic{grid-column:1;justify-self:end;padding:0 8px 0 0}
-.ev .ic svg{width:34px;height:34px;stroke:var(--ink);fill:none;stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round}
-.ev .h{font-family:'Bodoni Moda',serif;font-size:17px}
-.ev .n{font-family:'Bodoni Moda',serif;font-size:16px;letter-spacing:.1em;text-transform:uppercase;margin:2px 0}
-.ev .a{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;line-height:1.5}
-/* detalles */
+.ev .ic svg{width:36px;height:36px;stroke:#6b5218;fill:none;stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round}
+.ev .h{font-family:'Bodoni Moda',serif;font-size:16px;font-style:italic}
+.ev .n{font-family:'Bodoni Moda',serif;font-size:17px;letter-spacing:.12em;text-transform:uppercase;margin:2px 0}
+.ev .a{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;line-height:1.55}
+.place{width:100%;max-width:340px;padding:22px 18px;border:1px solid rgba(138,106,34,.4);border-radius:18px;background:rgba(255,255,250,.55);margin-bottom:14px}
+.place .k{font-size:11px;letter-spacing:.24em;text-transform:uppercase;font-weight:600;color:#6b5218}
+.place .serif{font-size:24px;margin:6px 0 4px}
+.place p{font-size:13px;font-weight:500;line-height:1.6}
 .det{position:relative;width:100%;max-width:340px;text-align:right;padding-right:26px}
-.det::after{content:'';position:absolute;right:4px;top:0;bottom:0;width:1.5px;background:var(--ink);transform-origin:50% 0;transform:scaleY(var(--dl,1))}
-.dItem{position:relative;margin-bottom:30px}
-.dItem::after{content:'';position:absolute;right:-26px;top:5px;width:10px;height:10px;border-radius:50%;background:var(--ink)}
-.dItem h3{font-family:'Bodoni Moda',serif;font-weight:400;font-size:18px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px}
+.det::after{content:'';position:absolute;right:4px;top:0;bottom:0;width:1.5px;background:linear-gradient(#2b2112,#8a6a22,#2b2112);transform-origin:50% 0;transform:scaleY(var(--dl,1))}
+.dItem{position:relative;margin-bottom:28px}
+.dItem::after{content:'';position:absolute;right:-27px;top:5px;width:11px;height:11px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#f3dc9a,#8a6a22);box-shadow:0 0 10px rgba(201,162,74,.6)}
+.dItem h3{font-family:'Bodoni Moda',serif;font-weight:400;font-size:18px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px}
 .dItem p{font-family:'Montserrat',sans-serif;font-size:13px;font-weight:500;line-height:1.6}
-/* rsvp */
-#s5{background:#fff}
-.rings{position:absolute;left:50%;top:42%;width:340px;height:340px;margin:-170px 0 0 -170px;perspective:900px;z-index:0;opacity:.6}
-.ring{position:absolute;inset:40px;border-radius:50%;border:16px solid transparent;background:linear-gradient(#fff,#fff) padding-box,conic-gradient(from 0deg,#8a6a22,#f7e7ce,#c9a24a,#fff6dc,#8a6a22,#e6c97a,#8a6a22) border-box;box-shadow:0 18px 40px rgba(138,106,34,.25)}
-.ring.b{inset:70px 30px 10px 90px}
+.sw{display:inline-flex;gap:8px;vertical-align:middle;margin-left:6px}
+.sw i{width:16px;height:16px;border-radius:50%;border:1px solid rgba(138,106,34,.6);display:inline-block;box-shadow:0 0 8px rgba(201,162,74,.5)}
+.qr{width:190px;height:190px;padding:12px;background:#fff;border-radius:18px;margin:22px auto 6px;box-shadow:0 0 0 1px rgba(201,162,74,.6),0 0 30px rgba(255,214,140,.35),0 20px 40px rgba(0,0,0,.35)}
+.qr img{width:100%;height:100%;display:block}
+#s8{background:#fff}
+#s8 video.bg{opacity:.5}
+#s8 .veil{background:radial-gradient(70% 50% at 50% 42%,rgba(255,255,255,.15),rgba(255,255,255,.75))}
 .rs{position:relative;z-index:1;width:100%}
-.rs .script{font-size:64px;display:block;text-align:left;padding-left:30px}
-.rs .big{font-family:'Bodoni Moda',serif;font-size:clamp(118px,36vw,150px);line-height:.92;letter-spacing:.02em}
-.rs .by{font-family:'Bodoni Moda',serif;font-size:24px;letter-spacing:.06em;text-transform:uppercase;margin-top:22px}
-.rs .mail{font-size:11px;letter-spacing:.2em;margin-top:6px}
-.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 28px;margin-top:20px;border-radius:999px;border:1px solid var(--gold-d);background:linear-gradient(135deg,#8a6a22,#c9a24a 50%,#8a6a22);color:#fff;font-family:'Montserrat',sans-serif;font-weight:600;font-size:13px;letter-spacing:.18em;text-transform:uppercase;text-decoration:none}
-.btn.ghost{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.7)}
-.ty{font-size:60px;margin-top:8px}
-/* cierre */
-#s6 .bg{filter:sepia(.55) saturate(1.1) brightness(.62)}
-#s6 .veil{background:linear-gradient(180deg,rgba(20,14,6,.2),rgba(20,14,6,.65))}
-.bigdate{font-family:'Bodoni Moda',serif;color:#fff;font-size:clamp(84px,26vw,112px);line-height:1;letter-spacing:.01em}
+.rs .script{font-size:66px;display:block;text-align:left;padding-left:30px}
+.rs .big{font-family:'Bodoni Moda',serif;font-size:clamp(120px,37vw,156px);line-height:.92;letter-spacing:.02em}
+.rs .by{font-family:'Bodoni Moda',serif;font-size:22px;letter-spacing:.08em;text-transform:uppercase;margin-top:20px;color:#2b2112}
+.btn{position:relative;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 30px;margin-top:20px;border-radius:999px;border:1px solid rgba(255,236,190,.7);background:linear-gradient(135deg,#7a5c14,#c9a24a 45%,#f0d894 55%,#8a6a22);color:#fff;font-family:'Montserrat',sans-serif;font-weight:600;font-size:13px;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;box-shadow:0 10px 26px rgba(138,106,34,.35),inset 0 1px 0 rgba(255,255,255,.5);text-shadow:0 1px 2px rgba(60,40,0,.5)}
+.btn::after{content:'';position:absolute;top:0;bottom:0;width:40%;left:-60%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.7),transparent);transform:skewX(-20deg);animation:btnShine 3.6s ease-in-out infinite}
+@keyframes btnShine{0%,60%{left:-60%}100%{left:140%}}
+.btn.ghost{background:rgba(20,14,6,.35);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.ty{font-size:62px;margin-top:8px}
+#s9 .veil{background:linear-gradient(180deg,rgba(16,10,4,.15),rgba(16,10,4,.35) 45%,rgba(16,10,4,.8))}
+#s9{justify-content:flex-end;padding-bottom:120px}
+.bigdate{font-family:'Bodoni Moda',serif;font-size:clamp(88px,27vw,118px);line-height:.98;letter-spacing:.01em}
 .bigdate span{display:block}
-.sign{font-family:'WindSong',cursive;color:#fff;font-size:clamp(28px,8.6vw,38px);white-space:nowrap;margin-top:22px;padding:.2em .3em}
-.blessing{font-family:'Bodoni Moda',serif;font-style:italic;color:#fff;font-size:15px;margin-top:6px;opacity:.9}
-/* barra de video */
-.ctrl{position:absolute;left:0;right:0;bottom:0;z-index:50;padding:14px 16px max(14px,env(safe-area-inset-bottom));display:flex;align-items:center;gap:12px;background:linear-gradient(to top,rgba(0,0,0,.55),rgba(0,0,0,0));transition:opacity .4s}
-.ctrl.dim{opacity:.35}
-.pp{flex:none;width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.55);background:rgba(0,0,0,.35);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
-.pp svg{width:16px;height:16px;fill:#fff}
+.sign{font-family:'WindSong',cursive;font-size:clamp(30px,9vw,40px);white-space:nowrap;margin-top:18px}
+.blessing{font-family:'Bodoni Moda',serif;font-style:italic;color:#fffaf0;font-size:15px;margin-top:4px;opacity:.92}
+.ctrl{position:absolute;left:0;right:0;bottom:0;z-index:50;padding:14px 16px max(14px,env(safe-area-inset-bottom));display:flex;align-items:center;gap:12px;background:linear-gradient(to top,rgba(0,0,0,.6),rgba(0,0,0,0));transition:opacity .4s}
+.ctrl.dim{opacity:.4}
+.pp{flex:none;width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,236,190,.6);background:rgba(0,0,0,.35);display:flex;align-items:center;justify-content:center;cursor:pointer;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.pp svg{width:16px;height:16px;fill:#f7e7ce}
 .track{position:relative;flex:1;height:44px;cursor:pointer;touch-action:none}
-.track::before{content:'';position:absolute;left:0;right:0;top:50%;height:3px;margin-top:-1.5px;border-radius:3px;background:rgba(255,255,255,.35)}
-.fill{position:absolute;left:0;top:50%;height:3px;margin-top:-1.5px;border-radius:3px;background:linear-gradient(90deg,#c9a24a,#f7e7ce);width:0}
-.thumb{position:absolute;top:50%;width:16px;height:16px;margin:-8px 0 0 -8px;border-radius:50%;background:#f7e7ce;box-shadow:0 0 0 3px rgba(201,162,74,.45),0 2px 6px rgba(0,0,0,.4);left:0;transition:transform .2s}
+.track::before{content:'';position:absolute;left:0;right:0;top:50%;height:3px;margin-top:-1.5px;border-radius:3px;background:rgba(255,255,255,.3)}
+.fill{position:absolute;left:0;top:50%;height:3px;margin-top:-1.5px;border-radius:3px;background:linear-gradient(90deg,#8a6a22,#e9d08f,#fff3cf);width:0;box-shadow:0 0 8px rgba(255,214,140,.7)}
+.thumb{position:absolute;top:50%;width:16px;height:16px;margin:-8px 0 0 -8px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff6dc,#c9a24a);box-shadow:0 0 0 3px rgba(201,162,74,.35),0 0 12px rgba(255,214,140,.8);left:0;transition:transform .2s}
 .track.drag .thumb{transform:scale(1.35)}
 .tm{flex:none;min-width:78px;text-align:right;color:#fff;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:500;font-variant-numeric:tabular-nums;text-shadow:0 1px 4px rgba(0,0,0,.6)}
-.lang{position:absolute;top:max(14px,env(safe-area-inset-top));right:14px;z-index:50;display:flex;border-radius:999px;overflow:hidden;border:1px solid rgba(255,255,255,.5);background:rgba(0,0,0,.3)}
+.lang{position:absolute;top:max(18px,env(safe-area-inset-top));right:16px;z-index:50;display:flex;border-radius:999px;overflow:hidden;border:1px solid rgba(255,236,190,.55);background:rgba(0,0,0,.3);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
 .lang button{min-width:44px;min-height:36px;border:0;background:none;color:#fff;font:600 12px 'Montserrat',sans-serif;letter-spacing:.1em;cursor:pointer}
-.lang button.on{background:rgba(201,162,74,.85)}
-.mute{position:absolute;top:max(14px,env(safe-area-inset-top));left:14px;z-index:50;width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.5);background:rgba(0,0,0,.3);color:#fff;font-size:16px;cursor:pointer}
-/* inicio */
-.start{position:absolute;inset:0;z-index:60;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding-bottom:16vh;color:#f7e7ce;font-family:'Montserrat',sans-serif;font-size:13px;letter-spacing:.3em;text-transform:uppercase;cursor:pointer;background:transparent;border:0;width:100%}
-.start span{animation:pulse 2.2s ease-in-out infinite}
-@keyframes pulse{0%,100%{opacity:.45}50%{opacity:1}}
-@media(prefers-reduced-motion:reduce){.start span{animation:none}}
+.lang button.on{background:linear-gradient(135deg,#8a6a22,#c9a24a)}
+.vinyl-btn{position:fixed;bottom:20px;right:20px;z-index:998;width:72px;height:72px;border-radius:50%;padding:0;border:none;cursor:pointer;background:transparent;opacity:0;transform:scale(.6);pointer-events:none;transition:transform .35s cubic-bezier(.2,.7,.2,1);box-shadow:0 4px 18px rgba(0,0,0,.35),0 0 0 1px rgba(165,128,46,.18)}
+.vinyl-btn.is-ready{opacity:1;transform:scale(1);pointer-events:auto}
+.vinyl-btn:hover{transform:scale(1.1)}
+.vinyl-spin{width:100%;height:100%;border-radius:50%;position:relative;transition:none}
+.vinyl-btn.is-playing .vinyl-spin{animation:vinylSpin 1.8s linear infinite}
+@keyframes vinylSpin{to{transform:rotate(360deg)}}
+.vinyl-disc{width:100%;height:100%;border-radius:50%;overflow:hidden;position:relative;background:radial-gradient(circle,#1a1a1a 4%,transparent 4.5%),radial-gradient(circle,#f0e2b6 0%,#a5802e 17%,#6b5218 19%,transparent 19.5%),repeating-radial-gradient(circle,transparent 20%,rgba(255,255,255,.055) 20.8%,transparent 21.5%,transparent 24%,rgba(255,255,255,.04) 24.8%,transparent 25.5%,transparent 28%,rgba(255,255,255,.055) 28.8%,transparent 29.5%,transparent 32%,rgba(255,255,255,.04) 32.8%,transparent 33.5%,transparent 36%,rgba(255,255,255,.055) 36.8%,transparent 37.5%,transparent 40%,rgba(255,255,255,.04) 40.8%,transparent 41.5%,transparent 44%,rgba(255,255,255,.055) 44.8%,transparent 45.5%,transparent 48%,rgba(255,255,255,.04) 48.8%,transparent 49.5%,transparent 52%,rgba(255,255,255,.055) 52.8%,transparent 53.5%,transparent 56%,rgba(255,255,255,.04) 56.8%,transparent 57.5%,transparent 60%,rgba(255,255,255,.055) 60.8%,transparent 61.5%,transparent 64%,rgba(255,255,255,.04) 64.8%,transparent 65.5%,transparent 68%,rgba(255,255,255,.055) 68.8%,transparent 69.5%,transparent 72%,rgba(255,255,255,.04) 72.8%,transparent 73.5%,transparent 76%,rgba(255,255,255,.055) 76.8%,transparent 77.5%,transparent 80%,rgba(255,255,255,.04) 80.8%,transparent 81.5%,transparent 84%,rgba(255,255,255,.055) 84.8%,transparent 85.5%,transparent 88%,rgba(255,255,255,.04) 88.8%,transparent 89.5%,transparent 92%,rgba(255,255,255,.055) 92.8%,transparent 93.5%,transparent 96%,rgba(255,255,255,.04) 96.8%,transparent 97.5%),radial-gradient(circle,#1a1a1a 0%,#111111 60%,#1a1a1a 100%);box-shadow:inset 0 0 8px rgba(0,0,0,.4)}
+.vinyl-sheen{position:absolute;inset:0;border-radius:50%;background:linear-gradient(135deg,transparent 30%,rgba(255,255,255,.09) 42%,rgba(255,255,255,.15) 48%,rgba(255,255,255,.09) 54%,transparent 66%);pointer-events:none}
+.vinyl-label-text{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'Italiana',serif;font-size:11px;color:#f0e2b6;text-align:center;line-height:1.1;opacity:.85;pointer-events:none;width:26px}
+.vinyl-label-text small{font-family:'Cormorant Garamond',serif;font-size:5px;letter-spacing:.15em;display:block;margin-top:1px;opacity:.6}
+.vinyl-hole{position:absolute;top:50%;left:50%;width:6px;height:6px;transform:translate(-50%,-50%);border-radius:50%;background:#1a1a1a;box-shadow:0 0 0 1.5px rgba(165,128,46,.5)}
+.vinyl-icons{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:18px;height:18px;pointer-events:none;z-index:2}
+.vinyl-icons svg{width:100%;height:100%;display:block}
+.vinyl-icon-pause{display:none}
+.vinyl-btn.is-playing .vinyl-icon-play{display:none}
+.vinyl-btn.is-playing .vinyl-icon-pause{display:block}
+.vinyl-btn::after{content:"";position:absolute;inset:-5px;border-radius:50%;border:1px solid var(--gold);opacity:.3;animation:vinylPulse 3s ease-in-out infinite}
+.vinyl-btn.is-playing::after{animation-duration:1.6s}
+@keyframes vinylPulse{0%,100%{transform:scale(1);opacity:.3}50%{transform:scale(1.12);opacity:.05}}
+.vinyl-tonearm{position:absolute;top:-4px;right:-2px;width:24px;height:34px;transform-origin:top right;transform:rotate(-28deg);transition:transform .6s cubic-bezier(.2,.7,.2,1);pointer-events:none;z-index:1}
+.vinyl-btn.is-playing .vinyl-tonearm{transform:rotate(-12deg)}
+.vinyl-tonearm-line{position:absolute;top:2px;right:4px;width:2px;height:28px;background:linear-gradient(to bottom,#6b5218,#a5802e 40%,#6b5218);border-radius:1px;transform:rotate(-5deg);transform-origin:top center}
+.vinyl-tonearm-head{position:absolute;bottom:0;right:2px;width:5px;height:6px;background:#a5802e;border-radius:0 0 2px 2px}
+.vinyl-tonearm-pivot{position:absolute;top:0;right:2px;width:7px;height:7px;background:radial-gradient(circle,#f0e2b6,#a5802e);border-radius:50%;box-shadow:0 1px 3px rgba(0,0,0,.3)}
+@keyframes vinylSpin{to{transform:rotate(360deg)}}
+@keyframes vinylPulse{0%,100%{transform:scale(1);opacity:.3}50%{transform:scale(1.12);opacity:.05}}
+.vinyl-btn{position:absolute!important;top:max(14px,env(safe-area-inset-top))!important;left:16px!important;right:auto!important;bottom:auto!important;width:58px!important;height:58px!important;z-index:55!important}
+.start{position:absolute;inset:0;z-index:60;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding-bottom:14vh;color:#f7e7ce;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:500;letter-spacing:.32em;text-transform:uppercase;cursor:pointer;background:linear-gradient(to top,rgba(0,0,0,.55),transparent 45%);border:0;width:100%}
+.start span{animation:pulse 2.2s ease-in-out infinite;text-shadow:0 0 12px rgba(255,214,140,.8)}
+@keyframes pulse{0%,100%{opacity:.5}50%{opacity:1}}
+@media(prefers-reduced-motion:reduce){.start span,.foil .ch,.glint::after,.leak,.btn::after{animation:none!important}}
 </style>
 </head>
 <body>
 <div class="stage" id="stage">
 
-  <!-- 0 · SOBRE -->
   <section class="sc" id="s0" style="visibility:visible;opacity:1">
-    <div class="env"></div>
-    <div class="ribbon"></div><div class="ribbon r2"></div>
-    <div class="flap"></div>
-    <div class="seal">Z<i>&amp;</i>H</div>
+    <video class="bg" src="vid/sobre.mp4" muted playsinline preload="auto"></video>
   </section>
 
-  <!-- 1 · PORTADA -->
-  <section class="sc light" id="s1">
-    <div class="bg"></div><div class="sun"></div><div class="veil"></div>
-    <p class="cap a" data-en="Together with their families">Junto con sus familias</p>
-    <h1 class="names serif a"><span>ZULEYMA</span><span class="script" data-en="and">y</span><span>HORLANDO</span></h1>
-    <p class="cap a" data-en="invite you<br>to their wedding celebration">los invitan<br>a celebrar su boda</p>
+  <section class="sc dark" id="s1">
+    <video class="bg" src="vid/portada.mp4" muted playsinline preload="auto"></video>
+    <div class="veil"></div><div class="leak"></div>
+    <div class="frame"><i></i><i></i><i></i><i></i></div>
+    <p class="cap ivory a" data-en="Together with their families">Junto con sus familias</p>
+    <h1 class="names serif"><span class="foil split a">ZULEYMA</span><br><span class="script y a" data-en="and">y</span><br><span class="foil split a">HORLANDO</span></h1>
+    <p class="cap ivory a" data-en="invite you<br>to their wedding celebration">los invitan<br>a celebrar su boda</p>
     <div class="dt a">
       <span class="side" data-en="Saturday">Sábado</span>
-      <span class="mid"><small data-en="APRIL">ABRIL</small><b>3</b><small>2027</small></span>
+      <span class="mid"><small data-en="APRIL">ABRIL</small><b class="foil solo">3</b><small>2027</small></span>
       <span class="side">Montgomery<br>TX</span>
     </div>
   </section>
 
-  <!-- 2 · FRASE Y FAMILIAS -->
   <section class="sc lightsc" id="s2">
     <div class="bg"></div><div class="veil"></div>
-    <span class="script a" style="font-size:64px" data-en="With God's blessing">Con la bendición de Dios</span>
-    <p class="serif a" style="font-size:27px;line-height:1.35;margin:18px 0 34px;font-style:italic" data-en="“God wrote<br>our love story.”">“Dios escribió<br>nuestra historia de amor.”</p>
-    <p class="cap a" style="font-weight:600" data-en="Groom's parents">Padres del novio</p>
-    <p class="serif a" style="font-size:18px;margin:6px 0 22px;line-height:1.5">Sr. Joaquín Martínez<br>Sra. Guillermina Martínez</p>
-    <p class="cap a" style="font-weight:600" data-en="Bride's parents">Padres de la novia</p>
-    <p class="serif a" style="font-size:18px;margin-top:6px;line-height:1.5">Sr. Tomás Morales<br>Sra. Guadalupe Morales</p>
+    <div class="frame"><i></i><i></i><i></i><i></i></div>
+    <span class="script a" style="font-size:44px;white-space:nowrap" data-en="With God's blessing">Con la bendición de Dios</span>
+    <p class="serif a glint" style="font-size:27px;line-height:1.35;margin:16px 0 30px;font-style:italic" data-en="“God wrote<br>our love story.”">“Dios escribió<br>nuestra historia de amor.”</p>
+    <div class="fam">
+      <div class="a"><p class="cap" style="font-weight:600;font-size:11px" data-en="Groom's parents">Padres del novio</p><p class="serif">Sr. Joaquín Martínez<br>Sra. Guillermina Martínez</p></div>
+      <div class="a"><p class="cap" style="font-weight:600;font-size:11px" data-en="Bride's parents">Padres de la novia</p><p class="serif">Sr. Tomás Morales<br>Sra. Guadalupe Morales</p></div>
+    </div>
   </section>
 
-  <!-- 3 · PROGRAMA -->
-  <section class="sc lightsc" id="s3">
+  <section class="sc dark" id="s3">
+    <div class="bg ink"></div><div class="leak"></div>
+    <div class="frame"><i></i><i></i><i></i><i></i></div>
+    <span class="script a" style="font-size:64px" data-en="only">faltan</span>
+    <p class="serif foil split a" style="font-size:clamp(30px,9vw,40px);letter-spacing:.08em;margin-top:4px" data-en="FOR THE BIG DAY">PARA EL GRAN DÍA</p>
+    <div class="cd">
+      <div class="a"><b class="foil solo" id="cdD">--</b><small data-en="Days">Días</small></div>
+      <div class="a"><b class="foil solo" id="cdH">--</b><small data-en="Hours">Horas</small></div>
+      <div class="a"><b class="foil solo" id="cdM">--</b><small data-en="Min">Min</small></div>
+      <div class="a"><b class="foil solo" id="cdS">--</b><small data-en="Sec">Seg</small></div>
+    </div>
+  </section>
+
+  <section class="sc lightsc" id="s4">
     <div class="bg"></div><div class="veil"></div>
-    <div class="ttl"><span class="script a" data-en="The">El</span><span class="serif a" data-en="PROGRAM">PROGRAMA</span></div>
+    <div class="frame"><i></i><i></i><i></i><i></i></div>
+    <div class="ttl"><span class="script a" data-en="The">El</span><span class="serif foil split a" data-en="PROGRAM">PROGRAMA</span></div>
     <div class="tl">
       <div class="tl-line"></div>
       <div class="ev a">
@@ -169,53 +225,77 @@ body{font-family:'Montserrat',sans-serif;color:var(--ink);-webkit-font-smoothing
       <div class="ev r a">
         <span class="ic"><svg viewBox="0 0 40 40"><path d="M11 8h18l-9 12z"/><path d="M20 20v12M14 32h12"/><circle cx="27" cy="9" r="2.5"/></svg></span>
         <span class="dot"></span>
-        <div class="tx"><div class="h" data-en="Time TBA">Por confirmar</div><div class="n" data-en="Reception">Recepción</div><div class="a">The Luminaire Venue<br>495 S Pine Lake Rd</div></div>
-      </div>
-      <div class="ev a" style="margin-bottom:0">
-        <div class="tx"><div class="h" data-en="All night">Toda la noche</div><div class="n" data-en="Party">Fiesta</div><div class="a">Montgomery, TX 77356</div></div>
-        <span class="dot"></span>
-        <span class="ic"><svg viewBox="0 0 40 40"><rect x="11" y="7" width="18" height="26" rx="2"/><circle cx="20" cy="24" r="5"/><circle cx="20" cy="13" r="2.5"/></svg></span>
+        <div class="tx"><div class="h" data-en="Time TBA">Por confirmar</div><div class="n" data-en="Reception">Recepción</div><div class="a">The Luminaire Venue<br>Montgomery, TX</div></div>
       </div>
     </div>
   </section>
 
-  <!-- 4 · DETALLES -->
-  <section class="sc lightsc" id="s4">
+  <section class="sc lightsc" id="s5">
     <div class="bg"></div><div class="veil"></div>
-    <div class="ttl"><span class="script a" data-en="The">Los</span><span class="serif a" data-en="DETAILS">DETALLES</span></div>
+    <div class="frame"><i></i><i></i><i></i><i></i></div>
+    <div class="ttl c"><span class="script a" data-en="where">dónde</span><span class="serif foil split a" data-en="LOCATION">UBICACIÓN</span></div>
+    <div class="place a"><p class="k" data-en="Religious ceremony">Ceremonia religiosa</p><p class="serif" data-en="To be confirmed">Por confirmar</p><p>Montgomery, Texas</p></div>
+    <div class="place a"><p class="k" data-en="Reception">Recepción</p><p class="serif">The Luminaire Venue</p><p>495 S Pine Lake Rd<br>Montgomery, TX 77356</p>
+      <a class="btn" style="margin-top:14px" href="https://www.google.com/maps/search/?api=1&query=The+Luminaire+Venue+495+S+Pine+Lake+Rd+Montgomery+TX+77356" target="_blank" rel="noopener" data-en="Directions">Cómo llegar</a></div>
+  </section>
+
+  <section class="sc lightsc" id="s6">
+    <div class="bg"></div><div class="veil"></div>
+    <div class="frame"><i></i><i></i><i></i><i></i></div>
+    <div class="ttl"><span class="script a" data-en="The">Los</span><span class="serif foil split a" data-en="DETAILS">DETALLES</span></div>
     <div class="det">
-      <div class="dItem a"><h3 data-en="Dress code">Código de vestimenta</h3><p data-en="To be confirmed. Please avoid white and ivory, reserved for the bride.">Por confirmar. Por favor evita el blanco y el marfil, reservados para la novia.</p></div>
+      <div class="dItem a"><h3 data-en="Dress code">Código de vestimenta</h3><p><span data-en="To be confirmed. Please avoid white and ivory, reserved for the bride.">Por confirmar. Evita el blanco y el marfil, reservados para la novia.</span><span class="sw"><i style="background:#fff"></i><i style="background:#fffff0"></i></span></p></div>
       <div class="dItem a"><h3 data-en="Accommodation">Hospedaje</h3><p data-en="Best Western Lake Conroe, Margaritaville Lake Resort and Homewood Suites Conroe — 6 to 15 min from the reception.">Best Western Lake Conroe, Margaritaville Lake Resort y Homewood Suites Conroe, a 6–15 min de la recepción.</p></div>
       <div class="dItem a" style="margin-bottom:0"><h3 data-en="Gifts">Regalos</h3><p data-en="Your presence is our gift. There will be an envelope box at the reception.">Tu presencia es nuestro regalo. Habrá buzón de sobres en la recepción.</p></div>
     </div>
   </section>
 
-  <!-- 5 · RSVP -->
-  <section class="sc" id="s5">
-    <div class="rings"><div class="ring"></div><div class="ring b"></div></div>
+  <section class="sc dark" id="s7">
+    <div class="bg ink"></div><div class="leak"></div>
+    <div class="frame"><i></i><i></i><i></i><i></i></div>
+    <span class="script a" style="font-size:50px;white-space:nowrap" data-en="share your">comparte tus</span>
+    <p class="serif foil split a" style="font-size:clamp(40px,12vw,52px);letter-spacing:.1em" data-en="PHOTOS">FOTOS</p>
+    <div class="qr a"><img src="qr-album.png" alt="Código QR del álbum"></div>
+    <p class="cap ivory a" style="max-width:300px" data-en="Scan the code on the wedding day<br>and upload your photos to our album">Escanea el código el día de la boda<br>y sube tus fotos a nuestro álbum</p>
+  </section>
+
+  <section class="sc" id="s8">
+    <video class="bg" src="vid/anillos.mp4" muted playsinline loop preload="auto"></video>
+    <div class="veil"></div>
     <div class="rs">
       <span class="script a" data-en="please">por favor</span>
-      <div class="big a">RS</div><div class="big a">VP</div>
+      <div class="big foil split a">RS</div><div class="big foil split a">VP</div>
       <p class="by a" data-en="Confirm your attendance">Confirma tu asistencia</p>
       <a class="btn a" id="rsvpBtn" href="index.html#rsvp" data-en="Confirm">Confirmar</a>
       <span class="script ty a" data-en="thank you" style="display:block;text-align:center;padding:0">gracias</span>
     </div>
   </section>
 
-  <!-- 6 · CIERRE -->
-  <section class="sc light" id="s6">
-    <div class="bg"></div><div class="veil"></div>
-    <div class="bigdate a"><span>03·04</span><span>2027</span></div>
-    <div class="sign a">Zuleyma &amp; Horlando</div>
+  <section class="sc dark" id="s9">
+    <video class="bg" src="vid/cierre.mp4" muted playsinline loop preload="auto"></video>
+    <div class="veil"></div><div class="leak"></div>
+    <div class="frame"><i></i><i></i><i></i><i></i></div>
+    <div class="bigdate"><span class="foil split a">03·04</span><span class="foil split a">2027</span></div>
+    <div class="sign script a">Zuleyma &amp; Horlando</div>
     <p class="blessing a" data-en="Together by God's grace, forever in His love.">Unidos por la gracia de Dios, para siempre en Su amor.</p>
     <a class="btn ghost a" id="fullBtn" href="index.html" data-en="See full invitation">Ver invitación completa</a>
   </section>
 
+  <canvas id="fx"></canvas>
+  <div class="grain"></div>
+
   <button class="start" id="start" type="button"><span data-en="Tap to open">Toca para abrir</span></button>
-  <button class="mute" id="mute" type="button" aria-label="Sonido">♪</button>
+  <button class="vinyl-btn is-ready" id="musicFab" type="button" aria-label="Música">
+    <div class="vinyl-tonearm"><div class="vinyl-tonearm-pivot"></div><div class="vinyl-tonearm-line"></div><div class="vinyl-tonearm-head"></div></div>
+    <div class="vinyl-spin"><div class="vinyl-disc"><div class="vinyl-sheen"></div><div class="vinyl-label-text">Z&amp;H<small>2027</small></div><div class="vinyl-hole"></div></div></div>
+    <div class="vinyl-icons">
+      <svg class="vinyl-icon-play" viewBox="0 0 24 24" fill="#f0e2b6" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+      <svg class="vinyl-icon-pause" viewBox="0 0 24 24" fill="#f0e2b6" aria-hidden="true"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+    </div>
+  </button>
   <div class="lang" id="lang"><button type="button" data-l="es" class="on">ES</button><button type="button" data-l="en">EN</button></div>
   <div class="ctrl" id="ctrl" style="visibility:hidden">
-    <button class="pp" id="pp" type="button" aria-label="Pausa"><svg id="ppIco" viewBox="0 0 16 16"><rect x="3" y="2" width="3.5" height="12"/><rect x="9.5" y="2" width="3.5" height="12"/></svg></button>
+    <button class="pp" id="pp" type="button" aria-label="Pausa"><svg id="ppIco" viewBox="0 0 16 16"></svg></button>
     <div class="track" id="track" role="slider" aria-label="Avance" aria-valuemin="0" aria-valuemax="100" tabindex="0"><div class="fill" id="fill"></div><div class="thumb" id="thumb"></div></div>
     <span class="tm" id="tm">0:00 / 0:00</span>
   </div>
@@ -228,92 +308,115 @@ body{font-family:'Montserrat',sans-serif;color:var(--ink);-webkit-font-smoothing
 var RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
 var $=function(s,c){return (c||document).querySelector(s);},$$=function(s,c){return [].slice.call((c||document).querySelectorAll(s));};
 
-/* idioma */
+function split(el){var t=el.textContent,i=0;el.innerHTML=t.split(' ').map(function(w){return '<span class="wd">'+w.split('').map(function(c){return '<span class="ch" style="--i:'+(i++)+'">'+c+'</span>';}).join('')+'</span>';}).join(' ');}
+
 var LANG=(new URLSearchParams(location.search).get('lang')==='en')?'en':'es';
 $$('[data-en]').forEach(function(e){e.dataset.es=e.innerHTML;});
 function setLang(l){LANG=l;document.documentElement.lang=l;$$('[data-en]').forEach(function(e){e.innerHTML=l==='en'?e.dataset.en:e.dataset.es;});
-  $$('#lang button').forEach(function(b){b.classList.toggle('on',b.dataset.l===l);});}
+  $$('.split').forEach(split);$$('#lang button').forEach(function(b){b.classList.toggle('on',b.dataset.l===l);});
+  if(window.__tlRefresh)window.__tlRefresh();}
 $$('#lang button').forEach(function(b){b.addEventListener('click',function(){setLang(b.dataset.l);});});
 setLang(LANG);
 
-/* links de confirmación con los datos del invitado */
 var qs=location.search||'';
 $('#rsvpBtn').href='index.html'+qs+'#rsvp';$('#fullBtn').href='index.html'+qs;
 
-/* timeline: una sola animación continua */
-var tl=gsap.timeline({paused:true,defaults:{ease:'power2.out'}});
-function blurIn(t,els,at,stag){tl.fromTo(els,{autoAlpha:0,filter:'blur(10px)',y:10},{autoAlpha:1,filter:'blur(0px)',y:0,duration:1.1,stagger:stag||.25},at);}
-function xfade(a,b,at){tl.to(a,{autoAlpha:0,filter:'blur(6px)',duration:1.1,ease:'power1.inOut'},at).fromTo(b,{autoAlpha:0},{autoAlpha:1,duration:1.1,ease:'power1.inOut'},at);}
+var T0=new Date('2027-04-03T16:00:00-05:00').getTime();
+function cd(){var d=Math.max(0,T0-Date.now()),s=Math.floor(d/1000);
+  $('#cdD').textContent=Math.floor(s/86400);$('#cdH').textContent=String(Math.floor(s%86400/3600)).padStart(2,'0');
+  $('#cdM').textContent=String(Math.floor(s%3600/60)).padStart(2,'0');$('#cdS').textContent=String(s%60).padStart(2,'0');}
+cd();setInterval(cd,1000);
 
-// 0 sobre: se abre y se va
-tl.to('#s0 .flap',{rotationX:178,duration:1.1,ease:'power2.inOut'},.4)
-  .to('#s0 .seal',{x:260,rotation:60,duration:1.2,ease:'power2.in'},.9)
-  .to('#s0 .env,#s0 .ribbon,#s0 .flap',{x:-480,duration:1.3,ease:'power2.in'},1.2)
-  .set('#s1',{autoAlpha:1},1.2)
-  .to('#s0',{autoAlpha:0,duration:.3},2.4);
-// 1 portada
-tl.fromTo('#s1 .bg',{scale:1.12},{scale:1.02,duration:8,ease:'none'},1.2);
-tl.fromTo('#s1 .sun',{scale:.8,opacity:.6},{scale:1.1,opacity:1,duration:8,ease:'sine.inOut'},1.2);
-blurIn(tl,$$('#s1 .a'),2.2,.45);
-// 2 frase/familias
-xfade('#s1','#s2',9);
-tl.fromTo('#s2 .bg',{scale:1.02,x:0},{scale:1.1,x:-12,duration:7,ease:'none'},9);
-blurIn(tl,$$('#s2 .a'),9.6,.3);
-// 3 programa
-xfade('#s2','#s3',15);
-tl.fromTo('#s3 .bg',{scale:1.08},{scale:1,duration:7,ease:'none'},15);
-blurIn(tl,$$('#s3 .ttl .a'),15.4,.35);
-tl.fromTo('#s3 .tl-line',{scaleY:0},{scaleY:1,duration:2.2,ease:'power1.inOut'},16);
-blurIn(tl,$$('#s3 .ev'),16.4,.6);
-// 4 detalles
-xfade('#s3','#s4',21.5);
-tl.fromTo('#s4 .bg',{scale:1,x:0},{scale:1.08,x:10,duration:7,ease:'none'},21.5);
-blurIn(tl,$$('#s4 .ttl .a'),21.9,.35);
-tl.fromTo('#s4 .det',{'--dl':0},{'--dl':1,duration:2.2,ease:'power1.inOut'},22.4);
-blurIn(tl,$$('#s4 .dItem'),22.8,.7);
-// 5 rsvp
-xfade('#s4','#s5',28);
-tl.fromTo('#s5 .ring',{rotationY:-55,rotationX:28,rotationZ:-20},{rotationY:55,rotationX:38,rotationZ:70,duration:6.5,ease:'sine.inOut',stagger:.25},28);
-blurIn(tl,$$('#s5 .a'),28.4,.35);
-// 6 cierre
-xfade('#s5','#s6',34.5);
-tl.fromTo('#s6 .bg',{scale:1.14,x:-14},{scale:1.02,x:14,duration:6.5,ease:'none'},34.5);
-blurIn(tl,$$('#s6 .a'),35,.5);
-tl.to({},{duration:1.5});
-var D=tl.duration();
+/* ── una sola animación continua ── */
+var tl,SC,D;
+function build(){
+  var keep=tl?tl.time():0,was=tl?!tl.paused():false;if(tl)tl.kill();
+  tl=gsap.timeline({paused:true,defaults:{ease:'power2.out'}});SC=[];
+  function reveal(els,at,stag){els.forEach(function(el,k){
+    var chs=el.classList.contains('split')?$$('.ch',el):null,t=at+k*(stag||.3);
+    if(chs&&chs.length){tl.fromTo(el,{autoAlpha:0},{autoAlpha:1,duration:.01},t);
+      tl.fromTo(chs,{opacity:0,y:18,filter:'blur(8px)',scale:1.25},{opacity:1,y:0,filter:'blur(0px)',scale:1,duration:.9,stagger:.045,ease:'power3.out'},t);}
+    else if(el.classList.contains('script')){tl.fromTo(el,{autoAlpha:0,clipPath:'inset(0 100% 0 0)',filter:'blur(3px)'},{autoAlpha:1,clipPath:'inset(0 0% 0 0)',filter:'blur(0px)',duration:1.5,ease:'power1.inOut'},t);}
+    else{tl.fromTo(el,{autoAlpha:0,filter:'blur(10px)',y:12},{autoAlpha:1,filter:'blur(0px)',y:0,duration:1.1},t);}});}
+  function frame(sel,at){var f=$$(sel+' .frame i');if(!f.length)return;
+    tl.fromTo(f.slice(0,2),{scaleX:0},{scaleX:1,duration:1.6,ease:'power2.inOut'},at).fromTo(f.slice(2),{scaleY:0},{scaleY:1,duration:1.6,ease:'power2.inOut'},at+.2);}
+  function xfade(a,b,at){tl.to(a,{autoAlpha:0,filter:'blur(8px)',scale:1.04,duration:1.2,ease:'power1.inOut'},at).fromTo(b,{autoAlpha:0,scale:1.04,filter:'blur(0px)'},{autoAlpha:1,scale:1,duration:1.2,ease:'power1.inOut'},at);}
+  function drift(sel,at,dur,a,b){tl.fromTo(sel,a,Object.assign({duration:dur,ease:'none'},b),at);}
+  function scene(id,start,end){xfade('#'+SC[SC.length-1].id,'#'+id,start);SC.push({id:id,start:start,end:end,v:$('#'+id+' video')});frame('#'+id,start+.4);}
+  SC.push({id:'s0',start:0,end:6.3,v:$('#s0 video')});
+  scene('s1',5.4,13);reveal($$('#s1 .a'),6.4,.42);
+  scene('s2',13,19.5);drift('#s2 .bg',13,7,{scale:1.02,x:0},{scale:1.1,x:-12});reveal($$('#s2 .a'),13.5,.4);
+  scene('s3',19.5,25);drift('#s3 .bg',19.5,6.5,{scale:1.12},{scale:1.02});reveal($$('#s3 .a'),20,.3);
+  scene('s4',25,31);drift('#s4 .bg',25,7,{scale:1.08},{scale:1});reveal($$('#s4 .ttl .a'),25.4,.35);
+  tl.fromTo('#s4 .tl-line',{scaleY:0},{scaleY:1,duration:2,ease:'power1.inOut'},26.2);reveal($$('#s4 .ev'),26.6,.7);
+  scene('s5',31,37);drift('#s5 .bg',31,7,{scale:1,x:10},{scale:1.08,x:-10});reveal($$('#s5 .a'),31.4,.35);
+  scene('s6',37,43.5);drift('#s6 .bg',37,7,{scale:1,x:0},{scale:1.08,x:10});reveal($$('#s6 .ttl .a'),37.4,.35);
+  tl.fromTo('#s6 .det',{'--dl':0},{'--dl':1,duration:2,ease:'power1.inOut'},38);reveal($$('#s6 .dItem'),38.4,.7);
+  scene('s7',43.5,49);drift('#s7 .bg',43.5,6.5,{scale:1.02,x:-8},{scale:1.1,x:8});reveal($$('#s7 .a'),44,.35);
+  scene('s8',49,55.5);reveal($$('#s8 .a'),49.4,.35);
+  scene('s9',55.5,64);reveal($$('#s9 .a'),56,.5);
+  tl.to({},{duration:.5},64);
+  SC.forEach(function(s){if(s.id==='s0')return;tl.call(burst,[s.id],s.start+1.4);});
+  D=tl.duration();
+  tl.eventCallback('onUpdate',paint);
+  tl.eventCallback('onComplete',function(){setIco(false);ctrl.classList.remove('dim');syncVideos();});
+  tl.time(keep,false);if(was)tl.play();paint();
+}
+window.__tlRefresh=function(){if(tl)build();};
+
+function syncVideos(){
+  if(!SC)return;var t=tl.time(),playing=!tl.paused();
+  SC.forEach(function(s){if(!s.v)return;var v=s.v,on=t>=s.start-.2&&t<=s.end+1.3;
+    if(!on){if(!v.paused)v.pause();return;}
+    var dur=v.duration||8,want=Math.max(0,t-s.start);want=v.loop?want%dur:Math.min(want,dur-.05);
+    if(Math.abs(v.currentTime-want)>.35||!playing){try{v.currentTime=want;}catch(e){}}
+    if(playing&&v.paused)v.play().catch(function(){});if(!playing&&!v.paused)v.pause();});
+}
+
+/* destellos */
+var cv=$('#fx'),cx=cv.getContext('2d'),P=[],W=0,H=0,DPR=Math.min(2,devicePixelRatio||1);
+function rs(){var r=$('#stage').getBoundingClientRect();W=r.width;H=r.height;cv.width=W*DPR;cv.height=H*DPR;cx.setTransform(DPR,0,0,DPR,0,0);}
+rs();addEventListener('resize',rs);
+function add(n,b,x0,y0){for(var i=0;i<n;i++)P.push({x:b?x0+(Math.random()-.5)*170:Math.random()*W,y:b?y0+(Math.random()-.5)*70:Math.random()*H,
+  r:b?1.4+Math.random()*3.4:.6+Math.random()*2.1,vy:b?-.2-Math.random()*.6:-.05-Math.random()*.25,vx:(Math.random()-.5)*(b?.8:.15),
+  life:0,max:b?60+Math.random()*50:220+Math.random()*260,star:Math.random()<(b?.7:.22),ph:Math.random()*6.28});}
+add(36);
+function burst(id){if(tl.paused())return;var r=$('#'+id+' .foil'),st=$('#stage').getBoundingClientRect();if(!r)return;var b=r.getBoundingClientRect();add(22,true,b.left-st.left+b.width/2,b.top-st.top+b.height/2);}
+function star(x,y,r,a){cx.globalAlpha=a;cx.beginPath();cx.moveTo(x,y-r*3);cx.quadraticCurveTo(x,y,x+r*3,y);cx.quadraticCurveTo(x,y,x,y+r*3);cx.quadraticCurveTo(x,y,x-r*3,y);cx.quadraticCurveTo(x,y,x,y-r*3);cx.fill();}
+function loop(){cx.clearRect(0,0,W,H);
+  for(var i=P.length-1;i>=0;i--){var p=P[i];p.life++;p.x+=p.vx;p.y+=p.vy;p.ph+=.08;
+    if(p.life>p.max){P.splice(i,1);continue;}
+    var k=p.life/p.max,a=Math.sin(Math.PI*k)*(.55+.45*Math.sin(p.ph));
+    var g=cx.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r*4);g.addColorStop(0,'rgba(255,244,214,'+(a*.9)+')');g.addColorStop(1,'rgba(255,200,110,0)');
+    cx.globalAlpha=1;cx.fillStyle=g;cx.beginPath();cx.arc(p.x,p.y,p.r*4,0,6.29);cx.fill();
+    if(p.star){cx.fillStyle='#fff6dc';star(p.x,p.y,p.r,a);}}
+  if(P.length<36)add(1);cx.globalAlpha=1;if(!RM)requestAnimationFrame(loop);}
+loop();
 
 /* barra inferior */
 var track=$('#track'),fill=$('#fill'),thumb=$('#thumb'),tm=$('#tm'),pp=$('#pp'),ico=$('#ppIco'),ctrl=$('#ctrl');
 function fmt(s){s=Math.max(0,Math.round(s));return Math.floor(s/60)+':'+String(s%60).padStart(2,'0');}
-function paint(){var p=tl.progress();fill.style.width=(p*100)+'%';thumb.style.left=(p*100)+'%';tm.textContent=fmt(tl.time())+' / '+fmt(D);track.setAttribute('aria-valuenow',Math.round(p*100));}
-tl.eventCallback('onUpdate',paint);
-tl.eventCallback('onComplete',function(){setIco(false);ctrl.classList.remove('dim');});
+function paint(){if(!tl)return;var p=tl.progress();fill.style.width=(p*100)+'%';thumb.style.left=(p*100)+'%';tm.textContent=fmt(tl.time())+' / '+fmt(D);track.setAttribute('aria-valuenow',Math.round(p*100));syncVideos();}
 function setIco(playing){ico.innerHTML=playing?'<rect x="3" y="2" width="3.5" height="12"/><rect x="9.5" y="2" width="3.5" height="12"/>':'<path d="M4 2l10 6-10 6z"/>';pp.setAttribute('aria-label',playing?'Pausa':'Reproducir');}
-function play(){if(tl.progress()>=1)tl.restart();else tl.play();setIco(true);dimSoon();}
-function pause(){tl.pause();setIco(false);ctrl.classList.remove('dim');}
+function play(){if(tl.progress()>=1)tl.restart();else tl.play();setIco(true);dimSoon();syncVideos();}
+function pause(){tl.pause();setIco(false);ctrl.classList.remove('dim');syncVideos();}
 pp.addEventListener('click',function(){tl.paused()||tl.progress()>=1?play():pause();});
 var dimT;function dimSoon(){clearTimeout(dimT);ctrl.classList.remove('dim');dimT=setTimeout(function(){if(!tl.paused())ctrl.classList.add('dim');},2600);}
 var dragging=false,wasPlaying=false;
-function seekAt(x){var r=track.getBoundingClientRect();var p=Math.min(1,Math.max(0,(x-r.left)/r.width));tl.progress(p);paint();}
-track.addEventListener('pointerdown',function(e){dragging=true;wasPlaying=!tl.paused()&&tl.progress()<1;tl.pause();track.classList.add('drag');track.setPointerCapture(e.pointerId);seekAt(e.clientX);ctrl.classList.remove('dim');});
+function seekAt(x){var r=track.getBoundingClientRect();tl.progress(Math.min(1,Math.max(0,(x-r.left)/r.width)));paint();}
+track.addEventListener('pointerdown',function(e){dragging=true;wasPlaying=!tl.paused()&&tl.progress()<1;tl.pause();track.classList.add('drag');try{track.setPointerCapture(e.pointerId);}catch(_){}seekAt(e.clientX);ctrl.classList.remove('dim');});
 track.addEventListener('pointermove',function(e){if(dragging)seekAt(e.clientX);});
-function endDrag(){if(!dragging)return;dragging=false;track.classList.remove('drag');if(wasPlaying&&tl.progress()<1)play();else setIco(false);}
+function endDrag(){if(!dragging)return;dragging=false;track.classList.remove('drag');if(wasPlaying&&tl.progress()<1)play();else{setIco(false);syncVideos();}}
 track.addEventListener('pointerup',endDrag);track.addEventListener('pointercancel',endDrag);
 track.addEventListener('keydown',function(e){if(e.key==='ArrowRight'||e.key==='ArrowLeft'){tl.time(tl.time()+(e.key==='ArrowRight'?3:-3));paint();}});
 $('#stage').addEventListener('pointerdown',function(e){if(!e.target.closest('.ctrl'))dimSoon();});
 
-/* sonido */
-var aud=$('#aud'),muted=false;
-$('#mute').addEventListener('click',function(){muted=!muted;aud.muted=muted;this.textContent=muted?'×':'♪';if(!muted&&aud.paused)aud.play().catch(function(){});});
+var aud=$('#aud'),fab=$('#musicFab');
+function musicOn(){aud.play().then(function(){fab.classList.add('is-playing');}).catch(function(){});}
+fab.addEventListener('click',function(){if(aud.paused)musicOn();else{aud.pause();fab.classList.remove('is-playing');}});
 
-/* inicio: un toque abre el sobre y arranca música */
-$('#start').addEventListener('click',function(){
-  this.remove();ctrl.style.visibility='visible';
-  aud.play().catch(function(){});
-  if(RM){tl.progress(.25);}
-  play();
-});
-paint();setIco(false);
+build();setIco(false);
+$('#start').addEventListener('click',function(){this.remove();ctrl.style.visibility='visible';musicOn();if(RM)tl.progress(.12);play();});
 })();
 </script>
 </body>
