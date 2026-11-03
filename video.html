@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Zuleyma & Horlando · 3 · IV · 2027</title>
+<meta name="description" content="Zuleyma Morales & Horlando Martínez · 3 de abril de 2027 · Montgomery, Texas">
+<meta property="og:title" content="Zuleyma & Horlando · 3 de abril de 2027">
+<meta property="og:image" content="https://boda-zuleyma-y-horlando.vercel.app/og-image.jpg">
+<meta name="theme-color" content="#1a140c">
+<style>
+@font-face{font-family:'Bodoni Moda';src:url(fonts/BodoniModa.ttf) format('truetype');font-weight:400 900;font-display:swap}
+@font-face{font-family:'WindSong';src:url(fonts/WindSong.ttf) format('truetype');font-display:swap}
+@font-face{font-family:'Montserrat';src:url(fonts/Montserrat.ttf) format('truetype');font-weight:100 900;font-display:swap}
+:root{--ink:#1c1710;--ivory:#fffff0;--champ:#f7e7ce;--gold:#c9a24a;--gold-d:#8a6a22;--sepia:#2a2013}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:#120e08;overflow:hidden;overscroll-behavior:none}
+body{font-family:'Montserrat',sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased;-webkit-tap-highlight-color:transparent}
+.stage{position:fixed;inset:0;margin:0 auto;max-width:480px;overflow:hidden;background:#000}
+@media(min-width:520px){.stage{inset:2vh auto;height:96vh;left:0;right:0;width:min(480px,54vh);border-radius:34px;box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 0 1px rgba(201,162,74,.35)}
+  body{background:url(ink/ink-hero.webp) center/cover}
+  body::before{content:'';position:fixed;inset:0;background:rgba(18,14,8,.55)}}
+.sc{position:absolute;inset:0;visibility:hidden;opacity:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 26px}
+.bg{position:absolute;inset:-6%;background-size:cover;background-position:center;z-index:-1}
+.veil{position:absolute;inset:0;z-index:-1}
+/* tipografía */
+.cap{font-family:'Montserrat',sans-serif;font-weight:400;font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;line-height:1.7}
+.serif{font-family:'Bodoni Moda',serif;font-weight:400}
+.script{font-family:'WindSong',cursive;font-weight:400;line-height:1;padding:.2em .3em;margin:-.2em -.3em}
+.light{color:#fff}
+/* 0 · sobre */
+#s0{background:#0c0a07;padding:0}
+.env{position:absolute;inset:0;background:radial-gradient(120% 80% at 50% 40%,#2a2620,#0c0a07 70%)}
+.env::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.13'/%3E%3C/svg%3E")}
+.flap{position:absolute;left:0;right:0;top:0;height:58%;background:linear-gradient(170deg,#1d1a15,#0f0d0a);clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:50% 0;filter:drop-shadow(0 6px 10px rgba(0,0,0,.6));z-index:2}
+.ribbon{position:absolute;width:5px;height:140%;top:-20%;left:50%;background:linear-gradient(90deg,#8a6a22,#f7e7ce 50%,#8a6a22);transform:rotate(32deg);z-index:3;box-shadow:0 0 6px rgba(0,0,0,.5)}
+.ribbon.r2{transform:rotate(-32deg)}
+.seal{position:absolute;left:50%;top:58%;width:118px;height:118px;margin:-59px 0 0 -59px;border-radius:50%;z-index:4;
+  background:radial-gradient(circle at 36% 30%,#f3dc9a,#c9a24a 38%,#8a6a22 72%,#5e4612);box-shadow:0 8px 20px rgba(0,0,0,.65),inset 0 0 0 7px rgba(138,106,34,.55),inset 0 0 18px rgba(255,240,200,.35);
+  display:flex;align-items:center;justify-content:center;font-family:'Bodoni Moda',serif;font-size:34px;color:#5e4612;text-shadow:0 1px 0 rgba(255,240,200,.6)}
+.seal i{font-family:'WindSong',cursive;font-style:normal;font-size:30px;margin:0 2px}
+/* 1 · portada */
+#s1 .bg,#s6 .bg{background-image:url(ink/ink-hero.webp)}
+#s1 .veil{background:linear-gradient(180deg,rgba(40,28,12,.25) 0%,rgba(40,28,12,.45) 40%,rgba(26,18,8,.82) 100%)}
+#s1 .bg{filter:sepia(.45) saturate(1.2) brightness(.72)}
+.sun{position:absolute;left:50%;top:13%;width:160px;height:160px;margin-left:-80px;border-radius:50%;background:radial-gradient(circle,rgba(255,246,220,.95),rgba(255,226,170,.5) 35%,rgba(255,210,140,0) 70%);z-index:-1}
+#s1{justify-content:flex-end;padding-bottom:120px}
+.names{font-size:clamp(30px,9vw,40px);letter-spacing:.04em;line-height:1.15;margin:12px 0 10px;display:flex;flex-wrap:wrap;align-items:baseline;justify-content:center;gap:0 10px}
+.names .script{font-size:1.25em;letter-spacing:0}
+.dt{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:12px;width:100%;max-width:330px;margin-top:22px}
+.dt .side{border-top:1px solid rgba(255,255,255,.8);border-bottom:1px solid rgba(255,255,255,.8);padding:9px 0;font-family:'Bodoni Moda',serif;font-size:15px;letter-spacing:.08em;text-transform:uppercase}
+.dt .mid{font-family:'Bodoni Moda',serif;line-height:1}
+.dt .mid small{display:block;font-size:17px;letter-spacing:.1em}
+.dt .mid b{display:block;font-weight:400;font-size:52px;margin:4px 0}
+/* escenas claras */
+.lightsc .bg{background-image:url(ink/ink-hero.webp);filter:saturate(.5) brightness(1.1);opacity:.55}
+.lightsc .veil{background:rgba(255,255,248,.72)}
+.ttl{position:relative;width:100%;text-align:left;margin-bottom:26px;padding-left:18px}
+.ttl .script{font-size:74px;display:block;margin-bottom:-30px;margin-left:-.1em}
+.ttl .serif{font-size:clamp(34px,10vw,44px);letter-spacing:.06em;display:block;padding-left:64px}
+/* programa */
+.tl{position:relative;width:100%;max-width:340px}
+.tl-line{position:absolute;left:50%;top:0;bottom:0;width:1.5px;background:var(--ink);transform-origin:50% 0}
+.ev{position:relative;display:grid;grid-template-columns:1fr 34px 1fr;align-items:center;margin:0 0 34px}
+.ev .dot{width:12px;height:12px;border-radius:50%;background:var(--ink);justify-self:center;z-index:1}
+.ev .tx{text-align:right;padding-right:6px}
+.ev.r .tx{grid-column:3;text-align:left;padding:0 0 0 6px}
+.ev .ic{grid-column:3;grid-row:1;justify-self:start;padding-left:8px}
+.ev.r .ic{grid-column:1;justify-self:end;padding:0 8px 0 0}
+.ev .ic svg{width:34px;height:34px;stroke:var(--ink);fill:none;stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round}
+.ev .h{font-family:'Bodoni Moda',serif;font-size:17px}
+.ev .n{font-family:'Bodoni Moda',serif;font-size:16px;letter-spacing:.1em;text-transform:uppercase;margin:2px 0}
+.ev .a{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;line-height:1.5}
+/* detalles */
+.det{position:relative;width:100%;max-width:340px;text-align:right;padding-right:26px}
+.det::after{content:'';position:absolute;right:4px;top:0;bottom:0;width:1.5px;background:var(--ink);transform-origin:50% 0;transform:scaleY(var(--dl,1))}
+.dItem{position:relative;margin-bottom:30px}
+.dItem::after{content:'';position:absolute;right:-26px;top:5px;width:10px;height:10px;border-radius:50%;background:var(--ink)}
+.dItem h3{font-family:'Bodoni Moda',serif;font-weight:400;font-size:18px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px}
+.dItem p{font-family:'Montserrat',sans-serif;font-size:13px;font-weight:500;line-height:1.6}
+/* rsvp */
+#s5{background:#fff}
+.rings{position:absolute;left:50%;top:42%;width:340px;height:340px;margin:-170px 0 0 -170px;perspective:900px;z-index:0;opacity:.6}
+.ring{position:absolute;inset:40px;border-radius:50%;border:16px solid transparent;background:linear-gradient(#fff,#fff) padding-box,conic-gradient(from 0deg,#8a6a22,#f7e7ce,#c9a24a,#fff6dc,#8a6a22,#e6c97a,#8a6a22) border-box;box-shadow:0 18px 40px rgba(138,106,34,.25)}
+.ring.b{inset:70px 30px 10px 90px}
+.rs{position:relative;z-index:1;width:100%}
+.rs .script{font-size:64px;display:block;text-align:left;padding-left:30px}
+.rs .big{font-family:'Bodoni Moda',serif;font-size:clamp(118px,36vw,150px);line-height:.92;letter-spacing:.02em}
+.rs .by{font-family:'Bodoni Moda',serif;font-size:24px;letter-spacing:.06em;text-transform:uppercase;margin-top:22px}
+.rs .mail{font-size:11px;letter-spacing:.2em;margin-top:6px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 28px;margin-top:20px;border-radius:999px;border:1px solid var(--gold-d);background:linear-gradient(135deg,#8a6a22,#c9a24a 50%,#8a6a22);color:#fff;font-family:'Montserrat',sans-serif;font-weight:600;font-size:13px;letter-spacing:.18em;text-transform:uppercase;text-decoration:none}
+.btn.ghost{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.7)}
+.ty{font-size:60px;margin-top:8px}
+/* cierre */
+#s6 .bg{filter:sepia(.55) saturate(1.1) brightness(.62)}
+#s6 .veil{background:linear-gradient(180deg,rgba(20,14,6,.2),rgba(20,14,6,.65))}
+.bigdate{font-family:'Bodoni Moda',serif;color:#fff;font-size:clamp(84px,26vw,112px);line-height:1;letter-spacing:.01em}
+.bigdate span{display:block}
+.sign{font-family:'WindSong',cursive;color:#fff;font-size:clamp(28px,8.6vw,38px);white-space:nowrap;margin-top:22px;padding:.2em .3em}
+.blessing{font-family:'Bodoni Moda',serif;font-style:italic;color:#fff;font-size:15px;margin-top:6px;opacity:.9}
+/* barra de video */
+.ctrl{position:absolute;left:0;right:0;bottom:0;z-index:50;padding:14px 16px max(14px,env(safe-area-inset-bottom));display:flex;align-items:center;gap:12px;background:linear-gradient(to top,rgba(0,0,0,.55),rgba(0,0,0,0));transition:opacity .4s}
+.ctrl.dim{opacity:.35}
+.pp{flex:none;width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.55);background:rgba(0,0,0,.35);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.pp svg{width:16px;height:16px;fill:#fff}
+.track{position:relative;flex:1;height:44px;cursor:pointer;touch-action:none}
+.track::before{content:'';position:absolute;left:0;right:0;top:50%;height:3px;margin-top:-1.5px;border-radius:3px;background:rgba(255,255,255,.35)}
+.fill{position:absolute;left:0;top:50%;height:3px;margin-top:-1.5px;border-radius:3px;background:linear-gradient(90deg,#c9a24a,#f7e7ce);width:0}
+.thumb{position:absolute;top:50%;width:16px;height:16px;margin:-8px 0 0 -8px;border-radius:50%;background:#f7e7ce;box-shadow:0 0 0 3px rgba(201,162,74,.45),0 2px 6px rgba(0,0,0,.4);left:0;transition:transform .2s}
+.track.drag .thumb{transform:scale(1.35)}
+.tm{flex:none;min-width:78px;text-align:right;color:#fff;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:500;font-variant-numeric:tabular-nums;text-shadow:0 1px 4px rgba(0,0,0,.6)}
+.lang{position:absolute;top:max(14px,env(safe-area-inset-top));right:14px;z-index:50;display:flex;border-radius:999px;overflow:hidden;border:1px solid rgba(255,255,255,.5);background:rgba(0,0,0,.3)}
+.lang button{min-width:44px;min-height:36px;border:0;background:none;color:#fff;font:600 12px 'Montserrat',sans-serif;letter-spacing:.1em;cursor:pointer}
+.lang button.on{background:rgba(201,162,74,.85)}
+.mute{position:absolute;top:max(14px,env(safe-area-inset-top));left:14px;z-index:50;width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.5);background:rgba(0,0,0,.3);color:#fff;font-size:16px;cursor:pointer}
+/* inicio */
+.start{position:absolute;inset:0;z-index:60;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding-bottom:16vh;color:#f7e7ce;font-family:'Montserrat',sans-serif;font-size:13px;letter-spacing:.3em;text-transform:uppercase;cursor:pointer;background:transparent;border:0;width:100%}
+.start span{animation:pulse 2.2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:.45}50%{opacity:1}}
+@media(prefers-reduced-motion:reduce){.start span{animation:none}}
+</style>
+</head>
+<body>
+<div class="stage" id="stage">
+
+  <!-- 0 · SOBRE -->
+  <section class="sc" id="s0" style="visibility:visible;opacity:1">
+    <div class="env"></div>
+    <div class="ribbon"></div><div class="ribbon r2"></div>
+    <div class="flap"></div>
+    <div class="seal">Z<i>&amp;</i>H</div>
+  </section>
+
+  <!-- 1 · PORTADA -->
+  <section class="sc light" id="s1">
+    <div class="bg"></div><div class="sun"></div><div class="veil"></div>
+    <p class="cap a" data-en="Together with their families">Junto con sus familias</p>
+    <h1 class="names serif a"><span>ZULEYMA</span><span class="script" data-en="and">y</span><span>HORLANDO</span></h1>
+    <p class="cap a" data-en="invite you<br>to their wedding celebration">los invitan<br>a celebrar su boda</p>
+    <div class="dt a">
+      <span class="side" data-en="Saturday">Sábado</span>
+      <span class="mid"><small data-en="APRIL">ABRIL</small><b>3</b><small>2027</small></span>
+      <span class="side">Montgomery<br>TX</span>
+    </div>
+  </section>
+
+  <!-- 2 · FRASE Y FAMILIAS -->
+  <section class="sc lightsc" id="s2">
+    <div class="bg"></div><div class="veil"></div>
+    <span class="script a" style="font-size:64px" data-en="With God's blessing">Con la bendición de Dios</span>
+    <p class="serif a" style="font-size:27px;line-height:1.35;margin:18px 0 34px;font-style:italic" data-en="“God wrote<br>our love story.”">“Dios escribió<br>nuestra historia de amor.”</p>
+    <p class="cap a" style="font-weight:600" data-en="Groom's parents">Padres del novio</p>
+    <p class="serif a" style="font-size:18px;margin:6px 0 22px;line-height:1.5">Sr. Joaquín Martínez<br>Sra. Guillermina Martínez</p>
+    <p class="cap a" style="font-weight:600" data-en="Bride's parents">Padres de la novia</p>
+    <p class="serif a" style="font-size:18px;margin-top:6px;line-height:1.5">Sr. Tomás Morales<br>Sra. Guadalupe Morales</p>
+  </section>
+
+  <!-- 3 · PROGRAMA -->
+  <section class="sc lightsc" id="s3">
+    <div class="bg"></div><div class="veil"></div>
+    <div class="ttl"><span class="script a" data-en="The">El</span><span class="serif a" data-en="PROGRAM">PROGRAMA</span></div>
+    <div class="tl">
+      <div class="tl-line"></div>
+      <div class="ev a">
+        <div class="tx"><div class="h" data-en="Time TBA">Por confirmar</div><div class="n" data-en="Ceremony">Ceremonia</div><div class="a" data-en="Religious ceremony<br>Montgomery, TX">Ceremonia religiosa<br>Montgomery, TX</div></div>
+        <span class="dot"></span>
+        <span class="ic"><svg viewBox="0 0 40 40"><circle cx="15" cy="23" r="9"/><circle cx="25" cy="23" r="9"/><path d="M12 12l3-5 3 5"/></svg></span>
+      </div>
+      <div class="ev r a">
+        <span class="ic"><svg viewBox="0 0 40 40"><path d="M11 8h18l-9 12z"/><path d="M20 20v12M14 32h12"/><circle cx="27" cy="9" r="2.5"/></svg></span>
+        <span class="dot"></span>
+        <div class="tx"><div class="h" data-en="Time TBA">Por confirmar</div><div class="n" data-en="Reception">Recepción</div><div class="a">The Luminaire Venue<br>495 S Pine Lake Rd</div></div>
+      </div>
+      <div class="ev a" style="margin-bottom:0">
+        <div class="tx"><div class="h" data-en="All night">Toda la noche</div><div class="n" data-en="Party">Fiesta</div><div class="a">Montgomery, TX 77356</div></div>
+        <span class="dot"></span>
+        <span class="ic"><svg viewBox="0 0 40 40"><rect x="11" y="7" width="18" height="26" rx="2"/><circle cx="20" cy="24" r="5"/><circle cx="20" cy="13" r="2.5"/></svg></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 · DETALLES -->
+  <section class="sc lightsc" id="s4">
+    <div class="bg"></div><div class="veil"></div>
+    <div class="ttl"><span class="script a" data-en="The">Los</span><span class="serif a" data-en="DETAILS">DETALLES</span></div>
+    <div class="det">
+      <div class="dItem a"><h3 data-en="Dress code">Código de vestimenta</h3><p data-en="To be confirmed. Please avoid white and ivory, reserved for the bride.">Por confirmar. Por favor evita el blanco y el marfil, reservados para la novia.</p></div>
+      <div class="dItem a"><h3 data-en="Accommodation">Hospedaje</h3><p data-en="Best Western Lake Conroe, Margaritaville Lake Resort and Homewood Suites Conroe — 6 to 15 min from the reception.">Best Western Lake Conroe, Margaritaville Lake Resort y Homewood Suites Conroe, a 6–15 min de la recepción.</p></div>
+      <div class="dItem a" style="margin-bottom:0"><h3 data-en="Gifts">Regalos</h3><p data-en="Your presence is our gift. There will be an envelope box at the reception.">Tu presencia es nuestro regalo. Habrá buzón de sobres en la recepción.</p></div>
+    </div>
+  </section>
+
+  <!-- 5 · RSVP -->
+  <section class="sc" id="s5">
+    <div class="rings"><div class="ring"></div><div class="ring b"></div></div>
+    <div class="rs">
+      <span class="script a" data-en="please">por favor</span>
+      <div class="big a">RS</div><div class="big a">VP</div>
+      <p class="by a" data-en="Confirm your attendance">Confirma tu asistencia</p>
+      <a class="btn a" id="rsvpBtn" href="index.html#rsvp" data-en="Confirm">Confirmar</a>
+      <span class="script ty a" data-en="thank you" style="display:block;text-align:center;padding:0">gracias</span>
+    </div>
+  </section>
+
+  <!-- 6 · CIERRE -->
+  <section class="sc light" id="s6">
+    <div class="bg"></div><div class="veil"></div>
+    <div class="bigdate a"><span>03·04</span><span>2027</span></div>
+    <div class="sign a">Zuleyma &amp; Horlando</div>
+    <p class="blessing a" data-en="Together by God's grace, forever in His love.">Unidos por la gracia de Dios, para siempre en Su amor.</p>
+    <a class="btn ghost a" id="fullBtn" href="index.html" data-en="See full invitation">Ver invitación completa</a>
+  </section>
+
+  <button class="start" id="start" type="button"><span data-en="Tap to open">Toca para abrir</span></button>
+  <button class="mute" id="mute" type="button" aria-label="Sonido">♪</button>
+  <div class="lang" id="lang"><button type="button" data-l="es" class="on">ES</button><button type="button" data-l="en">EN</button></div>
+  <div class="ctrl" id="ctrl" style="visibility:hidden">
+    <button class="pp" id="pp" type="button" aria-label="Pausa"><svg id="ppIco" viewBox="0 0 16 16"><rect x="3" y="2" width="3.5" height="12"/><rect x="9.5" y="2" width="3.5" height="12"/></svg></button>
+    <div class="track" id="track" role="slider" aria-label="Avance" aria-valuemin="0" aria-valuemax="100" tabindex="0"><div class="fill" id="fill"></div><div class="thumb" id="thumb"></div></div>
+    <span class="tm" id="tm">0:00 / 0:00</span>
+  </div>
+</div>
+<audio id="aud" loop preload="auto" src="cancion.mp3"></audio>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script>
+(function(){
+var RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var $=function(s,c){return (c||document).querySelector(s);},$$=function(s,c){return [].slice.call((c||document).querySelectorAll(s));};
+
+/* idioma */
+var LANG=(new URLSearchParams(location.search).get('lang')==='en')?'en':'es';
+$$('[data-en]').forEach(function(e){e.dataset.es=e.innerHTML;});
+function setLang(l){LANG=l;document.documentElement.lang=l;$$('[data-en]').forEach(function(e){e.innerHTML=l==='en'?e.dataset.en:e.dataset.es;});
+  $$('#lang button').forEach(function(b){b.classList.toggle('on',b.dataset.l===l);});}
+$$('#lang button').forEach(function(b){b.addEventListener('click',function(){setLang(b.dataset.l);});});
+setLang(LANG);
+
+/* links de confirmación con los datos del invitado */
+var qs=location.search||'';
+$('#rsvpBtn').href='index.html'+qs+'#rsvp';$('#fullBtn').href='index.html'+qs;
+
+/* timeline: una sola animación continua */
+var tl=gsap.timeline({paused:true,defaults:{ease:'power2.out'}});
+function blurIn(t,els,at,stag){tl.fromTo(els,{autoAlpha:0,filter:'blur(10px)',y:10},{autoAlpha:1,filter:'blur(0px)',y:0,duration:1.1,stagger:stag||.25},at);}
+function xfade(a,b,at){tl.to(a,{autoAlpha:0,filter:'blur(6px)',duration:1.1,ease:'power1.inOut'},at).fromTo(b,{autoAlpha:0},{autoAlpha:1,duration:1.1,ease:'power1.inOut'},at);}
+
+// 0 sobre: se abre y se va
+tl.to('#s0 .flap',{rotationX:178,duration:1.1,ease:'power2.inOut'},.4)
+  .to('#s0 .seal',{x:260,rotation:60,duration:1.2,ease:'power2.in'},.9)
+  .to('#s0 .env,#s0 .ribbon,#s0 .flap',{x:-480,duration:1.3,ease:'power2.in'},1.2)
+  .set('#s1',{autoAlpha:1},1.2)
+  .to('#s0',{autoAlpha:0,duration:.3},2.4);
+// 1 portada
+tl.fromTo('#s1 .bg',{scale:1.12},{scale:1.02,duration:8,ease:'none'},1.2);
+tl.fromTo('#s1 .sun',{scale:.8,opacity:.6},{scale:1.1,opacity:1,duration:8,ease:'sine.inOut'},1.2);
+blurIn(tl,$$('#s1 .a'),2.2,.45);
+// 2 frase/familias
+xfade('#s1','#s2',9);
+tl.fromTo('#s2 .bg',{scale:1.02,x:0},{scale:1.1,x:-12,duration:7,ease:'none'},9);
+blurIn(tl,$$('#s2 .a'),9.6,.3);
+// 3 programa
+xfade('#s2','#s3',15);
+tl.fromTo('#s3 .bg',{scale:1.08},{scale:1,duration:7,ease:'none'},15);
+blurIn(tl,$$('#s3 .ttl .a'),15.4,.35);
+tl.fromTo('#s3 .tl-line',{scaleY:0},{scaleY:1,duration:2.2,ease:'power1.inOut'},16);
+blurIn(tl,$$('#s3 .ev'),16.4,.6);
+// 4 detalles
+xfade('#s3','#s4',21.5);
+tl.fromTo('#s4 .bg',{scale:1,x:0},{scale:1.08,x:10,duration:7,ease:'none'},21.5);
+blurIn(tl,$$('#s4 .ttl .a'),21.9,.35);
+tl.fromTo('#s4 .det',{'--dl':0},{'--dl':1,duration:2.2,ease:'power1.inOut'},22.4);
+blurIn(tl,$$('#s4 .dItem'),22.8,.7);
+// 5 rsvp
+xfade('#s4','#s5',28);
+tl.fromTo('#s5 .ring',{rotationY:-55,rotationX:28,rotationZ:-20},{rotationY:55,rotationX:38,rotationZ:70,duration:6.5,ease:'sine.inOut',stagger:.25},28);
+blurIn(tl,$$('#s5 .a'),28.4,.35);
+// 6 cierre
+xfade('#s5','#s6',34.5);
+tl.fromTo('#s6 .bg',{scale:1.14,x:-14},{scale:1.02,x:14,duration:6.5,ease:'none'},34.5);
+blurIn(tl,$$('#s6 .a'),35,.5);
+tl.to({},{duration:1.5});
+var D=tl.duration();
+
+/* barra inferior */
+var track=$('#track'),fill=$('#fill'),thumb=$('#thumb'),tm=$('#tm'),pp=$('#pp'),ico=$('#ppIco'),ctrl=$('#ctrl');
+function fmt(s){s=Math.max(0,Math.round(s));return Math.floor(s/60)+':'+String(s%60).padStart(2,'0');}
+function paint(){var p=tl.progress();fill.style.width=(p*100)+'%';thumb.style.left=(p*100)+'%';tm.textContent=fmt(tl.time())+' / '+fmt(D);track.setAttribute('aria-valuenow',Math.round(p*100));}
+tl.eventCallback('onUpdate',paint);
+tl.eventCallback('onComplete',function(){setIco(false);ctrl.classList.remove('dim');});
+function setIco(playing){ico.innerHTML=playing?'<rect x="3" y="2" width="3.5" height="12"/><rect x="9.5" y="2" width="3.5" height="12"/>':'<path d="M4 2l10 6-10 6z"/>';pp.setAttribute('aria-label',playing?'Pausa':'Reproducir');}
+function play(){if(tl.progress()>=1)tl.restart();else tl.play();setIco(true);dimSoon();}
+function pause(){tl.pause();setIco(false);ctrl.classList.remove('dim');}
+pp.addEventListener('click',function(){tl.paused()||tl.progress()>=1?play():pause();});
+var dimT;function dimSoon(){clearTimeout(dimT);ctrl.classList.remove('dim');dimT=setTimeout(function(){if(!tl.paused())ctrl.classList.add('dim');},2600);}
+var dragging=false,wasPlaying=false;
+function seekAt(x){var r=track.getBoundingClientRect();var p=Math.min(1,Math.max(0,(x-r.left)/r.width));tl.progress(p);paint();}
+track.addEventListener('pointerdown',function(e){dragging=true;wasPlaying=!tl.paused()&&tl.progress()<1;tl.pause();track.classList.add('drag');track.setPointerCapture(e.pointerId);seekAt(e.clientX);ctrl.classList.remove('dim');});
+track.addEventListener('pointermove',function(e){if(dragging)seekAt(e.clientX);});
+function endDrag(){if(!dragging)return;dragging=false;track.classList.remove('drag');if(wasPlaying&&tl.progress()<1)play();else setIco(false);}
+track.addEventListener('pointerup',endDrag);track.addEventListener('pointercancel',endDrag);
+track.addEventListener('keydown',function(e){if(e.key==='ArrowRight'||e.key==='ArrowLeft'){tl.time(tl.time()+(e.key==='ArrowRight'?3:-3));paint();}});
+$('#stage').addEventListener('pointerdown',function(e){if(!e.target.closest('.ctrl'))dimSoon();});
+
+/* sonido */
+var aud=$('#aud'),muted=false;
+$('#mute').addEventListener('click',function(){muted=!muted;aud.muted=muted;this.textContent=muted?'×':'♪';if(!muted&&aud.paused)aud.play().catch(function(){});});
+
+/* inicio: un toque abre el sobre y arranca música */
+$('#start').addEventListener('click',function(){
+  this.remove();ctrl.style.visibility='visible';
+  aud.play().catch(function(){});
+  if(RM){tl.progress(.25);}
+  play();
+});
+paint();setIco(false);
+})();
+</script>
+</body>
+</html>
