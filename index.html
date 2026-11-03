@@ -1083,7 +1083,7 @@ body{background:var(--bg);color:var(--text);font-family:'Cormorant Garamond',ser
 </div>
 
 <!-- AUDIO: Supabase, preload=none para no consumir egress en Vercel -->
-<audio id="bgAudio" loop preload="none"><source src="cancion.mp3" type="audio/mpeg"></audio>
+<audio id="bgAudio" loop preload="none"><source src="cancion-love-i-prayed.mp3" type="audio/mpeg"></audio>
 <button class="vinyl-btn" id="musicFab" type="button" aria-label="Reproducir música de la invitación">
   <div class="vinyl-tonearm"><div class="vinyl-tonearm-pivot"></div><div class="vinyl-tonearm-line"></div><div class="vinyl-tonearm-head"></div></div>
   <div class="vinyl-spin"><div class="vinyl-disc"><div class="vinyl-sheen"></div><div class="vinyl-label-text">Z&amp;H<small>2027</small></div><div class="vinyl-hole"></div></div></div>
@@ -1756,7 +1756,7 @@ function applyLang(lang){
    - Si el archivo de la cancion falla (404, host caido, HTML en vez de mp3) se usa una de respaldo. */
 (function(){
   if(window.__elyAudio2) return; window.__elyAudio2=1;
-  var FALLBACK='https://boda-zuleyma-y-horlando.vercel.app/cancion.mp3';
+  var FALLBACK='https://boda-zuleyma-y-horlando.vercel.app/cancion-love-i-prayed.mp3';
   var forced=false, gestured=false;
   function A(){ return document.querySelector('audio'); }
   function toFallback(a){
