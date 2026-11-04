@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Zuleyma & Horlando · 3 · IV · 2027</title>
-<meta name="description" content="Zuleyma Morales & Horlando Martínez · 3 de abril de 2027 · Montgomery, Texas">
+<meta name="description" content="Zuleyma Morales & Horlando Martínez · 3 de abril de 2027 · Houston y Montgomery, Texas">
 <meta property="og:title" content="Zuleyma & Horlando · 3 de abril de 2027">
 <meta property="og:image" content="https://boda-zuleyma-y-horlando.vercel.app/og-image.jpg">
 <meta name="theme-color" content="#120e08">
@@ -13,6 +13,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
 <style>
 @font-face{font-family:'Bodoni Moda';src:url(fonts/BodoniModa.ttf) format('truetype');font-weight:400 900;font-display:swap}
+@font-face{font-family:'Parisienne';src:url(fonts/Parisienne.ttf) format('truetype');font-display:swap}
 @font-face{font-family:'WindSong';src:url(fonts/WindSong.ttf) format('truetype');font-display:swap}
 @font-face{font-family:'Montserrat';src:url(fonts/Montserrat.ttf) format('truetype');font-weight:100 900;font-display:swap}
 :root{--ink:#1c1710;--ivory:#fffff0;--champ:#f7e7ce;--gold:#c9a24a;--gold-d:#8a6a22}
@@ -30,8 +31,8 @@ body{font-family:'Montserrat',sans-serif;color:var(--ink);-webkit-font-smoothing
 video.bg{inset:0;width:100%;height:100%;object-fit:cover}
 .veil{position:absolute;inset:0;z-index:-1;pointer-events:none}
 .frame{position:absolute;inset:16px;pointer-events:none;z-index:1}
-.frame i{width:46px!important;height:46px!important;background:none!important;border:0 solid rgba(232,206,140,.9);filter:drop-shadow(0 0 5px rgba(255,214,140,.7));top:auto!important;bottom:auto!important;left:auto!important;right:auto!important}
-.frame i::after{content:"";position:absolute;width:7px;height:7px;background:#f3dc9a;transform:rotate(45deg);box-shadow:0 0 10px #ffd98a}
+.frame i{width:46px!important;height:46px!important;background:none!important;border:0 solid rgba(236,222,190,.85);filter:drop-shadow(0 0 3px rgba(255,236,200,.35));top:auto!important;bottom:auto!important;left:auto!important;right:auto!important}
+.frame i::after{content:"";position:absolute;width:7px;height:7px;background:#eadbb8;transform:rotate(45deg);box-shadow:0 0 5px rgba(255,236,200,.5)}
 .frame i:nth-child(1){top:0!important;left:0!important;border-top-width:1.5px;border-left-width:1.5px;border-top-left-radius:14px}.frame i:nth-child(1)::after{top:-4px;left:-4px}
 .frame i:nth-child(2){top:0!important;right:0!important;border-top-width:1.5px;border-right-width:1.5px;border-top-right-radius:14px}.frame i:nth-child(2)::after{top:-4px;right:-4px}
 .frame i:nth-child(3){bottom:0!important;left:0!important;border-bottom-width:1.5px;border-left-width:1.5px;border-bottom-left-radius:14px}.frame i:nth-child(3)::after{bottom:-4px;left:-4px}
@@ -48,24 +49,35 @@ video.bg{inset:0;width:100%;height:100%;object-fit:cover}
 .serif{font-family:'Bodoni Moda',serif;font-weight:400}
 .script{font-family:'WindSong',cursive;font-weight:400;line-height:1;padding:.25em .35em;margin:-.25em -.35em;display:inline-block}
 .ch{display:inline-block;white-space:pre;padding:.14em .06em;margin:-.14em -.06em}.wd{display:inline-block;white-space:nowrap}
-.foil .ch,.foil.solo{background:linear-gradient(105deg,#7a5c14 0%,#c9a24a 18%,#fff3cf 30%,#e2c47c 40%,#9c7a2a 55%,#f4dd9c 72%,#8a6a22 100%);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;animation:foil 5.5s ease-in-out infinite;animation-delay:calc(var(--i,0) * .07s)}
+.foil .ch,.foil.solo{background:linear-gradient(105deg,#9a8156 0%,#d2bb8c 18%,#fbf3e2 30%,#e6d4ad 42%,#b09566 56%,#f2e6cb 72%,#a08659 100%);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;animation:foil 9s ease-in-out infinite;animation-delay:calc(var(--i,0) * .07s)}
 @keyframes foil{0%,100%{background-position:100% 0}50%{background-position:0 0}}
-.dark .foil{filter:drop-shadow(0 0 10px rgba(255,220,150,.35)) drop-shadow(0 2px 2px rgba(0,0,0,.45))}
-.lightsc .foil .ch,.lightsc .foil.solo,#s8 .foil .ch{background-image:linear-gradient(105deg,#3b2c0e 0%,#8a6a22 22%,#d9b860 34%,#6b5218 48%,#a8843a 66%,#2f230b 100%)}
+.dark .foil{filter:drop-shadow(0 0 6px rgba(255,236,200,.18)) drop-shadow(0 2px 3px rgba(0,0,0,.55))}
+.lightsc .foil .ch,.lightsc .foil.solo,#s8 .foil .ch{background-image:linear-gradient(105deg,#4a3b20 0%,#8f7548 22%,#c8ad7c 34%,#76603a 48%,#a58b5f 66%,#3f321c 100%)}
 .ivory{color:#fffaf0;text-shadow:0 1px 12px rgba(0,0,0,.45)}
-.dark .script{color:#fff4dc;text-shadow:0 0 14px rgba(255,214,140,.55),0 0 2px rgba(255,240,210,.8)}
+.dark .script{color:#fbf3e2;text-shadow:0 1px 10px rgba(0,0,0,.45),0 0 8px rgba(255,236,200,.25)}
 .lightsc .script,#s8 .script{color:#2b2112}
 .glint{position:relative}
-.glint::after{content:'';position:absolute;top:-10%;bottom:-10%;left:-30%;width:30%;background:linear-gradient(100deg,transparent,rgba(255,250,230,.0) 20%,rgba(255,250,230,.85) 50%,transparent 80%);transform:skewX(-18deg);mix-blend-mode:overlay;pointer-events:none;animation:glint 6s ease-in-out infinite 1.5s}
+.glint::after{content:'';position:absolute;top:-10%;bottom:-10%;left:-30%;width:30%;background:linear-gradient(100deg,transparent,rgba(255,250,230,.0) 20%,rgba(255,250,230,.85) 50%,transparent 80%);transform:skewX(-18deg);mix-blend-mode:overlay;opacity:.45;pointer-events:none;animation:glint 10s ease-in-out infinite 2s}
 @keyframes glint{0%,70%{left:-40%}100%{left:130%}}
 #fx{position:absolute;inset:0;z-index:20;pointer-events:none}
-.leak{position:absolute;inset:-20%;z-index:-1;pointer-events:none;mix-blend-mode:screen;background:radial-gradient(40% 30% at 20% 15%,rgba(255,196,110,.35),transparent 70%),radial-gradient(35% 25% at 85% 80%,rgba(255,170,90,.25),transparent 70%);animation:leak 9s ease-in-out infinite alternate}
+.leak{position:absolute;inset:-20%;z-index:-1;pointer-events:none;mix-blend-mode:screen;background:radial-gradient(40% 30% at 20% 15%,rgba(255,226,180,.16),transparent 70%),radial-gradient(35% 25% at 85% 80%,rgba(255,214,170,.1),transparent 70%);animation:leak 9s ease-in-out infinite alternate}
 @keyframes leak{to{transform:translate(6%,-4%) rotate(4deg)}}
 .grain{position:absolute;inset:0;z-index:21;pointer-events:none;opacity:.07;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E")}
 #s0{background:#0c0a07;padding:0}
-#s1{justify-content:flex-end;padding-bottom:128px}
-#s1 .veil{background:linear-gradient(180deg,rgba(20,12,4,.15) 0%,rgba(20,12,4,.2) 42%,rgba(16,10,4,.86) 100%)}
-.names{font-size:clamp(30px,9vw,40px);letter-spacing:.05em;line-height:1.08;margin:14px 0 10px}
+#s1{justify-content:flex-end;padding-bottom:104px}
+#s1 .veil{background:linear-gradient(180deg,rgba(20,12,4,.12) 0%,rgba(20,12,4,.18) 34%,rgba(16,10,4,.72) 58%,rgba(14,9,4,.92) 100%)}
+.nm{font-family:'Parisienne',cursive!important;font-size:clamp(46px,13.5vw,56px);line-height:1.1;padding:.18em .3em;margin:-.2em -.3em;display:inline-block;letter-spacing:0}
+.names .y{font-family:'Parisienne',cursive;font-size:22px!important;color:#eadbb8;margin:-.3em 0 -.2em;padding:.1em .3em}
+.bless{font-family:'Bodoni Moda',serif;font-weight:400;font-size:10.5px;letter-spacing:.24em;line-height:1.85;text-transform:uppercase;color:#f3e7cf;text-shadow:0 1px 10px rgba(0,0,0,.6)}
+.honor{font-family:'Bodoni Moda',serif;font-weight:400;font-size:10.5px;letter-spacing:.17em;line-height:1.9;text-transform:uppercase;color:#fbf3e2;text-shadow:0 1px 10px rgba(0,0,0,.6);margin-top:2px;white-space:nowrap}
+.fd{display:flex;flex-direction:column;align-items:center;margin-top:12px;color:#fbf3e2;text-shadow:0 1px 10px rgba(0,0,0,.55)}
+.fd .w,.fd .m{font-family:'Bodoni Moda',serif;font-size:12px;letter-spacing:.34em;text-transform:uppercase;padding-left:.34em}
+.fd .n{display:flex;align-items:center;gap:14px;margin:2px 0}
+.fd .n i{width:46px;height:1px;background:linear-gradient(90deg,transparent,rgba(236,222,190,.85))}.fd .n i:last-child{transform:scaleX(-1)}
+.fd .n b{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:46px;line-height:1;padding:0 .1em}
+.btn.sm{min-height:40px;padding:0 24px;margin-top:12px;font-size:11px;letter-spacing:.22em;background:transparent;color:#6b5420;border:1px solid rgba(143,117,72,.6);box-shadow:none}.btn.sm::after{display:none}
+.place .when{font-family:'Bodoni Moda',serif;font-style:italic;font-size:15px;margin-top:8px;color:#4a3b20}
+.names{font-size:clamp(30px,9vw,40px);letter-spacing:.05em;line-height:1.08;margin:8px 0 6px}
 .names .y{font-size:1.15em;margin:-.15em 0 -.25em}
 .dt{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:12px;width:100%;max-width:330px;margin-top:20px}
 .dt .side{border-top:1px solid rgba(232,206,140,.8);border-bottom:1px solid rgba(232,206,140,.8);padding:9px 0;font-family:'Bodoni Moda',serif;font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:#fffaf0}
@@ -78,7 +90,8 @@ video.bg{inset:0;width:100%;height:100%;object-fit:cover}
 .ttl .script{font-size:66px;display:block;margin-bottom:-30px;margin-left:0}
 .ttl .serif{font-size:clamp(28px,8.4vw,38px);letter-spacing:.06em;display:block;padding-left:54px}
 .ttl.c{text-align:center;padding:0}.ttl.c .serif{padding:0}.ttl.c .script{margin-left:0;margin-right:0}
-.fam{display:grid;grid-template-columns:1fr 1fr;gap:14px;width:100%;max-width:350px}
+.fam{display:grid;grid-template-columns:1fr;gap:10px;width:100%;max-width:320px}
+.fam .serif{white-space:nowrap}
 .fam div{padding:16px 8px;border-top:1px solid rgba(138,106,34,.45);border-bottom:1px solid rgba(138,106,34,.45)}
 .fam .serif{font-size:17px;line-height:1.5;margin-top:6px}
 #s3,#s7{background:radial-gradient(90% 70% at 50% 40%,#3d2a12,#1a1108 60%,#0d0904)}
@@ -89,7 +102,7 @@ video.bg{inset:0;width:100%;height:100%;object-fit:cover}
 .cd small{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:#f7e7ce;margin-top:8px;font-weight:500}
 .tl{position:relative;width:100%;max-width:340px}
 .tl-line{position:absolute;left:50%;top:0;bottom:0;width:2px;margin-left:-1px;background:linear-gradient(transparent,#8a6a22 12%,#c9a24a 50%,#8a6a22 88%,transparent);transform-origin:50% 0;border-radius:2px;box-shadow:0 0 6px rgba(201,162,74,.45)}
-.tl-line::after,.det::before{content:'';position:absolute;left:50%;width:6px;height:46px;margin-left:-3px;top:0;border-radius:6px;background:linear-gradient(transparent,#fff6dc,transparent);box-shadow:0 0 12px #ffd98a;animation:comet 3.2s ease-in-out infinite}
+.tl-line::after,.det::before{content:'';position:absolute;left:50%;width:6px;height:46px;margin-left:-3px;top:0;border-radius:6px;background:linear-gradient(transparent,#fff6dc,transparent);box-shadow:0 0 12px #ffd98a;animation:comet 5s ease-in-out infinite;opacity:.6}
 @keyframes comet{0%{top:-10%;opacity:0}15%{opacity:1}85%{opacity:1}100%{top:100%;opacity:0}}
 .ev{position:relative;display:grid;grid-template-columns:1fr 34px 1fr;align-items:center;margin:0 0 30px}
 .ev .dot{width:12px;height:12px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#f3dc9a,#8a6a22);box-shadow:0 0 0 3px rgba(201,162,74,.25),0 0 12px rgba(201,162,74,.6);justify-self:center;z-index:1}
@@ -123,8 +136,8 @@ video.bg{inset:0;width:100%;height:100%;object-fit:cover}
 .rs .script{font-size:58px;display:block;text-align:left;padding-left:34px}
 .rs .big{font-family:'Bodoni Moda',serif;font-size:clamp(104px,32vw,136px);line-height:.92;letter-spacing:.02em}
 .rs .by{font-family:'Bodoni Moda',serif;font-size:22px;letter-spacing:.08em;text-transform:uppercase;margin-top:20px;color:#2b2112}
-.btn{position:relative;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 30px;margin-top:20px;border-radius:999px;border:1px solid rgba(255,236,190,.7);background:linear-gradient(135deg,#7a5c14,#c9a24a 45%,#f0d894 55%,#8a6a22);color:#fff;font-family:'Montserrat',sans-serif;font-weight:600;font-size:13px;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;white-space:nowrap;box-shadow:0 10px 26px rgba(138,106,34,.35),inset 0 1px 0 rgba(255,255,255,.5);text-shadow:0 1px 2px rgba(60,40,0,.5)}
-.btn::after{content:'';position:absolute;top:0;bottom:0;width:40%;left:-60%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.7),transparent);transform:skewX(-20deg);animation:btnShine 3.6s ease-in-out infinite}
+.btn{position:relative;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 30px;margin-top:20px;border-radius:999px;border:1px solid rgba(255,236,190,.7);background:linear-gradient(135deg,#8f7548,#c8ad7c 45%,#eadbb8 55%,#9a8156);color:#fff;font-family:'Montserrat',sans-serif;font-weight:600;font-size:13px;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;white-space:nowrap;box-shadow:0 10px 26px rgba(138,106,34,.35),inset 0 1px 0 rgba(255,255,255,.5);text-shadow:0 1px 2px rgba(60,40,0,.5)}
+.btn::after{content:'';position:absolute;top:0;bottom:0;width:40%;left:-60%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.7),transparent);transform:skewX(-20deg);animation:btnShine 7s ease-in-out infinite;opacity:.5}
 @keyframes btnShine{0%,60%{left:-60%}100%{left:140%}}
 .btn.ghost{background:rgba(20,14,6,.35);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
 .ty{font-size:62px;margin-top:8px}
@@ -134,7 +147,7 @@ video.bg{inset:0;width:100%;height:100%;object-fit:cover}
 .bigdate span{display:block}
 .bd-d,.bd-m{font-family:'Bodoni Moda',serif;color:#fffaf0;font-size:20px;letter-spacing:.28em;text-transform:uppercase;text-shadow:0 1px 10px rgba(0,0,0,.5)}
 .bd-n{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(120px,36vw,150px);line-height:1;padding:0 .12em;filter:drop-shadow(0 0 14px rgba(255,214,140,.45))}
-.sign{font-family:'WindSong',cursive;font-size:clamp(24px,7vw,32px);white-space:nowrap;margin-top:18px}
+.sign{font-family:'Parisienne',cursive!important;font-size:clamp(24px,7vw,32px);white-space:nowrap;margin-top:18px}
 .blessing{font-family:'Bodoni Moda',serif;font-style:italic;color:#fffaf0;font-size:15px;margin-top:4px;opacity:.92}
 .ctrl{position:absolute;left:0;right:0;bottom:0;z-index:50;padding:14px 16px max(14px,env(safe-area-inset-bottom));display:flex;align-items:center;gap:12px;background:linear-gradient(to top,rgba(0,0,0,.6),rgba(0,0,0,0));transition:opacity .4s}
 .ctrl.dim{opacity:.4}
@@ -193,25 +206,21 @@ video.bg{inset:0;width:100%;height:100%;object-fit:cover}
     <video class="bg" src="vid/portada.mp4" muted playsinline preload="auto"></video>
     <div class="veil"></div><div class="leak"></div>
     <div class="frame"><i></i><i></i><i></i><i></i></div>
-    <p class="cap ivory a" data-en="Together with their families">Junto con sus familias</p>
-    <h1 class="names serif"><span class="foil split a">ZULEYMA</span><br><span class="script y a" data-en="and">y</span><br><span class="foil split a">HORLANDO</span></h1>
-    <p class="cap ivory a" data-en="invite you<br>to their wedding celebration">los invitan<br>a celebrar su boda</p>
-    <div class="dt a">
-      <span class="side" data-en="Saturday">Sábado</span>
-      <span class="mid"><small data-en="APRIL">ABRIL</small><b class="foil solo">3</b><small>2027</small></span>
-      <span class="side">Montgomery<br>TX</span>
-    </div>
+    <p class="bless a" data-en="With the blessing of God<br>and our parents">Con la bendición de Dios<br>y de nuestros padres</p>
+    <h1 class="names"><span class="script nm foil solo a">Zuleyma</span><br><span class="script y a" data-en="and">y</span><br><span class="script nm foil solo a">Horlando</span></h1>
+    <p class="honor a" data-en="are honored to invite you<br>to celebrate their holy matrimony">tienen el honor de invitarles<br>a celebrar su unión matrimonial</p>
+    <div class="fd a"><span class="w" data-en="Saturday">Sábado</span><span class="n"><i></i><b class="foil solo">3</b><i></i></span><span class="m" data-en="April 2027">Abril 2027</span></div>
   </section>
 
   <section class="sc lightsc" id="s2">
     <div class="bg"></div><div class="veil"></div>
     <div class="frame"><i></i><i></i><i></i><i></i></div>
-    <span class="script a" style="font-size:44px;line-height:1.15" data-en="With God's<br>blessing">Con la bendición<br>de Dios</span>
-    <p class="serif a glint" style="font-size:27px;line-height:1.35;margin:16px 0 30px;font-style:italic" data-en="“God wrote<br>our love story.”">“Dios escribió<br>nuestra historia de amor.”</p>
+    <div class="ttl c"><span class="script a" data-en="our">nuestros</span><span class="serif foil split a" data-en="PARENTS">PADRES</span></div>
     <div class="fam">
-      <div class="a"><p class="cap" style="font-weight:600;font-size:11px" data-en="Groom's parents">Padres del novio</p><p class="serif">Sr. Joaquín Martínez<br>Sra. Guillermina Martínez</p></div>
       <div class="a"><p class="cap" style="font-weight:600;font-size:11px" data-en="Bride's parents">Padres de la novia</p><p class="serif">Sr. Tomás Morales<br>Sra. Guadalupe Morales</p></div>
+      <div class="a"><p class="cap" style="font-weight:600;font-size:11px" data-en="Groom's parents">Padres del novio</p><p class="serif">Sr. Joaquín Martínez<br>Sra. Guillermina Martínez</p></div>
     </div>
+    <p class="serif a glint" style="font-size:22px;line-height:1.45;margin-top:30px;font-style:italic;max-width:310px" data-en="“A promise of love,<br>under the grace and will of God.”">“Una promesa de amor,<br>bajo la gracia<br>y la voluntad de Dios.”</p>
   </section>
 
   <section class="sc dark" id="s3">
@@ -234,7 +243,7 @@ video.bg{inset:0;width:100%;height:100%;object-fit:cover}
     <div class="tl">
       <div class="tl-line"></div>
       <div class="ev a">
-        <div class="tx"><div class="h" data-en="Time TBA">Por confirmar</div><div class="n" data-en="Ceremony">Ceremonia</div><div class="a" data-en="Religious ceremony<br>Montgomery, TX">Ceremonia religiosa<br>Montgomery, TX</div></div>
+        <div class="tx"><div class="h">3:00 p. m.</div><div class="n" data-en="Ceremony">Ceremonia</div><div class="a">Iglesia MIDEA<br>Houston, TX</div></div>
         <span class="dot"></span>
         <span class="ic"><svg viewBox="0 0 40 40"><circle cx="15" cy="23" r="9"/><circle cx="25" cy="23" r="9"/><path d="M12 12l3-5 3 5"/></svg></span>
       </div>
@@ -249,10 +258,11 @@ video.bg{inset:0;width:100%;height:100%;object-fit:cover}
   <section class="sc lightsc" id="s5">
     <div class="bg"></div><div class="veil"></div>
     <div class="frame"><i></i><i></i><i></i><i></i></div>
-    <div class="ttl c"><span class="script a" data-en="the">el lugar</span><span class="serif foil split a" data-en="VENUE">DEL EVENTO</span></div>
-    <div class="place a"><p class="k" data-en="Religious ceremony">Ceremonia religiosa</p><p class="serif" data-en="To be confirmed">Por confirmar</p><p>Montgomery, Texas</p></div>
+    <div class="ttl c"><span class="script a" data-en="the">los</span><span class="serif foil split a" data-en="VENUES">LUGARES</span></div>
+    <div class="place a"><p class="k" data-en="Religious ceremony">Ceremonia religiosa</p><p class="serif">Iglesia MIDEA Houston</p><p>9118 W Bellfort Ave<br>Houston, TX 77031</p><p class="when" data-en="Saturday, April 3, 2027 · 3:00 p.m.">Sábado, 3 de abril de 2027 · 3:00 p. m.</p>
+      <a class="btn sm" href="https://www.google.com/maps/search/?api=1&query=Iglesia+MIDEA+Houston+9118+W+Bellfort+Ave+Houston+TX+77031" target="_blank" rel="noopener" data-en="Directions">Cómo llegar</a></div>
     <div class="place a"><p class="k" data-en="Reception">Recepción</p><p class="serif">The Luminaire Venue</p><p>495 S Pine Lake Rd<br>Montgomery, TX 77356</p>
-      <a class="btn" style="margin-top:14px" href="https://www.google.com/maps/search/?api=1&query=The+Luminaire+Venue+495+S+Pine+Lake+Rd+Montgomery+TX+77356" target="_blank" rel="noopener" data-en="Directions">Cómo llegar</a></div>
+      <a class="btn sm" href="https://www.google.com/maps/search/?api=1&query=The+Luminaire+Venue+495+S+Pine+Lake+Rd+Montgomery+TX+77356" target="_blank" rel="noopener" data-en="Directions">Cómo llegar</a></div>
   </section>
 
   <section class="sc lightsc" id="s6">
@@ -337,7 +347,7 @@ setLang(LANG);
 var qs=location.search||'';
 $('#rsvpBtn').href='index.html'+qs+'#rsvp';$('#fullBtn').href='index.html'+qs;
 
-var T0=new Date('2027-04-03T16:00:00-05:00').getTime();
+var T0=new Date('2027-04-03T15:00:00-05:00').getTime();
 function cd(){var d=Math.max(0,T0-Date.now()),s=Math.floor(d/1000);
   $('#cdD').textContent=Math.floor(s/86400);$('#cdH').textContent=String(Math.floor(s%86400/3600)).padStart(2,'0');
   $('#cdM').textContent=String(Math.floor(s%3600/60)).padStart(2,'0');$('#cdS').textContent=String(s%60).padStart(2,'0');}
@@ -351,16 +361,16 @@ function build(){
   function reveal(els,at,stag){els.forEach(function(el,k){
     var chs=el.classList.contains('split')?$$('.ch',el):null,t=at+k*(stag||.3);
     if(chs&&chs.length){tl.fromTo(el,{autoAlpha:0},{autoAlpha:1,duration:.01},t);
-      tl.fromTo(chs,{opacity:0,y:18,filter:'blur(8px)',scale:1.25},{opacity:1,y:0,filter:'blur(0px)',scale:1,duration:.9,stagger:.045,ease:'power3.out'},t);}
+      tl.fromTo(chs,{opacity:0,y:10,filter:'blur(6px)'},{opacity:1,y:0,filter:'blur(0px)',duration:1.2,stagger:.05,ease:'power2.out'},t);}
     else if(el.classList.contains('script')){tl.fromTo(el,{autoAlpha:0,clipPath:'inset(-40% 120% -40% -20%)',filter:'blur(3px)'},{autoAlpha:1,clipPath:'inset(-40% -20% -40% -20%)',filter:'blur(0px)',duration:1.5,ease:'power1.inOut'},t);}
     else{tl.fromTo(el,{autoAlpha:0,filter:'blur(10px)',y:12},{autoAlpha:1,filter:'blur(0px)',y:0,duration:1.1},t);}});}
   function frame(sel,at){var f=$$(sel+' .frame i');if(!f.length)return;
-    tl.fromTo(f,{autoAlpha:0,scale:.4},{autoAlpha:1,scale:1,duration:1.2,stagger:.12,ease:'back.out(1.6)'},at);}
+    tl.fromTo(f,{autoAlpha:0,scale:.8},{autoAlpha:1,scale:1,duration:1.6,stagger:.1,ease:'power2.out'},at);}
   function xfade(a,b,at){tl.to(a,{autoAlpha:0,filter:'blur(8px)',scale:1.04,duration:1.2,ease:'power1.inOut'},at).fromTo(b,{autoAlpha:0,scale:1.04,filter:'blur(0px)'},{autoAlpha:1,scale:1,duration:1.2,ease:'power1.inOut'},at);}
   function drift(sel,at,dur,a,b){tl.fromTo(sel,a,Object.assign({duration:dur,ease:'none'},b),at);}
   function scene(id,start,end){xfade('#'+SC[SC.length-1].id,'#'+id,start);SC.push({id:id,start:start,end:end,v:$('#'+id+' video')});frame('#'+id,start+.4);}
   SC.push({id:'s0',start:0,end:6.3,v:$('#s0 video')});
-  scene('s1',5.4,13);reveal($$('#s1 .a'),6.4,.42);
+  scene('s1',5.4,14);reveal($$('#s1 .a'),6.4,.62);
   scene('s2',13,19.5);drift('#s2 .bg',13,7,{scale:1.02,x:0},{scale:1.1,x:-12});reveal($$('#s2 .a'),13.5,.4);
   scene('s3',19.5,25);drift('#s3 .bg',19.5,6.5,{scale:1.12},{scale:1.02});reveal($$('#s3 .a'),20,.3);
   scene('s4',25,31);drift('#s4 .bg',25,7,{scale:1.08},{scale:1});reveal($$('#s4 .ttl .a'),25.4,.35);
@@ -397,17 +407,17 @@ rs();addEventListener('resize',rs);
 function add(n,b,x0,y0){for(var i=0;i<n;i++)P.push({x:b?x0+(Math.random()-.5)*170:Math.random()*W,y:b?y0+(Math.random()-.5)*70:Math.random()*H,
   r:b?1.4+Math.random()*3.4:.6+Math.random()*2.1,vy:b?-.2-Math.random()*.6:-.05-Math.random()*.25,vx:(Math.random()-.5)*(b?.8:.15),
   life:0,max:b?60+Math.random()*50:220+Math.random()*260,star:Math.random()<(b?.7:.22),ph:Math.random()*6.28});}
-add(36);
-function burst(id){if(tl.paused())return;var r=$('#'+id+' .foil'),st=$('#stage').getBoundingClientRect();if(!r)return;var b=r.getBoundingClientRect();add(22,true,b.left-st.left+b.width/2,b.top-st.top+b.height/2);}
+add(12);
+function burst(id){if(tl.paused())return;var r=$('#'+id+' .foil'),st=$('#stage').getBoundingClientRect();if(!r)return;var b=r.getBoundingClientRect();add(7,true,b.left-st.left+b.width/2,b.top-st.top+b.height/2);}
 function star(x,y,r,a){cx.globalAlpha=a;cx.beginPath();cx.moveTo(x,y-r*3);cx.quadraticCurveTo(x,y,x+r*3,y);cx.quadraticCurveTo(x,y,x,y+r*3);cx.quadraticCurveTo(x,y,x-r*3,y);cx.quadraticCurveTo(x,y,x,y-r*3);cx.fill();}
 function loop(){cx.clearRect(0,0,W,H);
   for(var i=P.length-1;i>=0;i--){var p=P[i];p.life++;p.x+=p.vx;p.y+=p.vy;p.ph+=.08;
     if(p.life>p.max){P.splice(i,1);continue;}
     var k=p.life/p.max,a=Math.sin(Math.PI*k)*(.55+.45*Math.sin(p.ph));
-    var g=cx.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r*4);g.addColorStop(0,'rgba(255,244,214,'+(a*.9)+')');g.addColorStop(1,'rgba(255,200,110,0)');
+    var g=cx.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r*4);g.addColorStop(0,'rgba(255,248,232,'+(a*.45)+')');g.addColorStop(1,'rgba(255,230,190,0)');
     cx.globalAlpha=1;cx.fillStyle=g;cx.beginPath();cx.arc(p.x,p.y,p.r*4,0,6.29);cx.fill();
-    if(p.star){cx.fillStyle='#fff6dc';star(p.x,p.y,p.r,a);}}
-  if(P.length<36)add(1);cx.globalAlpha=1;if(!RM)requestAnimationFrame(loop);}
+    if(p.star){cx.fillStyle='#fffaf0';star(p.x,p.y,p.r*.8,a*.6);}}
+  if(P.length<12&&Math.random()<.3)add(1);cx.globalAlpha=1;if(!RM)requestAnimationFrame(loop);}
 loop();
 
 /* barra inferior */
