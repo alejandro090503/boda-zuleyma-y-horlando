@@ -1,0 +1,28 @@
+/* Sobre ivory (intro y la invitación formal) — papel con relieve de rosas, solapa en V y sello champagne Z&H */
+@font-face{font-family:'Great Vibes';src:url(fonts/GreatVibes.ttf) format('truetype');font-display:block}
+.zh-env{position:fixed;inset:0;z-index:9000;overflow:hidden;background:#efe6d3;cursor:pointer;perspective:1400px;-webkit-tap-highlight-color:transparent;user-select:none}
+.zh-env .p{position:absolute;inset:0;background:#f4ecdc url(papel-ivory.jpg) center/cover}
+.zh-env .p::after{content:'';position:absolute;inset:0;background:radial-gradient(120% 70% at 50% 46%,rgba(255,252,244,.0) 40%,rgba(120,96,56,.16) 100%)}
+.zh-env .in{position:absolute;left:0;right:0;top:0;height:54%;opacity:0;-webkit-clip-path:polygon(0 0,100% 0,50% 100%);clip-path:polygon(0 0,100% 0,50% 100%);background:radial-gradient(70% 90% at 50% 92%,#fffaf0 0%,#f6e6bf 30%,#e2c993 62%,#cdb07a 100%)}
+.zh-env .rays{position:absolute;left:50%;top:52%;width:180vmax;height:180vmax;margin:-90vmax 0 0 -90vmax;opacity:0;pointer-events:none;background:repeating-conic-gradient(from 0deg,rgba(255,240,205,.0) 0deg 7deg,rgba(255,240,205,.28) 9deg 11deg,rgba(255,240,205,0) 13deg 22deg);-webkit-mask:radial-gradient(circle,#000 0,rgba(0,0,0,.6) 18%,transparent 48%);mask:radial-gradient(circle,#000 0,rgba(0,0,0,.6) 18%,transparent 48%)}
+.zh-env .lines{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.zh-env .lines path{fill:none;stroke:rgba(150,122,74,.32);stroke-width:1.2;vector-effect:non-scaling-stroke}
+.zh-env .fw{position:absolute;left:0;right:0;top:0;height:54%;transform-origin:50% 0;transform-style:preserve-3d;filter:drop-shadow(0 6px 7px rgba(110,84,40,.22)) drop-shadow(0 1px 1px rgba(110,84,40,.25));z-index:2}
+.zh-env .fl{position:absolute;left:0;right:0;top:0;height:185.2%;-webkit-clip-path:polygon(0 0,100% 0,50% 54%);clip-path:polygon(0 0,100% 0,50% 54%);background:#f5eddc url(papel-ivory.jpg) center/cover}
+.zh-env .fl::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.18),rgba(255,250,236,0) 40%,rgba(140,110,60,.10))}
+.zh-env .fl.back{background:linear-gradient(0deg,#efe2c4,#e3d0a6)}
+.zh-env .fl.back::after{display:none}
+.zh-env .seal{position:absolute;left:50%;top:54%;width:min(36vw,150px);height:min(36vw,150px);margin:calc(min(36vw,150px)/-2) 0 0 calc(min(36vw,150px)/-2);z-index:3;filter:drop-shadow(0 6px 10px rgba(90,66,30,.32)) drop-shadow(0 1px 2px rgba(90,66,30,.4))}
+.zh-env .seal svg{width:100%;height:100%;display:block;overflow:visible}
+.zh-env .seal .glow{position:absolute;inset:-30%;border-radius:50%;background:radial-gradient(circle,rgba(255,236,190,.55),rgba(255,236,190,0) 65%);opacity:0;animation:zhPulse 3.4s ease-in-out infinite}
+@keyframes zhPulse{0%,100%{opacity:0;transform:scale(.9)}50%{opacity:.8;transform:scale(1.05)}}
+.zh-env .sub{position:absolute;left:0;right:0;top:calc(54% + min(18vw,75px) + 22px);z-index:3;text-align:center;color:#7a6236;font-family:'Cormorant Garamond',serif;font-weight:600;font-size:13px;letter-spacing:.32em;text-transform:uppercase;padding-left:.32em;text-shadow:0 0 10px #fbf6ea,0 0 18px #fbf6ea}
+.zh-env .sub i{display:block;font-family:'Great Vibes',cursive;font-style:normal;text-transform:none;letter-spacing:0;font-size:30px;font-weight:400;color:#8a6d38;margin-bottom:4px;padding:0}
+.zh-env .hint{position:absolute;left:0;right:0;bottom:max(9vh,calc(env(safe-area-inset-bottom) + 48px));z-index:3;text-align:center;font-family:'Cormorant Garamond',serif;font-weight:600;font-size:12px;letter-spacing:.34em;text-transform:uppercase;color:#6b5420;text-shadow:0 0 8px #fbf6ea,0 0 16px #fbf6ea,0 0 22px #fbf6ea;animation:zhHint 2.6s ease-in-out infinite}
+.zh-env .hint::before{content:'';display:block;width:1px;height:26px;margin:0 auto 10px;background:linear-gradient(transparent,rgba(138,109,56,.7))}
+@keyframes zhHint{0%,100%{opacity:.45}50%{opacity:1}}
+.zh-env .card{position:absolute;left:12%;right:12%;top:30%;height:38%;z-index:1;border-radius:4px;background:#fffcf4;box-shadow:0 10px 30px rgba(120,90,40,.18);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;opacity:0}
+.zh-env .card b{font-family:'Great Vibes',cursive;font-weight:400;font-size:clamp(34px,10vw,46px);color:#8a6d38;line-height:1.15}
+.zh-env .card small{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#8a6d38;margin-top:10px}
+.zh-env .wash{position:absolute;inset:0;z-index:5;background:#fbf6ea;opacity:0;pointer-events:none}
+@media(prefers-reduced-motion:reduce){.zh-env .hint,.zh-env .seal .glow{animation:none}}

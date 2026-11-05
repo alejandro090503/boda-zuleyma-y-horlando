@@ -1,19 +1,10 @@
 {
   "rewrites": [
-    {
-      "source": "/video",
-      "destination": "/video.html"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
+    { "source": "/invitacion", "destination": "/invitacion.html" },
+    { "source": "/(.*)", "destination": "/index.html" }
   ],
   "redirects": [
-    {
-      "source": "/album",
-      "destination": "https://panel-invitados.vercel.app/subir/boda-zuleyma-y-horlando",
-      "permanent": false
-    }
+    { "source": "/video", "destination": "/", "permanent": false },
+    { "source": "/album", "destination": "https://panel-invitados.vercel.app/subir/boda-zuleyma-y-horlando", "permanent": false }
   ]
 }
