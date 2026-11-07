@@ -2549,7 +2549,8 @@ body,.wrap{background-color:#fffff0}
   var FULL={familias:'768/1376',lazo:'768/1376',countdown:'928/1152',regalos:'768/1376'};
   function load(u,ok){var im=new Image();im.onload=function(){ok(u,im);};im.src=u;}
   function done(){if(window.ScrollTrigger)ScrollTrigger.refresh();}
-  function life(sec,full){var g=document.createElement('div');g.className='fr-glint';sec.insertBefore(g,sec.firstChild);
+  function life(){return;}
+  function lifeOld(sec,full){var g=document.createElement('div');g.className='fr-glint';sec.insertBefore(g,sec.firstChild);
     var zones=full?[[6,20],[80,94]]:[[2,14],[86,98]];
     for(var i=0;i<7;i++){var z=zones[i%2],sp=document.createElement('i');sp.className='fr-sp';
       sp.style.left=(8+Math.random()*84).toFixed(1)+'%';sp.style.top=(z[0]+Math.random()*(z[1]-z[0])).toFixed(1)+'%';
