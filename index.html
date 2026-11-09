@@ -86,6 +86,17 @@ body{font-family:'Cormorant Garamond',serif;color:#fbf3e2;-webkit-font-smoothing
 .out{position:fixed;inset:0;z-index:9999;background:#f4ecdc;opacity:0;pointer-events:none;transition:opacity 1.6s ease}
 .out.on{opacity:1;pointer-events:auto}
 @media(prefers-reduced-motion:reduce){.foil{animation:none}}
+
+/* botón a la invitación: resplandor que palpita suave */
+#go{animation:goPulse 3s ease-in-out infinite}
+@keyframes goPulse{0%,100%{scale:1;box-shadow:0 10px 26px rgba(0,0,0,.3),0 0 0 0 rgba(255,232,180,.5),0 0 16px rgba(255,214,140,.3),inset 0 1px 0 rgba(255,255,255,.5)}
+  50%{scale:1.035;box-shadow:0 12px 30px rgba(0,0,0,.32),0 0 0 12px rgba(255,232,180,0),0 0 42px rgba(255,214,140,.7),inset 0 1px 0 rgba(255,255,255,.65)}}
+#go::after{content:'';position:absolute;inset:-40%;pointer-events:none;filter:blur(6px);mix-blend-mode:soft-light;
+  background:linear-gradient(115deg,transparent 38%,rgba(255,250,235,.9) 50%,transparent 62%);background-size:300% 100%;background-position:130% 0;animation:goSheen 4.5s ease-in-out infinite 1s}
+@keyframes goSheen{0%,45%{background-position:130% 0}100%{background-position:-30% 0}}
+#skip{animation:skipGlow 3s ease-in-out infinite}
+@keyframes skipGlow{0%,100%{text-shadow:0 1px 8px rgba(0,0,0,.6)}50%{text-shadow:0 1px 8px rgba(0,0,0,.6),0 0 12px rgba(255,224,160,.9)}}
+@media(prefers-reduced-motion:reduce){#go,#go::after,#skip{animation:none}}
 </style>
 </head>
 <body>
