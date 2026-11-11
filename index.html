@@ -80,8 +80,8 @@ body{font-family:'Cormorant Garamond',serif;color:#fbf3e2;-webkit-font-smoothing
 .doors .dt1,.doors .dt2{position:absolute;left:0;right:0;color:#8a6d38;text-shadow:0 0 12px rgba(255,250,236,.95),0 0 4px rgba(255,250,236,.9)}
 .doors .dt1{top:var(--dt-top,57%);font-family:'Cormorant Garamond',serif;font-weight:600;font-size:15px;letter-spacing:.34em;text-transform:uppercase;padding-left:.34em}
 .doors .dt2{top:calc(var(--dt-top,57%) + 26px);font-family:'Great Vibes',cursive;font-size:clamp(38px,11vw,48px);line-height:1.2}
-.doors .dhint{position:absolute;left:0;right:0;bottom:max(7vh,calc(env(safe-area-inset-bottom) + 40px));text-align:center;font-family:'Cormorant Garamond',serif;font-weight:600;font-size:12px;letter-spacing:.34em;text-transform:uppercase;color:#6b5420;text-shadow:0 0 10px #fbf6ea,0 0 18px #fbf6ea;animation:dPulse 2.6s ease-in-out infinite}
-@keyframes dPulse{0%,100%{opacity:.45}50%{opacity:1}}
+.doors .dhint{position:absolute;left:0;right:0;margin:0 auto;width:max-content;bottom:max(6vh,calc(env(safe-area-inset-bottom) + 34px));white-space:nowrap;text-align:center;font-family:'Cormorant Garamond',serif;font-weight:700;font-size:13.5px;letter-spacing:.3em;text-transform:uppercase;color:#4a3815;padding:11px 22px 11px 26px;border-radius:999px;background:rgba(255,250,238,.82);border:1px solid rgba(176,141,74,.6);box-shadow:0 6px 22px rgba(90,64,24,.25),0 0 22px rgba(255,226,170,.55);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);animation:dPulse 2.6s ease-in-out infinite}
+@keyframes dPulse{0%,100%{opacity:.75;box-shadow:0 6px 22px rgba(90,64,24,.25),0 0 10px rgba(255,226,170,.35)}50%{opacity:1;box-shadow:0 6px 22px rgba(90,64,24,.25),0 0 30px rgba(255,226,170,.85)}}
 .doors .dwash{position:absolute;inset:0;background:#fffaf0;opacity:0;pointer-events:none}
 .out{position:fixed;inset:0;z-index:9999;background:#f4ecdc;opacity:0;pointer-events:none;transition:opacity 1.6s ease}
 .out.on{opacity:1;pointer-events:auto}
@@ -197,7 +197,7 @@ try{if(!qs.get('lang')&&localStorage.getItem('zuleymahorlando_lang')==='en')LANG
 function startFilm(){document.body.classList.add('film');$('#stage').classList.add('film');$('#ctrl').style.visibility='visible';play();
   gsap.to('#skip',{autoAlpha:.85,duration:1,delay:4});}
 function useDoors(){
-  var d=$('#doors'),v=$('#doors .dv'),done=false,opened=false;$('#env').remove();d.hidden=false;$('#doors .dp').src='puertas.jpg';v.src='vid/puertas.mp4';
+  var d=$('#doors'),v=$('#doors .dv'),done=false,opened=false;$('#env').remove();d.hidden=false;var sfx=LANG==='en'?'-en':'';$('#doors .dp').src='puertas'+sfx+'.jpg';v.src='vid/puertas'+sfx+'.mp4';window.__doorLang=function(l){if(opened)return;var x=l==='en'?'-en':'';$('#doors .dp').src='puertas'+x+'.jpg';v.src='vid/puertas'+x+'.mp4';};
   gsap.fromTo('#doors .dp',{scale:1.05},{scale:1,duration:9,ease:'power1.out'});
   gsap.fromTo('#doors .dhint',{autoAlpha:0,y:10,filter:'blur(6px)'},{autoAlpha:1,y:0,filter:'blur(0px)',duration:1.6,stagger:.35,delay:.3,ease:'power2.out'});
   function finish(){if(done)return;done=true;gsap.to('#doors .dwash',{opacity:1,duration:1.2,ease:'power1.inOut',onComplete:function(){startFilm();gsap.to(d,{autoAlpha:0,duration:1,onComplete:function(){d.remove();}});}});}
@@ -216,7 +216,7 @@ fetch('vid/puertas.mp4',{method:'HEAD'}).then(function(r){var t=r.headers.get('c
 /* ── idioma ── */
 $$('[data-en]').forEach(function(e){e.dataset.es=e.innerHTML;});
 function lines(el){el.innerHTML=el.innerHTML.split(/<br\s*\/?>/i).map(function(t){return '<span class="ln">'+t+'</span>';}).join('');}
-function setLang(l){LANG=l;document.documentElement.lang=l;$$('[data-en]').forEach(function(e){e.innerHTML=l==='en'?e.dataset.en:e.dataset.es;});
+function setLang(l){LANG=l;if(window.__doorLang)window.__doorLang(l);document.documentElement.lang=l;$$('[data-en]').forEach(function(e){e.innerHTML=l==='en'?e.dataset.en:e.dataset.es;});
   $$('.lines').forEach(lines);$$('#lang button').forEach(function(b){b.classList.toggle('on',b.dataset.l===l);});
   var sub=$('#env .sub'),hint=$('#env .hint');if(sub)sub.innerHTML='<i>Zuleyma &amp; Horlando</i>'+(l==='en'?'Our story':'Nuestra historia');if(hint)hint.textContent=l==='en'?'Tap to open':'Toca para abrir';
   try{localStorage.setItem('zuleymahorlando_lang',l);}catch(e){}
