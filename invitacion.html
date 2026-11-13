@@ -951,6 +951,7 @@ body{background:var(--bg);color:var(--text);font-family:'Cormorant Garamond',ser
 
   <!-- MENÚ -->
   <section id="menu" class="zm">
+    <img class="zm-img" src="fotos/menu-es.jpg" alt="Nuestro menú: Pollo Mediterráneo (favorito de Zuleyma) o Steak (favorito de Horlando). Por favor, selecciona tu platillo favorito al confirmar tu asistencia." loading="lazy" width="1086" height="1448">
     <div class="zm-card">
       <p class="zm-pre" data-en="The wedding of">La boda de</p>
       <p class="zm-nm">Zuleyma &amp; Horlando</p>
@@ -959,7 +960,7 @@ body{background:var(--bg);color:var(--text);font-family:'Cormorant Garamond',ser
         <circle cx="60" cy="9" r="3.4" fill="url(#zmG)"/><path d="M28 46a32 32 0 0 1 64 0z" fill="url(#zmG)"/><path d="M36 40a25 25 0 0 1 18-21" stroke="#fff8e4" stroke-width="2" fill="none" opacity=".7" stroke-linecap="round"/><rect x="20" y="46" width="80" height="4" rx="2" fill="url(#zmG)"/></svg>
       <h2 class="zm-ttl" data-en="Our Wedding Menu">Nuestro Menú</h2>
       <div class="zh-hr" aria-hidden="true"><span class="l"></span><span class="d"></span><span class="l"></span></div>
-      <p class="zm-txt" data-en="We're delighted to offer two special entrées, carefully chosen for you, each with a personal meaning to our love story.">Con gran alegría queremos compartir con ustedes dos platillos especiales, elegidos con mucho cariño, porque son los favoritos de cada uno.</p>
+      <p class="zm-txt" data-en="With much love, we have chosen two of our favorite dishes to share with you on this very special day.">Con gran alegría queremos compartir con ustedes dos platillos especiales, elegidos con mucho cariño, porque son los favoritos de cada uno.</p>
       <div class="zm-opts">
         <div class="zm-opt">
           <p class="zm-who" data-en="Her choice">El favorito<br>de la novia</p>
@@ -975,7 +976,7 @@ body{background:var(--bg);color:var(--text);font-family:'Cormorant Garamond',ser
         </div>
       </div>
       <div class="zh-hr" aria-hidden="true"><span class="l"></span><span class="d"></span><span class="l"></span></div>
-      <p class="zm-pie" data-en="Please select your entrée<br>when you confirm your attendance (RSVP).">Por favor, selecciona tu platillo<br>al confirmar tu asistencia (RSVP).</p>
+      <p class="zm-pie" data-en="Please select your favorite dish<br>when you confirm your attendance.">Por favor, selecciona tu platillo<br>al confirmar tu asistencia (RSVP).</p>
       <p class="zm-firma">Z&amp;H</p>
     </div>
   </section>
@@ -2722,6 +2723,11 @@ body,.wrap{background-color:#fffff0}
 .zv.on .zv-play{display:none}
 @keyframes zvPulse{0%,100%{box-shadow:inset 0 0 0 3px #fffdf6,0 10px 22px -12px rgba(80,58,22,.5)}50%{box-shadow:inset 0 0 0 3px #fffdf6,0 0 0 6px rgba(201,162,74,.18),0 10px 22px -12px rgba(80,58,22,.5)}}
 @media(prefers-reduced-motion:reduce){.zv-play{animation:none}}
+
+/* menú: imagen de la clienta en español; la tarjeta HTML queda para inglés */
+.zm-img{display:block;width:100%;max-width:440px;height:auto;margin:0 auto;border-radius:6px;box-shadow:0 22px 44px -24px rgba(80,58,22,.5)}
+html[lang="en"] .zm-img{display:none}
+html:not([lang="en"]) .zm-card{display:none}
 /* marcos por sección: completos (proporción exacta) o cabecera+pie (secciones largas) */
 .zh-fr.fr-full{width:100%;aspect-ratio:var(--ar);background:#fbf6ec var(--fr) center top/100% auto no-repeat!important;display:flex;flex-direction:column;justify-content:center;padding:15% 12%!important;margin:0!important}
 .zh-fr.fr-strip{position:relative;background:#fbf6ec linear-gradient(rgba(201,162,74,.55),rgba(201,162,74,.55)) 5% 0/1px 100% no-repeat!important;padding-top:calc(100% * 672 / 1584 * .78)!important;padding-bottom:calc(100% * 672 / 1584 * .78)!important;padding-left:9%!important;padding-right:9%!important}
