@@ -884,6 +884,21 @@ body{background:var(--bg);color:var(--text);font-family:'Cormorant Garamond',ser
     <p class="zh-gift-nm">Zuleyma &amp; Horlando</p>
   </section>
 
+  <!-- VIDEO DEL COMPROMISO (se reproduce solo al tocarlo) -->
+  <section id="compromiso" class="zv">
+    <div class="zv-card">
+      <p class="zv-nm">Zuleyma &amp; Horlando</p>
+      <p class="zv-eb"><span class="l"></span><span data-en="Our love story">Nuestra historia de amor</span><span class="l"></span></p>
+      <button type="button" class="zv-media" id="zvBtn" aria-label="Reproducir el video del compromiso">
+        <img src="vid/compromiso.jpg" alt="Horlando le pide matrimonio a Zuleyma">
+        <video id="zvVid" playsinline preload="none" poster="vid/compromiso.jpg" src="vid/compromiso.mp4"></video>
+        <span class="zv-veil"></span>
+      </button>
+      <p class="zv-q" data-en="A moment that marked the beginning<br>of our forever&hellip;">Un momento que marcó<br>el comienzo de nuestro<br><em>para siempre&hellip;</em></p>
+      <button type="button" class="zv-play" id="zvPlay"><span class="zv-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span><span data-en="Relive our engagement">Revive nuestro<br>compromiso</span></button>
+    </div>
+  </section>
+
   <!-- GALERÍA · órbita de fotos circulares que gira -->
   <section id="galeria" class="zo">
     <span class="zh-script" data-en="Our">Nuestros</span>
@@ -1856,7 +1871,7 @@ body.zh-menu-open #musicFab{opacity:0;pointer-events:none}
   var SECS=[
     ['hero','Inicio','Home'],['familias','Padres','Parents'],['ubicacion','Ubicación','Location'],['hospedaje','Hospedaje','Lodging'],
     ['itinerario','Celebración','Celebration'],['vestimenta','Vestimenta','Dress code'],
-    ['regalos','Regalos','Gifts'],['galeria','Fotos','Photos'],['menu','Menú','Menu'],['rsvp','Confirmar','RSVP']
+    ['regalos','Regalos','Gifts'],['compromiso','Compromiso','Engagement'],['galeria','Fotos','Photos'],['menu','Menú','Menu'],['rsvp','Confirmar','RSVP']
   ].filter(function(x){return document.getElementById(x[0]);});
 
   /* ---------- MENÚ ---------- */
@@ -2680,6 +2695,33 @@ body,.wrap{background-color:#fffff0}
 .zc-f img.ld,.zc-r img.ld{opacity:1}
 .zc-r{aspect-ratio:3/4;margin-top:6px;border-radius:14px;overflow:hidden;transform:scaleY(-1);opacity:.42;pointer-events:none;
   -webkit-mask-image:linear-gradient(to top,#000 0%,rgba(0,0,0,.35) 18%,transparent 42%);mask-image:linear-gradient(to top,#000 0%,rgba(0,0,0,.35) 18%,transparent 42%)}
+
+/* video del compromiso */
+.zv{padding:56px 14px 40px;background:#fffff0}
+.zv-card{position:relative;max-width:440px;margin:0 auto;padding:30px 18px 28px;text-align:center;border-radius:22px;
+  background:linear-gradient(180deg,#fffdf6,#fbf3e2);box-shadow:0 0 0 1px rgba(201,162,74,.75),0 0 0 6px #fffaf0,0 0 0 7px rgba(201,162,74,.45),0 24px 48px -24px rgba(80,58,22,.5)}
+.zv-nm{font-family:'Great Vibes',cursive;font-size:clamp(36px,10.6vw,48px);line-height:1.15;color:var(--zh-gold);padding:0 .2em}
+.zv-eb{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:6px;font-family:'Cormorant Garamond',serif;font-weight:600;font-size:12px;letter-spacing:.26em;text-transform:uppercase;color:#6b5420}
+.zv-eb .l{flex:0 0 28px;height:1px;background:#c9a24a}
+.zv-media{position:relative;display:block;width:100%;aspect-ratio:3/4;margin:18px 0 0;padding:0;border:0;border-radius:16px;overflow:hidden;background:#1b130a;cursor:pointer;
+  -webkit-mask-image:linear-gradient(#000 70%,transparent 100%);mask-image:linear-gradient(#000 70%,transparent 100%)}
+.zv-media img,.zv-media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.zv-media video{opacity:0;transition:opacity .6s ease;background:#000}
+.zv.on .zv-media{-webkit-mask-image:none;mask-image:none;aspect-ratio:1280/534}
+.zv.on .zv-media video{opacity:1;object-fit:contain}
+.zv-veil{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 40%,transparent 55%,rgba(255,250,240,.35))}
+.zv.on .zv-veil{display:none}
+.zv-q{position:relative;margin-top:-64px;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;font-size:clamp(23px,6.6vw,28px);line-height:1.25;color:#3a2a14;text-shadow:0 0 14px #fffdf6,0 0 26px #fffdf6}
+.zv-q em{font-family:'Great Vibes',cursive;font-style:normal;font-size:1.25em;color:#5c4520}
+.zv.on .zv-q{margin-top:18px}
+.zv-play{display:inline-flex;align-items:center;gap:14px;margin-top:20px;padding:10px 26px 10px 10px;border-radius:999px;border:1px solid rgba(176,141,74,.7);background:#fffaf0;cursor:pointer;
+  font-family:'Cormorant Garamond',serif;font-weight:600;font-size:15px;letter-spacing:.16em;text-transform:uppercase;line-height:1.25;color:#4a3618;text-align:left;
+  box-shadow:inset 0 0 0 3px #fffdf6,0 10px 22px -12px rgba(80,58,22,.5);animation:zvPulse 2.8s ease-in-out infinite}
+.zv-ic{flex:none;width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;background:linear-gradient(135deg,#c9a24a,#8a6d2c)}
+.zv-ic svg{width:20px;height:20px;margin-left:3px}
+.zv.on .zv-play{display:none}
+@keyframes zvPulse{0%,100%{box-shadow:inset 0 0 0 3px #fffdf6,0 10px 22px -12px rgba(80,58,22,.5)}50%{box-shadow:inset 0 0 0 3px #fffdf6,0 0 0 6px rgba(201,162,74,.18),0 10px 22px -12px rgba(80,58,22,.5)}}
+@media(prefers-reduced-motion:reduce){.zv-play{animation:none}}
 /* marcos por sección: completos (proporción exacta) o cabecera+pie (secciones largas) */
 .zh-fr.fr-full{width:100%;aspect-ratio:var(--ar);background:#fbf6ec var(--fr) center top/100% auto no-repeat!important;display:flex;flex-direction:column;justify-content:center;padding:15% 12%!important;margin:0!important}
 .zh-fr.fr-strip{position:relative;background:#fbf6ec linear-gradient(rgba(201,162,74,.55),rgba(201,162,74,.55)) 5% 0/1px 100% no-repeat!important;padding-top:calc(100% * 672 / 1584 * .78)!important;padding-bottom:calc(100% * 672 / 1584 * .78)!important;padding-left:9%!important;padding-right:9%!important}
@@ -2823,6 +2865,19 @@ body,.wrap{background-color:#fffff0}
   document.getElementById('zcNext').addEventListener('click',function(){target=Math.round(pos)+1;});
   lb.addEventListener('click',function(){lb.hidden=true;});
   addEventListener('resize',paint);
+})();
+</script>
+<script>
+/* Video del compromiso: solo se reproduce al tocarlo; la música baja mientras suena y regresa al terminar */
+(function(){var sec=document.getElementById('compromiso');if(!sec)return;
+  var v=document.getElementById('zvVid'),bg=document.getElementById('bgAudio'),habia=false;
+  function play(){sec.classList.add('on');v.controls=true;if(bg&&!bg.paused){habia=true;bg.pause();}var p=v.play();if(p&&p.catch)p.catch(function(){});}
+  document.getElementById('zvPlay').addEventListener('click',play);
+  document.getElementById('zvBtn').addEventListener('click',function(){if(!sec.classList.contains('on'))play();});
+  function back(){if(habia&&bg){habia=false;var p=bg.play();if(p&&p.catch)p.catch(function(){});}}
+  v.addEventListener('ended',function(){back();sec.classList.remove('on');v.controls=false;try{v.currentTime=0;}catch(e){}});
+  v.addEventListener('pause',function(){if(!v.ended)back();});
+  v.addEventListener('play',function(){if(bg&&!bg.paused){habia=true;bg.pause();}});
 })();
 </script>
 </body>
