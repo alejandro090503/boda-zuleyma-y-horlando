@@ -2725,7 +2725,9 @@ body,.wrap{background-color:#fffff0}
 @media(prefers-reduced-motion:reduce){.zv-play{animation:none}}
 
 /* menú: imagen de la clienta en español; la tarjeta HTML queda para inglés */
-.zm-img{display:block;width:100%;max-width:440px;height:auto;margin:0 auto;border-radius:6px;box-shadow:0 22px 44px -24px rgba(80,58,22,.5)}
+.zm-img{display:block;width:calc(100% + 28px);max-width:480px;height:auto;margin:0 auto;position:relative;left:50%;transform:translateX(-50%);
+  -webkit-mask-image:linear-gradient(transparent,#000 9%,#000 91%,transparent),linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);-webkit-mask-composite:source-in;
+  mask-image:linear-gradient(transparent,#000 9%,#000 91%,transparent),linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-composite:intersect}
 html[lang="en"] .zm-img{display:none}
 html:not([lang="en"]) .zm-card{display:none}
 /* marcos por sección: completos (proporción exacta) o cabecera+pie (secciones largas) */
