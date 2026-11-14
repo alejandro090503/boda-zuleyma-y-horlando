@@ -889,13 +889,13 @@ body{background:var(--bg);color:var(--text);font-family:'Cormorant Garamond',ser
     <div class="zv-card">
       <p class="zv-nm">Zuleyma &amp; Horlando</p>
       <p class="zv-eb"><span class="l"></span><span data-en="Our love story">Nuestra historia de amor</span><span class="l"></span></p>
+      <button type="button" class="zv-cta" id="zvPlay"><span class="l"></span><span class="zv-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span><span data-en="Click to relive our engagement">Haz clic para revivir nuestro compromiso</span><span class="l"></span></button>
       <button type="button" class="zv-media" id="zvBtn" aria-label="Reproducir el video del compromiso">
-        <img src="vid/compromiso.jpg" alt="Horlando le pide matrimonio a Zuleyma">
-        <video id="zvVid" playsinline preload="none" poster="vid/compromiso.jpg" src="vid/compromiso.mp4?v=2"></video>
-        <span class="zv-veil"></span>
+        <img src="vid/compromiso-w.jpg" alt="Horlando le pide matrimonio a Zuleyma">
+        <video id="zvVid" playsinline preload="none" poster="vid/compromiso-w.jpg" src="vid/compromiso.mp4?v=2"></video>
+        <span class="zv-big"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span>
       </button>
-      <p class="zv-q" data-en="A moment that marked the beginning<br>of our forever&hellip;">Un momento que marcó<br>el comienzo de nuestro<br><em>para siempre&hellip;</em></p>
-      <button type="button" class="zv-play" id="zvPlay"><span class="zv-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span><span data-en="Relive our engagement">Revive nuestro<br>compromiso</span></button>
+      <p class="zv-q" data-en="The day our love<br>became a promise<br>of forever&hellip;">El día en que nuestro amor<br>se convirtió en una promesa<br>para siempre&hellip;</p>
     </div>
   </section>
 
@@ -1350,8 +1350,9 @@ gsap.registerPlugin(ScrollTrigger);
     /* Sin link personalizado no hay invitación que actualizar */
     confirmBtn.disabled = true;
     if (dispEl) dispEl.style.display = 'none';
-    setFeedback(T('Abre el enlace personalizado que te enviaron para confirmar tu asistencia.',
-                  'Open the personal link you were sent to confirm your attendance.'));
+    var sinLink = function(){ setFeedback(T('Abre el enlace personalizado que te enviaron para confirmar tu asistencia.',
+                  'Open the personal link you were sent to confirm your attendance.')); };
+    sinLink(); document.addEventListener('langchange', sinLink);
     applyFreeze();
   }
 
@@ -2730,6 +2731,23 @@ body,.wrap{background-color:#fffff0}
   mask-image:linear-gradient(transparent,#000 9%,#000 91%,transparent),linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-composite:intersect}
 html[lang="en"] .zm-img{display:none}
 html:not([lang="en"]) .zm-card{display:none}
+
+/* video v2: encabezado con play, video panorámico, frase abajo */
+.zv-cta{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;margin:16px 0 0;padding:0;border:0;background:none;cursor:pointer;
+  font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:clamp(15px,4.4vw,18px);color:#4a3618}
+.zv-cta .l{flex:1 1 14px;max-width:34px;height:1px;background:#c9a24a}
+.zv-cta .zv-ic{width:34px;height:34px;flex:none;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#a5802e;background:#fffaf0;border:1.5px solid #b08d4a;animation:zvPulse2 2.6s ease-in-out infinite}
+.zv-cta .zv-ic svg{width:15px;height:15px;margin-left:2px}
+@keyframes zvPulse2{0%,100%{box-shadow:0 0 0 0 rgba(201,162,74,.35)}50%{box-shadow:0 0 0 7px rgba(201,162,74,0)}}
+#compromiso .zv-media,#compromiso.on .zv-media{aspect-ratio:1280/534;margin-top:14px;-webkit-mask-image:none;mask-image:none;box-shadow:0 14px 30px -16px rgba(40,28,10,.55)}
+#compromiso .zv-media video{object-fit:cover}
+.zv-big{position:absolute;left:50%;top:50%;width:58px;height:58px;margin:-29px 0 0 -29px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;
+  background:rgba(165,128,46,.78);box-shadow:0 0 0 2px rgba(255,250,240,.85),0 8px 20px rgba(0,0,0,.35);transition:opacity .4s}
+.zv-big svg{width:24px;height:24px;margin-left:3px}
+#compromiso.on .zv-big{opacity:0;pointer-events:none}
+#compromiso .zv-q,#compromiso.on .zv-q{margin-top:20px;text-shadow:none}
+#compromiso.on .zv-cta{opacity:.55}
+@media(prefers-reduced-motion:reduce){.zv-cta .zv-ic{animation:none}}
 /* marcos por sección: completos (proporción exacta) o cabecera+pie (secciones largas) */
 .zh-fr.fr-full{width:100%;aspect-ratio:var(--ar);background:#fbf6ec var(--fr) center top/100% auto no-repeat!important;display:flex;flex-direction:column;justify-content:center;padding:15% 12%!important;margin:0!important}
 .zh-fr.fr-strip{position:relative;background:#fbf6ec linear-gradient(rgba(201,162,74,.55),rgba(201,162,74,.55)) 5% 0/1px 100% no-repeat!important;padding-top:calc(100% * 672 / 1584 * .78)!important;padding-bottom:calc(100% * 672 / 1584 * .78)!important;padding-left:9%!important;padding-right:9%!important}
