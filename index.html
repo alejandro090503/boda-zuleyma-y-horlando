@@ -63,9 +63,12 @@ body{font-family:'Cormorant Garamond',serif;color:#fbf3e2;-webkit-font-smoothing
 .thumb{position:absolute;top:50%;width:13px;height:13px;margin:-6.5px 0 0 -6.5px;border-radius:50%;background:#f3e7cf;box-shadow:0 0 0 3px rgba(234,219,184,.25);left:0}
 .skip{flex:none;border:0;background:none;color:#f3e7cf;font-family:'Cormorant Garamond',serif;font-weight:600;font-size:12px;letter-spacing:.22em;text-transform:uppercase;padding:10px 8px;cursor:pointer;opacity:0;visibility:hidden;text-shadow:0 1px 8px rgba(0,0,0,.6)}
 .langw{position:absolute;top:max(12px,env(safe-area-inset-top));right:12px;z-index:9100;display:flex;flex-direction:column;align-items:flex-end;gap:5px}
-.lang-lbl{font:italic 600 11.5px/1.2 'Cormorant Garamond',serif;letter-spacing:.03em;color:#4a3618;white-space:nowrap;margin:0;padding:3px 10px;border-radius:999px;background:rgba(255,250,240,.72);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
-.lang-lbl i{font-style:normal;opacity:.6;margin:0 2px}
-.film .lang-lbl{color:#f7e7ce;background:rgba(0,0,0,.28)}
+.langw{align-items:center!important;gap:4px!important}
+.lang-lbl{font:500 13px/1.25 'Cormorant Garamond',serif;letter-spacing:.02em;color:#4a3618;text-align:center;margin:0;padding:0;background:none;text-shadow:0 0 10px rgba(255,248,235,.95),0 0 4px rgba(255,248,235,.9)}
+.lang-lbl em{font-style:italic}
+.lang-orn{width:150px;height:9px;color:#8a6d38;margin:0 0 3px;filter:drop-shadow(0 0 4px rgba(255,248,235,.9))}
+.film .lang-orn{color:#f7e7ce}
+.film .lang-lbl{color:#f7e7ce;text-shadow:0 1px 6px rgba(0,0,0,.6)}
 .lang{position:relative;display:flex;border-radius:999px;overflow:hidden;border:1px solid rgba(138,109,56,.45);background:rgba(255,250,240,.55);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
 .lang button{min-width:70px;min-height:34px;padding:0 12px;border:0;background:none;color:#6b5420;font:600 13px 'Cormorant Garamond',serif;letter-spacing:.06em;cursor:pointer}
 .lang button.on{background:linear-gradient(135deg,#a8915f,#cdb487);color:#fff}
@@ -181,7 +184,7 @@ body{font-family:'Cormorant Garamond',serif;color:#fbf3e2;-webkit-font-smoothing
     <div class="dwash"></div>
   </div>
   <button class="mus" id="mus" type="button" aria-label="Silenciar música"><svg viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9z"/><path class="on1" d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/><path class="off" d="M17 9l5 6M22 9l-5 6"/></svg></button>
-  <div class="langw"><p class="lang-lbl">Selecciona tu idioma <i>/</i> Select your language</p><div class="lang" id="lang"><button type="button" data-l="es" class="on">Español</button><button type="button" data-l="en">English</button></div></div>
+  <div class="langw"><p class="lang-lbl">Selecciona tu idioma /<br><em>Select your language</em></p><svg class="lang-orn" viewBox="0 0 200 12" aria-hidden="true"><path d="M2 6H88M112 6H198" stroke="currentColor" stroke-width="1" opacity=".7"/><path d="M100 1.5l4.5 4.5-4.5 4.5-4.5-4.5z" fill="currentColor"/></svg><div class="lang" id="lang"><button type="button" data-l="es" class="on">Español</button><button type="button" data-l="en">English</button></div></div>
 </div>
 <div class="out" id="out"></div>
 <audio id="aud" loop preload="auto" src="intro-instrumental.mp3"></audio>
