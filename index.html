@@ -200,7 +200,7 @@ var LANG=qs.get('lang')==='en'?'en':'es';
 try{if(!qs.get('lang')&&localStorage.getItem('zuleymahorlando_lang')==='en')LANG='en';}catch(e){}
 
 /* ── primera presentación: puertas (si ya están los archivos) o sobre ── */
-function startFilm(){document.body.classList.add('film');$('#stage').classList.add('film');$('#ctrl').style.visibility='visible';play();
+function startFilm(){var lw=document.querySelector('.langw');if(lw)lw.style.display='none';document.body.classList.add('film');$('#stage').classList.add('film');$('#ctrl').style.visibility='visible';play();
   gsap.to('#skip',{autoAlpha:.85,duration:1,delay:4});}
 function useDoors(){
   var d=$('#doors'),v=$('#doors .dv'),done=false,opened=false;$('#env').remove();d.hidden=false;var sfx=LANG==='en'?'-en':'';$('#doors .dp').src='puertas'+sfx+'.jpg';v.src='vid/puertas'+sfx+'.mp4';window.__doorLang=function(l){if(opened)return;var x=l==='en'?'-en':'';$('#doors .dp').src='puertas'+x+'.jpg';v.src='vid/puertas'+x+'.mp4';};
@@ -208,7 +208,7 @@ function useDoors(){
   gsap.fromTo('#doors .dhint',{autoAlpha:0,y:10,filter:'blur(6px)'},{autoAlpha:1,y:0,filter:'blur(0px)',duration:1.6,stagger:.35,delay:.3,ease:'power2.out'});
   function finish(){if(done)return;done=true;gsap.to('#doors .dwash',{opacity:1,duration:1.2,ease:'power1.inOut',onComplete:function(){startFilm();gsap.to(d,{autoAlpha:0,duration:1,onComplete:function(){d.remove();}});}});}
   function open(){if(opened)return;opened=true;musicOn(true);
-    gsap.to(['#doors .dtx','#doors .dhint'],{autoAlpha:0,duration:.7,ease:'power1.out'});
+    gsap.to(['#doors .dtx','#doors .dhint','.langw'],{autoAlpha:0,duration:.7,ease:'power1.out'});
     var p=v.play();if(p&&p.catch)p.catch(function(){finish();});
     v.addEventListener('playing',function(){gsap.to(v,{opacity:1,duration:.25});},{once:true});
     v.addEventListener('timeupdate',function(){if(v.duration&&v.currentTime>=v.duration-1.1)finish();});
